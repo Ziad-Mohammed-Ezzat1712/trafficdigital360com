@@ -12,7 +12,7 @@ import St from "../../assets/Images/St.png";
 import An from "../../assets/Images/An.png";
 import Pf from "../../assets/Images/Pf.png";
 import Id from "../../assets/Images/Id.png";
-import star from "../../assets/Images/star.png";
+import star from "../../assets/Images/Star.png";
 import gpt from "../../assets/Images/gpt.png";
 
 const firstRow = [Frame, Figma, Lr, Pr, Ae, Ai, Ps];
