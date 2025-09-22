@@ -13,8 +13,8 @@ import St from "../../assets/Images/St.png";
 import An from "../../assets/Images/An.png";
 import Pf from "../../assets/Images/Pf.png";
 import Id from "../../assets/Images/Id.png";
-import star from "../../assets/Images/star.png";
-import gpt from "../../asset/Imagess/gpt.png";
+import star from "../../assets/Images/Star.png";
+import gpt from "../../assets/Images/gpt.png";
 import pdf from "../../../public/Profile - 360.pdf"
 const firstRow = [
   { src: Frame, isLocal: true },
