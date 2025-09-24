@@ -32,7 +32,7 @@ export default function PortfolioSec2() {
     {[...firstRow, ...firstRow , ...firstRow].map((src, index) => (
       <div
         key={`row1-${index}`}
-        className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] mx-4 rounded-full bg-gray-200 flex items-center justify-center hover:scale-110 transition-transform duration-300"
+        className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] mx-4 rounded-full bg-gray-200 flex items-center justify-center  transition-transform duration-300"
       >
         <img src={src} alt={`tool-${index}`} className="w-24 h-24 object-contain" />
       </div>
@@ -46,7 +46,7 @@ export default function PortfolioSec2() {
     {[...secondRow, ...secondRow , ...secondRow].map((src, index) => (
       <div
         key={`row2-${index}`}
-        className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] mx-4 rounded-full bg-gray-200 flex items-center justify-center hover:scale-110 transition-transform duration-300"
+        className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] mx-4 rounded-full bg-gray-200 flex items-center justify-center  transition-transform duration-300"
       >
         <img src={src} alt={`tool-${index}`} className="w-24 h-24 object-contain" />
       </div>

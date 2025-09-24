@@ -41,3 +41,8 @@ body{
 .animate-marquee-left {
   animation: marquee-left 20s linear infinite;
 }
+@layer utilities {
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}

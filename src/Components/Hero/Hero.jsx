@@ -23,7 +23,7 @@ export default function Hero() {
   
 >
   <p className="uppercase tracking-widest text-[16px]">we are</p>
-  <h1 className="text-[120px] font-semibold leading-tight">
+  <h1 className="text-[120px] md:text-[80px] font-semibold leading-tight">
     Digital <br /> Agency
   </h1>
   <p className="text-gray-300 max-w-md">
@@ -43,7 +43,10 @@ export default function Hero() {
   animate={{ x: 0, opacity: 1 }}
   transition={{ duration: 1, delay: 0.5 }}
   className="relative"
-  style={{ backgroundImage: `url(${heroRightBG})` }}
+  style={{ backgroundImage: `url(${heroRightBG})`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",    
+    backgroundPosition: "center" }}
 >
   {/* الصورة */}
   <img
