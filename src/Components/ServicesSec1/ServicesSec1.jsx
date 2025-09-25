@@ -2,7 +2,9 @@ import React from 'react'
 import bgService from "../../assets/Images/bgService.PNG"
 import ServicesSlider from '../ServicesSlider/ServicesSlider'
 import ServicesGrid from '../ServicesGrid/ServicesGrid'
+
 import Navbar from '../Navbar/Navbar'
+
 export default function ServicesSec1() {
   return (
     <section
@@ -28,6 +30,7 @@ export default function ServicesSec1() {
       <div className="w-full ">
         <ServicesGrid />
       </div>
+   
     </section>
   )
 }
