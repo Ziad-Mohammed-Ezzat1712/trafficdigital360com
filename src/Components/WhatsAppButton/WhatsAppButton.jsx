@@ -15,7 +15,7 @@ const WhatsAppButton = () => {
       <img
         src={whatsappIcon}
         alt="WhatsApp"
-        className="w-16 h-16 hover:w-10 hover:h-10"
+        className="w-10 h-10 hover:w-10 hover:h-10"
       />
       <span
         className="ml-2 max-w-0 font-bold overflow-hidden opacity-0 group-hover:max-w-[200px] group-hover:opacity-100 transition-all duration-300 whitespace-nowrap"

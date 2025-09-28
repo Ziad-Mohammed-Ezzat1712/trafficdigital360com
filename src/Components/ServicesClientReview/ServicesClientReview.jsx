@@ -1,7 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FaStar } from "react-icons/fa";
 
 export default function ServicesClientReview() {
+  // بيانات العملاء
+  const testimonials = [
+    {
+      text: "Working with Traffic 360 completely transformed our business. The team handled everything from social media to ad campaigns with creativity and precision. Since partnering with them, we’ve seen a remarkable increase in engagement and sales.",
+      name: "Mohamed Ali",
+    },
+    {
+      text: "I was impressed with their dedication and creativity. They always came up with fresh ideas that actually worked for our campaigns. Highly recommended!",
+      name: "Sara Ahmed",
+    },
+    {
+      text: "Professional, reliable, and results-driven. Traffic 360 boosted our online presence more than we expected.",
+      name: "Omar Khaled",
+    },
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // اوتوماتيك يقلب كل ثانيتين
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 2000); // 2000ms = 2 ثانية
+
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
+
   return (
     <section className="container mx-auto flex flex-col md:flex-row gap-6 py-28 px-28">
       {/* Left Card */}
@@ -61,22 +90,27 @@ export default function ServicesClientReview() {
 
         {/* Testimonial */}
         <p className="text-gray-200 text-lg leading-relaxed text-center mb-6">
-          "Working with Traffic 360 completely transformed our business. The team
-          handled everything from social media to ad campaigns with creativity and
-          precision. Since partnering with them, we’ve seen a remarkable increase
-          in engagement and sales."
+          "{testimonials[currentIndex].text}"
         </p>
 
         {/* Client Name */}
         <h4 className="text-white font-semibold text-center text-xl mb-6">
-          Mohamed Ali
+          {testimonials[currentIndex].name}
         </h4>
 
         {/* Slider Dots */}
         <div className="flex justify-center space-x-2">
-          <span className="w-4 h-4 rounded-full border-2 border-cyan-400 "></span>
-          <span className="w-3 h-3 rounded-full bg-cyan-400"></span>
-          <span className="w-3 h-3 rounded-full bg-cyan-400"></span>
+          {testimonials.map((_, index) => (
+            <span
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`cursor-pointer rounded-full transition-all ${
+                index === currentIndex
+                  ? "w-4 h-4 bg-cyan-400"
+                  : "w-3 h-3 bg-gray-500"
+              }`}
+            ></span>
+          ))}
         </div>
       </div>
     </section>
