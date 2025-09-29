@@ -14,7 +14,7 @@ export default function Navbar() {
     { to: "/about", label: "About us" },
     { to: "/services", label: "Services" },
     { to: "/portfolio", label: "Portfolio" },
-    { to: "/contact", label: "Contact" },
+   
     { to: "/request", label: "Request your proposal" },
   ];
 

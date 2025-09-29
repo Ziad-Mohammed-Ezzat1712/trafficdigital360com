@@ -1,0 +1,379 @@
+
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import bgForm from "../../assets/Images/bgForm.PNG";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+
+export default function ContactForm() {
+  const [openCategory, setOpenCategory] = useState(null);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [selectedOptions, setSelectedOptions] = useState([]);
+
+  // form states
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [telephone, setTelephone] = useState("");
+  const [company, setCompany] = useState("");
+  const [message, setMessage] = useState("");
+
+  // errors
+  const [errors, setErrors] = useState({});
+
+  // success box
+  const [successMessage, setSuccessMessage] = useState("");
+
+  // التصنيفات والخيارات
+  const categories = {
+    "Business Consultant": [
+      "Market Research & Analysis",
+      "Business Strategy Development",
+      "Brand Positioning",
+      "Feasibility Studies",
+      "Competitor Analysis",
+      "Growth & Expansion Planning",
+      "Financial Planning Support",
+      "Business Model Innovation",
+    ],
+    "Digital Marketing": [
+      "Social Media Marketing",
+      "Content Marketing (Blogs, Articles, Copy writing)",
+      "SEO (Search Engine Optimization)",
+      "SEM (Search Engine Marketing – Google Ads)",
+      "Email Marketing",
+      "Influencer Marketing",
+      "Online Reputation Management",
+      "E-commerce Marketing",
+      "Analytics & Performance Tracking",
+      "Email Marketing",
+    ],
+    "Media Production": [
+      "Photography (Product, Lifestyle, Corporate)",
+      "Videography",
+      "Motion Graphics",
+      "Animation (2D/3D)",
+      "Podcast Production",
+      "Voice-over & Dubbing",
+      "Post-production (Editing, Color Grading, Sound Design)",
+      "Creative Direction",
+    ],
+    "Web Development": [
+      "Website Design (UI/UX)",
+      "Website Development (Front-end & Back-end)",
+      "E-commerce Platforms",
+      "Web Applications",
+      "Landing Pages for Campaigns",
+      "Website Maintenance & Support",
+      "Hosting & Domain Services",
+    ],
+    "App Development": [
+      "iOS App Development",
+      "Android App Development",
+      "Cross-platform Apps (Flutter, React Native)",
+      "UI/UX Design for Apps",
+      "App Testing & QA",
+      "App Maintenance & Updates",
+      "Integration with APIs & Databases",
+      "App Store Optimization (ASO)",
+    ],
+  };
+
+  const handleOptionChange = (option) => {
+    if (selectedOptions.includes(option)) {
+      setSelectedOptions(selectedOptions.filter((item) => item !== option));
+    } else {
+      setSelectedOptions([...selectedOptions, option]);
+    }
+  };
+
+  // Select All function
+  const handleSelectAll = (categoryOptions) => {
+    const allSelected = categoryOptions.every((opt) =>
+      selectedOptions.includes(opt)
+    );
+    if (allSelected) {
+      setSelectedOptions(
+        selectedOptions.filter((opt) => !categoryOptions.includes(opt))
+      );
+    } else {
+      const newSelections = categoryOptions.filter(
+        (opt) => !selectedOptions.includes(opt)
+      );
+      setSelectedOptions([...selectedOptions, ...newSelections]);
+    }
+  };
+
+  // Animation Variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: { staggerChildren: 0.15 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: 50 },
+    show: { opacity: 1, x: 0 },
+    exit: { opacity: 0, x: 50 },
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newErrors = {};
+
+    if (!email.trim()) newErrors.email = "Please enter your Email";
+    if (!name.trim()) newErrors.name = "Please enter your Name";
+    if (!telephone.trim())
+      newErrors.telephone = "Please enter your Phone Number";
+    if (selectedOptions.length === 0)
+      newErrors.needs = "Please select at least one need";
+
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length === 0) {
+      console.log({
+        email,
+        name,
+        telephone,
+        company,
+        message,
+        needs: selectedOptions,
+      });
+
+      setSuccessMessage("Request Done ");
+      setTimeout(() => {
+        setSuccessMessage("");
+      }, 5000);
+
+      setEmail("");
+      setName("");
+      setTelephone("");
+      setCompany("");
+      setMessage("");
+      setSelectedOptions([]);
+    }
+  };
+
+  return (
+    <div
+      className="rounded-2xl flex items-center justify-center bg-gradient-to-r from-gray-900 to-gray-800 px-4 py-12"
+      style={{
+        backgroundImage: `url(${bgForm})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="w-full ">
+        {/* Success Box */}
+        <AnimatePresence>
+          {successMessage && (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4 }}
+              className=" w-[25%] mx-auto mb-6 px-6 py-3 bg-[#055054] text-white text-center font-medium rounded-lg shadow-lg"
+            >
+              {successMessage}
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Form */}
+        <form className="w-full bg-transparent p-6" onSubmit={handleSubmit}>
+          {/* Four Inputs */}
+          <div className="flex flex-col gap-6 mb-6">
+            <div className="flex justify-between gap-6 mb-8">
+              <div className="w-1/3">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-black focus:outline-none"
+                />
+                {errors.email && (
+                  <p className="text-[#A3A3A3] text-sm mt-1">{errors.email}</p>
+                )}
+              </div>
+              <div className="w-1/3">
+                <input
+                  type="text"
+                  placeholder="Name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-black focus:outline-none"
+                />
+                {errors.name && (
+                  <p className="text-[#A3A3A3] text-sm mt-1">{errors.name}</p>
+                )}
+              </div>
+            </div>
+
+            <div className="flex justify-between gap-6 mb-10">
+              <div className="w-1/3">
+                <input
+                  type="tel"
+                  placeholder="Telephone"
+                  value={telephone}
+                  onChange={(e) => setTelephone(e.target.value)}
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-black focus:outline-none"
+                />
+                {errors.telephone && (
+                  <p className="text-[#A3A3A3] text-sm mt-1">
+                    {errors.telephone}
+                  </p>
+                )}
+              </div>
+              <input
+                type="text"
+                placeholder="Company Name"
+                value={company}
+                onChange={(e) => setCompany(e.target.value)}
+                className="w-1/3 px-4 py-3 rounded-lg border border-gray-300 bg-white text-black focus:outline-none"
+              />
+            </div>
+          </div>
+
+          {/* Needs Dropdown */}
+          <div className="flex justify-center relative mb-20">
+            <div className="w-full md:w-1/3 relative">
+              <button
+                type="button"
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+                className="w-full flex justify-between items-center px-4 py-3 rounded-lg border border-gray-300 text-black bg-white focus:outline-none"
+              >
+                <span className="bg-white text-black">Needs</span>
+                <span className="ml-2 bg-white text-black text-xl">
+                  {dropdownOpen ? (
+                    <ArrowForwardIosIcon className="rotate-90 transform duration-700" />
+                  ) : (
+                    <ArrowForwardIosIcon />
+                  )}
+                </span>
+              </button>
+              {errors.needs && (
+                <p className="text-[#A3A3A3] text-sm mt-1">{errors.needs}</p>
+              )}
+
+              <AnimatePresence>
+                {dropdownOpen && (
+                  <motion.div
+                    className="absolute text-black w-full mt-2 bg-white border rounded-lg shadow-lg z-20"
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="show"
+                    exit="hidden"
+                  >
+                    {Object.keys(categories).map((category) => (
+                      <motion.div
+                        key={category}
+                        className="relative group"
+                        variants={itemVariants}
+                      >
+                        <motion.button
+                          type="button"
+                          className={`w-full text-left px-4 py-2 hover:bg-gray-100 flex justify-between items-center 
+                          ${openCategory === category ? "text-black font-semibold" : "text-gray-700"}`}
+                          onClick={() =>
+                            setOpenCategory(
+                              openCategory === category ? null : category
+                            )
+                          }
+                          variants={itemVariants}
+                        >
+                          {category}
+                          <span>
+                            <ArrowForwardIosIcon />
+                          </span>
+                        </motion.button>
+
+                        <AnimatePresence>
+                          {openCategory === category && (
+                            <motion.div
+                              initial={{ opacity: 0, x: 30 }}
+                              animate={{ opacity: 1, x: 0 }}
+                              exit={{ opacity: 0, x: 30 }}
+                              transition={{ duration: 0.3 }}
+                              className="absolute z-50 top-0 left-full ml-1 bg-white border rounded-lg shadow-lg w-64 p-3 "
+                            >
+                              {/* Select All */}
+                              <motion.label
+                                className="flex items-center space-x-2 mb-3 font-semibold"
+                                initial={{ opacity: 0, x: 20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                exit={{ opacity: 0, x: 20 }}
+                                transition={{ duration: 0.2 }}
+                              >
+                                <input
+                                  type="checkbox"
+                                  checked={categories[category].every((opt) =>
+                                    selectedOptions.includes(opt)
+                                  )}
+                                  onChange={() =>
+                                    handleSelectAll(categories[category])
+                                  }
+                                  className="form-checkbox accent-[#8B8B8B]"
+                                />
+                                <span>Select All</span>
+                              </motion.label>
+
+                              {categories[category].map((option) => (
+                                <motion.label
+                                  key={option}
+                                  className="flex items-center text-gray-700 space-x-2 mb-2"
+                                  initial={{ opacity: 0, x: 20 }}
+                                  animate={{ opacity: 1, x: 0 }}
+                                  exit={{ opacity: 0, x: 20 }}
+                                  transition={{ duration: 0.2 }}
+                                >
+                                  <input
+                                    type="checkbox"
+                                    checked={selectedOptions.includes(option)}
+                                    onChange={() => handleOptionChange(option)}
+                                    className="form-checkbox accent-[#8B8B8B]"
+                                  />
+                                  <span>{option}</span>
+                                </motion.label>
+                              ))}
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </motion.div>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          </div>
+
+          {/* Message */}
+          <div className="flex justify-center mb-6">
+            <textarea
+              placeholder="Message"
+              rows="5"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-black focus:outline-none"
+            ></textarea>
+          </div>
+
+          {/* Send Button */}
+          <div className="flex justify-center gap-3">
+            <button
+              type="submit"
+              className="bg-[#0F9BA3] flex gap-2 text-white px-8 cursor-pointer py-2 rounded-lg hover:bg-[#0b777d] transition"
+            >
+              <span className="text-[16px]">Send</span>
+              <div className="text-md mt-">
+                <ArrowForwardIosIcon fontSize="small" />
+              </div>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}
+
