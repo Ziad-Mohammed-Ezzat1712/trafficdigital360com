@@ -3,6 +3,7 @@ body{
     background-color:black;
         overflow-x: hidden;
 }
+
 @keyframes loopWords {
   0% {
     transform: translateY(0%);

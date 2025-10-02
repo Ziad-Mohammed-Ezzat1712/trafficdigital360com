@@ -10,8 +10,9 @@ import Footer from '../Footer/Footer'
 import HomeSlider from '../HomeSlider/HomeSlider'
 export default function Home() {
   return <>
+  <div className=' overflow-hidden'>
 <Hero/>
-<HomeSec2/>
+<div className=' hidden md:block'><HomeSec2/></div>
 <HomeSlider/>
 <HomeSec3/>
 <HomeSec4/>
@@ -19,6 +20,6 @@ export default function Home() {
 <HomeSec6/>
 <HomeSec7/>
 <Footer/>
-
+</div>
   </>
 }

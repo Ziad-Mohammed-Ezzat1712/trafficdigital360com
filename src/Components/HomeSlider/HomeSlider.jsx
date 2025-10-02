@@ -9,7 +9,7 @@ const firstRow = [fedex, meta, fedex, meta, fedex, meta, fedex,meta];
 
 export default function HomeSlider() {
   return (
-    <section className="container mx-auto my-12 py-4 bg-white ">
+    <section className="hidden  md:block container mx-auto my-12 py-4 bg-white ">
     
 
 {/* الصف الأول */}

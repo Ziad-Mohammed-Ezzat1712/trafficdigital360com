@@ -6,7 +6,7 @@ import portfolio3 from "../../assets/Images/portfolio3.jpg";
 import portfolio4 from "../../assets/Images/portfolio4.jpg";
 import portfolio5 from "../../assets/Images/portfolio5.jpg";
 import portfolio6 from "../../assets/Images/portfolio6.jpg";
-
+import bg from "../../assets/Images/bg.png"
 const projects = [
   { id: 1, title: "LIQUID SPLASH", pragraph: "TTL Designe", img: portfolio1 },
   { id: 2, title: "LIQUID ROZETTA", pragraph: "TTL Designe", img: portfolio2 },
@@ -27,10 +27,11 @@ export default function HomeSec4() {
         viewport={{ once: true, amount: 0.2 }} // once=true يعني يظهر مرة واحدة بس
         className="text-center mb-10"
       >
-        <h1 className="text-[70px] font-medium">we make cool things</h1>
-        <h2 className="text-[70px] font-medium">
+        <h1 className="md:text-[70px] text-[20px] font-medium">we make cool things</h1>
+        <h2 className="md:text-[70px] text-[20px] font-medium">
           that do great{" "}
-          <span className="bg-[url('/src/assets/bg.png')] bg-cover bg-center rounded-full">
+          <span className="bg-[url('/src/assets/Images/bg.png')] bg-cover bg-center rounded-full" 
+          >
             business
           </span>
         </h2>
@@ -43,13 +44,13 @@ export default function HomeSec4() {
           viewport={{ once: true, amount: 0.2 }}
           className="flex justify-center gap-6 mt-6 text-gray-400"
         >
-          <button className="cursor-pointer hover:text-cyan-400 text-[20px]">
+          <button className="cursor-pointer text-[16px]  hover:text-cyan-400 md:text-[20px]">
             All project
           </button>
-          <button className="cursor-pointer hover:text-cyan-400 text-[20px]">
+          <button className="cursor-pointer text-[16px] hover:text-cyan-400 md:text-[20px]">
             Web Design
           </button>
-          <button className="cursor-pointer text-cyan-400 font-semibold text-[20px]">
+          <button className="cursor-pointer text-[16px] text-cyan-400 font-semibold md:text-[20px]">
             TTL Design
           </button>
         </motion.div>
@@ -61,7 +62,7 @@ export default function HomeSec4() {
         whileInView={{ opacity: 1 }} // 👈 يظهر فقط في مكانه
         transition={{ duration: 1, delay: 0.5 }}
         viewport={{ once: true, amount: 0.2 }}
-        className="container mx-auto grid md:grid-cols-3 gap-6 px-4"
+        className="container mx-auto grid md:grid-cols-3  grid-cols-2 gap-6 px-4"
       >
         {projects.map((project) => (
           <div
@@ -72,7 +73,7 @@ export default function HomeSec4() {
             <img
               src={project.img}
               alt={project.title}
-              className="w-full h-[450px] object-cover transition-transform duration-500 group-hover:blur-[2px]"
+              className="w-full md:h-[450px] h-[163px] object-cover transition-transform duration-500 group-hover:blur-[2px]"
             />
             {/* أوفرلاي عند الهوفر */}
             <div className="absolute inset-0 bg-[#2D2D2D]/[75%] cursor-pointer flex flex-col space-y-4 items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">

@@ -24,7 +24,7 @@ export default function Navbar() {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1 }}
-        className="absolute container mx-auto top-0 left-[2%] w-full flex items-center justify-around px-6 md:px-10 py-6 z-50"
+        className="absolute overflow-hidden container mx-auto top-0 left-[2%] w-full flex items-center xl:justify-around justify-between px-6 md:px-10 py-6 z-50"
       >
         {/* Logo */}
         <div className="font-bold text-xl tracking-wide">
@@ -69,7 +69,7 @@ export default function Navbar() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
-          className="md:hidden absolute top-20 left-0 w-full bg-[#0f0f0f] text-white flex flex-col items-center space-y-6 py-6 z-40"
+          className="md:hidden absolute top-20 left-0 w-full bg-[#0f0f0f] text-white flex flex-col items-center space-y-6 py-6 z-50"
         >
           {navLinks.map((link) => (
             <Link

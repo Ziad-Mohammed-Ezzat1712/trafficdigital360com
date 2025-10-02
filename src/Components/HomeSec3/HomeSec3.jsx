@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { FiSmile, FiAward, FiMonitor } from "react-icons/fi"; // أيقونات استروك
-export default function HomeSec3() {
+import { FiSmile, FiAward, FiMonitor } from "react-icons/fi";
 
+export default function HomeSec3() {
   const stats = [
     {
       icon: <FiSmile size={60} strokeWidth={1.5} />,
@@ -19,81 +19,131 @@ export default function HomeSec3() {
       text: "successful projects completed in one year",
     },
   ];
+
   return (
     <>
-    <section className="h-auto my-15 grid md:grid-cols-2 text-white relative  container mx-auto">
-      {/* Left Side */}
-      <motion.div
-        initial={{ x: -200, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{ duration: 1, delay: 0.2 }}
-        viewport={{ once: true, amount: 0.3 }} 
-        className="flex flex-col justify-center  font-bold px-8 md:px-32 space-y-6 bg-cover bg-center"
-      >
-        <h1 className="text-5xl ">We are Creative</h1>
-        <h1 className="text-5xl ">bold digital agency</h1>
-        <h1 className="text-5xl">
-  based in{" "}
-  <span
-    className="bg-[url('/src/assets/bg.png')] bg-cover bg-center rounded-full  "
-  >
-    Egypt
-  </span>
-</h1>
+      {/* ================= Desktop Version ================= */}
+      <section className="hidden md:grid h-auto my-15 md:grid-cols-2 text-white relative container mx-auto">
+        {/* Left Side */}
+        <motion.div
+          initial={{ x: -200, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.2 }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="flex flex-col justify-center font-bold px-8 md:px-32 space-y-6 bg-cover bg-center"
+        >
+          <h1 className="text-5xl ">We are Creative</h1>
+          <h1 className="text-5xl ">bold digital agency</h1>
+          <h1 className="text-5xl">
+            based in{" "}
+            <span className="bg-[url('/src/assets/Images/bg.png')] bg-cover bg-center rounded-full">
+              Egypt
+            </span>
+          </h1>
+        </motion.div>
 
-      </motion.div>
+        {/* Right Side */}
+        <motion.div
+          initial={{ x: 200, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.2 }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="relative"
+        >
+          <div className="flex items-center space-x-6 bg-black text-white p-6 rounded-lg">
+            {/* الدائرة */}
+            <div className="w-48 h-48 bg-[#0F9BA3] rounded-full flex items-center justify-center">
+              <span className="text-7xl font-bold">3+</span>
+            </div>
 
-      {/* Right Side */}
-      <motion.div
-        initial={{ x: 200, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{ duration: 1, delay: 0.2 }}
-        viewport={{ once: true, amount: 0.3 }}
-        className="relative"
-      >
-       <div className="flex items-center space-x-6 bg-black text-white p-6 rounded-lg">
-  {/* الدائرة */}
-  <div className="w-48 h-48 bg-[#0F9BA3] rounded-full flex items-center justify-center">
-    <span className="text-7xl font-bold">3+</span>
-  </div>
+            {/* النصوص */}
+            <div className="max-w-sm">
+              <h3 className="text-xl font-semibold">years of experience</h3>
+              <p className="text-gray-300 text-[20px] mt-2 leading-relaxed">
+                we are dedicated to providing outstanding digital and design services
+                meet the functional and aesthetics.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      </section>
 
-  {/* النصوص */}
-  <div className="max-w-sm">
-    <h3 className="text-xl font-semibold">years of experience</h3>
-    <p className="text-gray-300 text-[20px] mt-2 leading-relaxed">
-      we are dedicated to providing outstanding digital and design services
-      meet the functional and aesthetics.
-    </p>
-  </div>
-</div>
+      <section className="hidden md:block bg-black text-white max-w-5xl mx-auto py-16">
+        <div className="container mx-auto grid md:grid-cols-3 gap-8 ">
+          {stats.map((stat, index) => (
+            <motion.div
+              key={index}
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: index * 0.3 }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="flex flex-col space-y-3"
+            >
+              <div className="text-white flex gap-x-3 justify-start">
+                {stat.icon}
+                <h3 className="text-xl font-semibold">{stat.number}</h3>
+              </div>
+              <p className="text-gray-300 max-w-md text-[20px]">{stat.text}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
 
-      </motion.div>
+      {/* ================= Mobile Version ================= */}
+      <section className="block md:hidden text-white bg-gradient-to-b from-[#03090b] via-[#050e12] to-[#000000] py-12 px-6 space-y-12">
+        {/* العنوان */}
+        <motion.div
+          initial={{ y: -100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="text-center space-y-1"
+        >
+          <h1 className="text-[20px] font-bold">We are Creative bold digital agency</h1>
 
+          <h1 className="text-[20px] font-bold">
+            based in{" "}
+            <span className=" text-white px-2 rounded-full">Egypt</span>
+          </h1>
+        </motion.div>
 
-    </section>
+        {/* خبرة 3+ */}
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="flex  items-center justify-between gap-x-16 text-center space-y-4"
+        >
+          <div className="w-24 h-24 px-6 bg-[#0F9BA3] rounded-full flex items-center ">
+            <span className="text-4xl font-bold">3+</span>
+          </div>
+        
+          <p className="text-gray-300 text-left text-base">
+            <h3 className="text-lg text-left font-semibold">years of experience</h3>
+            we are dedicated to providing outstanding digital and design services
+            meet the functional and aesthetics.
+          </p>
+        </motion.div>
 
-     <section className="bg-black text-white max-w-5xl mx-auto py-16">
-      <div className="container mx-auto grid md:grid-cols-3 gap-8 ">
-        {stats.map((stat, index) => (
-          <motion.div
-            key={index}
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: index * 0.3 }}
-            viewport={{ once: true, amount: 0.3 }}
-            className="flex flex-col  space-y-3"
-          >
-            <div className="text-white flex  gap-x-3 justify-start">
-  {stat.icon} 
-  <h3 className="text-xl font-semibold">{stat.number}</h3>
-</div>
-
-           
-            <p className="text-gray-300 max-w-md text-[20px]">{stat.text}</p>
-          </motion.div>
-        ))}
-      </div>
-    </section>
-  </>
+        {/* الإحصائيات */}
+        <div className="grid gap-10">
+          {stats.map((stat, index) => (
+            <motion.div
+              key={index}
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: index * 0.3 }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="flex flex-col items-center text-center space-y-3"
+            >
+              <div className="">{stat.icon}</div>
+              <h3 className="text-2xl font-semibold">{stat.number}</h3>
+              <p className="text-gray-300">{stat.text}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+    </>
   );
 }
