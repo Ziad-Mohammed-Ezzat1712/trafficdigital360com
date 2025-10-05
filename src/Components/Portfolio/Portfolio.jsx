@@ -14,13 +14,13 @@ import PortfolioSec3Mobile from './../portfolioSec3Mobile/portfolioSec3Mobile';
 export default function Portfolio() {
   return (
     <>
-    <div className=' hidden md:block'><PortfolioSec1/></div>
-    <div className=' md:hidden block'><PortfolioSec1Mobile/></div>
+    <div className=' hidden md:block overflow-x-hidden'><PortfolioSec1/></div>
+    <div className=' md:hidden block overflow-x-hidden'><PortfolioSec1Mobile/></div>
     <PortfolioSec2/>
-     <div className=' hidden md:block'><PortfolioSec3/></div>
-    <div className=' md:hidden block'> <PortfolioSec3Mobile/></div>
-    <PortfolioFaqSection/>   
-    <PortfolioSec4/>   
+     <div className=' hidden md:block overflow-x-hidden'><PortfolioSec3/></div>
+    <div className=' overflow-x-hidden'> <PortfolioSec3Mobile/></div>
+    <div className=' overflow-x-hidden'><PortfolioFaqSection/>  </div>
+    <div className=' overflow-x-hidden'><PortfolioSec4/>   </div> 
     <Footer/>
  
 

@@ -32,18 +32,25 @@ export default function ServicesClientReviewMobile() {
   return (
     <section className="block md:hidden bg-black text-white px-5 py-16 space-y-8">
       {/* ---------- العنوان والنصوص ---------- */}
-      <div className="text-left space-y-3">
+      <div className="  text-left space-y-3">
         <h2 className="text-[16px] text-gray-200">See what our clients say</h2>
      
       </div>
-         <div className=" flex justify-between gap-x-6"><p className="text-gray-400 w-2/3 text-[13px] leading-relaxed">
+         <div className=" flex text-left  ">
+         <div className="w-1/2">
+          <p className="text-gray-400  text-[13px] leading-relaxed">
           Discover who we are and how our expertise helps brands grow <br />
           Learn more about our journey and what makes us different.
         </p>
-        <button className="bg-[#0F9BA3] absolute left-66  bottom-[-1280px] flex gap-x-6 items-center hover:bg-teal-500 text-white text-[13px] px-4 py-1 rounded-2xl">
+         </div>
+               <div className="flex w-1/2 justify-center items-center">
+      <button className="bg-[#0F9BA3] relative text-center flex gap-x-6 items-center hover:bg-teal-500 text-white text-[13px] px-4 py-2 rounded-2xl">
           about us  <ArrowForwardIosIcon />
-        </button></div>
+        </button>
 
+     </div>
+        </div>
+ 
       {/* ---------- كارت الريفيو ---------- */}
       <div className="bg-[#0c0c0c] border border-gray-700 rounded-2xl p-6 text-center space-y-4 shadow-lg">
         {/* Stars */}

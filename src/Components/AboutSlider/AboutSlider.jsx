@@ -6,7 +6,7 @@ const firstRow = [fedex, meta, fedex, meta, fedex, meta, fedex,meta];
 
 export default function AboutSlider() {
   return (
-    <section className="container mx-auto my-12 py-4 bg-white ">
+    <section className="container mx-auto hidden md:block my-12 py-4 bg-white ">
     
   {/* ================= Desktop AboutSlider ================= */}
 <div className="overflow-hidden  hidden md:block">

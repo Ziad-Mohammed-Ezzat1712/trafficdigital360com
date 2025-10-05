@@ -5,23 +5,14 @@ const WhatsAppButton = () => {
   const [isTouched, setIsTouched] = useState(false);
 
   const handleClick = () => {
-    window.open('https://wa.me/201507779771', '_blank'); // عدّل الرقم لو حبيت
+    window.open('https://wa.me/201507779771', '_blank'); 
   };
 
-  const handleTouchStart = () => {
-    setIsTouched(true);
-  };
-
-  const handleTouchEnd = () => {
-    // يرجع للوضع الطبيعي بعد ثانية
-    setTimeout(() => setIsTouched(false), 1000);
-  };
 
   return (
     <div
       onClick={handleClick}
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
+    
       className={`
         fixed bottom-5 md:right-10 right-[-16px] z-50 cursor-pointer 
         text-white px-6 py-2 rounded-full flex items-center 
