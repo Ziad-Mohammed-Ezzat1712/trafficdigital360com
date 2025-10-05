@@ -2,6 +2,7 @@ import React from "react";
 import { FaArrowRight, FaHeart } from "react-icons/fa";
 import { motion } from "framer-motion";
 import bgVector from "../../assets/Images/bgVector.png";
+import { Link } from 'react-router-dom';
 
 export default function HomeSec7() {
   return (
@@ -51,9 +52,11 @@ export default function HomeSec7() {
             <h3 className="text-lg font-medium text-black">
               Ready to work with us?
             </h3>
+             <Link to={"/request"}>
             <button className="flex items-center cursor-pointer text-[14px] gap-2 bg-[#0F9BA3] hover:bg-[#0c898f] text-white px-4 py-2 rounded-xl transition">
               let’s connect <FaArrowRight />
             </button>
+         </Link>
           </div>
         </div>
 
@@ -106,9 +109,11 @@ export default function HomeSec7() {
             <h3 className="text-[60px] font-medium text-black">
               Ready to work with us?
             </h3>
+             <Link to={"/request"}>
             <button className="flex items-center cursor-pointer text-[16px] gap-2 bg-[#0F9BA3] hover:bg-[#0c898f] text-white px-6 py-3 rounded-xl transition">
               let’s connect <FaArrowRight />
             </button>
+          </Link>
           </motion.div>
         </div>
       </div>
@@ -155,9 +160,11 @@ export default function HomeSec7() {
             <h3 className="text-md font-medium text-black">
               Ready to work with us?
             </h3>
+             <Link to={"/request"}>
             <button className="flex items-center cursor-pointer text-[14px] gap-2 bg-[#0F9BA3] hover:bg-[#0c898f] text-white px-6 py-1 rounded-xl transition">
               let’s connect <FaArrowRight />
             </button>
+             </Link>
           </div>
         </div>
 
@@ -210,9 +217,11 @@ export default function HomeSec7() {
             <h3 className="text-[60px] font-medium text-black">
               Ready to work with us?
             </h3>
+             <Link to={"/request"}>
             <button className="flex items-center cursor-pointer text-[16px] gap-2 bg-[#0F9BA3] hover:bg-[#0c898f] text-white px-6 py-3 rounded-xl transition">
               let’s connect <FaArrowRight />
             </button>
+             </Link>
           </motion.div>
         </div>
       </div>

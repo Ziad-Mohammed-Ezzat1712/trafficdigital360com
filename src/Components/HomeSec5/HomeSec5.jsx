@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { FaArrowRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 export default function HomeSec5() {
   const { ref, inView } = useInView({
@@ -40,9 +42,11 @@ export default function HomeSec5() {
 
           {/* الزرار في النص */}
           <div className="mt-8 flex justify-center">
-            <button className="bg-[#0F9BA3] md:ext-[16px] text-[12px]  text-white font-medium px-6 py-2 cursor-pointer rounded-md hover:bg-cyan-400 transition flex items-center justify-center gap-2">
-              let’s connect <span className="md:ext-[16px] text-[12px]">➔</span>
+            <Link to={"/request"}>
+            <button className="bg-[#0F9BA3] md:text-[16px] text-[12px]  text-white font-medium px-6 py-2 cursor-pointer rounded-md hover:bg-cyan-400 transition flex items-center justify-center gap-2">
+              let’s connect <span className="md:text-[16px] text-[12px]"><FaArrowRight/></span>
             </button>
+             </Link>
           </div>
         </div>
       </div>

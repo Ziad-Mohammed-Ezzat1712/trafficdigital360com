@@ -1,5 +1,7 @@
 import React from 'react'
  import { FiChevronLeft, FiChevronRight,FiArrowUp,  } from "react-icons/fi";
+import { Link } from 'react-router-dom';
+
 export default function HomeSec2() {
   return <>
   <div className=' hidden md:block bg-white py-10 container mx-auto text-center space-y-2  '>
@@ -9,9 +11,11 @@ export default function HomeSec2() {
     </h1>
   <h2 className='text-2xl font-semibold '>Fill Out The Form Below And One of Our Team Will</h2>
   <h2 className='text-2xl font-semibold '>Contact You Personally</h2>
+   <Link to={"/request"}>
    <button className="bg-[#0f9ba3] mx-auto text-xl text-white flex items-center gap-x-2 cursor-pointer  px-6 py-2 rounded-xl hover:bg-cyan-600">
                 let’s connect <FiChevronRight className='mt-[1px]'/>
               </button>
+              </Link>
 </div>
   </div>
 
@@ -22,9 +26,11 @@ export default function HomeSec2() {
     </h1>
   <h2 className='md:text-2xl text-[16px] font-semibold '>Fill Out The Form Below And One of Our Team </h2>
   <h2 className='md:text-2xl text-[16px] font-semibold '>Will of Our Team Will Contact You Personally Contact You Personally</h2>
+  <Link to={"/request"}>
    <button className="bg-[#0f9ba3] mx-auto text-xl text-white flex items-center gap-x-2 cursor-pointer  px-6 py-2 rounded-xl hover:bg-cyan-600">
                 let’s connect <FiChevronRight className='mt-[1px]'/>
               </button>
+              </Link>
 </div>
   </div>
   </>

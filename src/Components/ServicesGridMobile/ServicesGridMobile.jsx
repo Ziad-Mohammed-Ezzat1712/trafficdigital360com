@@ -112,9 +112,11 @@ export default function ServicesGridMobile() {
 
       {/* الزرار */}
       <div className="flex justify-center my-8">
+         <Link to={"/request"}>
         <button className="bg-[#0f9ba3] flex items-center gap-x-2 cursor-pointer px-6 py-2 rounded-xl hover:bg-cyan-600">
           let’s connect <FiChevronRight className="mt-[1px]" />
         </button>
+         </Link>
       </div>
     </div>
   );
