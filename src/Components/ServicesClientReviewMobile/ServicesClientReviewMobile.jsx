@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaStar } from "react-icons/fa";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { Link } from "react-router-dom";
 export default function ServicesClientReviewMobile() {
   const testimonials = [
     {
@@ -43,10 +44,11 @@ export default function ServicesClientReviewMobile() {
           Learn more about our journey and what makes us different.
         </p>
          </div>
-               <div className="flex w-1/2 justify-center items-center">
-      <button className="bg-[#0F9BA3] relative text-center flex gap-x-6 items-center hover:bg-teal-500 text-white text-[13px] px-4 py-2 rounded-2xl">
+              <div className="flex w-1/2 justify-center items-center">
+      about
+    <Link to={"/about"}>  <button className="bg-[#0F9BA3] relative text-center flex gap-x-6 items-center cursor-pointer hover:bg-[#097f85] text-white text-[13px] px-4 py-2 rounded-2xl">
           about us  <ArrowForwardIosIcon />
-        </button>
+        </button></Link>
 
      </div>
         </div>

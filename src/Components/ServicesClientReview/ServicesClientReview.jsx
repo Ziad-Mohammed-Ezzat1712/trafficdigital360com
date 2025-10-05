@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaStar } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { Link } from 'react-router-dom';
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 export default function ServicesClientReview() {
   // بيانات العملاء
@@ -59,14 +60,14 @@ export default function ServicesClientReview() {
           Learn more about our journey and what makes us different.
         </motion.p>
 
-        <motion.button
-          className="bg-[#0F9BA3] flex gap-x-3 items-center hover:bg-teal-500 text-white text-[20px] px-12 py-2 rounded-4xl"
+        <Link to={"/about"}><motion.button
+          className="bg-[#0F9BA3] flex gap-x-3 items-center cursor-pointer hover:bg-[#097f85] text-white text-[20px] px-12 py-2 rounded-4xl"
           initial={{ opacity: 0, x: 100 }} // من اليمين
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
         >
           about us <ArrowForwardIosIcon />
-        </motion.button>
+        </motion.button></Link>
       </div>
     </section>
  

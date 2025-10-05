@@ -6,9 +6,13 @@ import {
   FaChartLine,
   FaThumbsUp,
   FaClone,
+  FaLaptop,
+  FaMobileAlt,
+  FaHandshake 
 } from "react-icons/fa";
 import { FiChevronRight } from "react-icons/fi";
 import { motion } from "framer-motion";
+import { Link } from 'react-router-dom';
 
 // الكارت
 const ServiceCard = ({ title, subtitle, description, Icon }) => {
@@ -104,22 +108,22 @@ export default function ServicesGrid() {
         className="grid md:grid-cols-3 gap-6 text-left my-8"
       >
         <ServiceCard
-          title="Offline Marketing"
-          subtitle="(Sponsorships – Exhibitions – Outdoor Banners)"
-          description="We connect your brand with real audiences through offline marketing—events, trade shows, and outdoor banners that boost visibility and trust."
-          Icon={FaClone}
+          title="CRM Solutions"
+          subtitle="Customer Relationship Management"
+          description="We build and manage CRM systems that streamline communication, enhance customer experience, and boost repeat business through automation and data-driven strategies."
+          Icon={FaHandshake}
         />
         <ServiceCard
-          title="Offline Marketing"
-          subtitle="(Sponsorships – Exhibitions – Outdoor Banners)"
-          description="We connect your brand with real audiences through offline marketing—events, trade shows, and outdoor banners that boost visibility and trust."
-          Icon={FaClone}
+          title="Web Development "
+          subtitle="(Facebook, Instagram, TikTok, X, Snapchat)"
+          description="We build responsive, user-friendly websites that reflect your brand identity and goals—optimized for UX/UI, mobile, speed, and SEO with the latest technologies."
+          Icon={FaLaptop}
         />
         <ServiceCard
-          title="Offline Marketing"
-          subtitle="(Sponsorships – Exhibitions – Outdoor Banners)"
-          description="We connect your brand with real audiences through offline marketing—events, trade shows, and outdoor banners that boost visibility and trust."
-          Icon={FaClone}
+          title="E-Commerce Development"
+          subtitle=""
+          description="We build high-performing online stores with seamless payments, shipping integration, and full SEO to maximize conversions and boost sales—delivering a smooth shopping experience that grows your brand online."
+          Icon={FaMobileAlt}
         />
       </motion.div>
 

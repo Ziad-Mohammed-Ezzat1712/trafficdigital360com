@@ -2,7 +2,7 @@ import React from 'react'
 import bgService from "../../assets/Images/bgService.PNG"
 import ServicesSlider from '../ServicesSlider/ServicesSlider'
 import ServicesGrid from '../ServicesGrid/ServicesGrid'
-
+import { Link } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar'
 import ServicesGridMobile from './../ServicesGridMobile/ServicesGridMobile';
 
