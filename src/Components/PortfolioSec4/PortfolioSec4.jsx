@@ -4,7 +4,7 @@ import { FaStar } from 'react-icons/fa';
 export default function PortfolioSec4() {
   return (
     <section className="bg-black text-white py-16 px-4 text-center">
-      <h1 className="text-[60px] font-bold mb-12 flex justify-center items-center gap-4 bg-gradient-to-r from-white to-cyan-400 bg-clip-text text-transparent">
+      <h1 className="md:text-[60px] text-[32px] font-bold mb-12 flex justify-center items-center gap-4 bg-gradient-to-r from-white to-cyan-400 bg-clip-text text-transparent">
         What Clients Say
       </h1>
 
@@ -15,7 +15,7 @@ export default function PortfolioSec4() {
             key={index}
             className="bg-[#1D1D1D] border border-cyan-400 text-white text-left rounded-2xl p-6 flex-1 shadow-md transition-all duration-300 transform h-[400px] overflow-hidden flex flex-col justify-between"
           >
-            <p className="text-[20px] leading-relaxed mb-6">
+            <p className="md:text-[20px] text-[16px] leading-relaxed mb-6">
               We are very happy with the marketing services provided. The team managed our social media pages professionally, designed creative content, and ran campaigns that helped us reach new patients. Everything was delivered on time and with great attention to detail. We highly recommend their work.
             </p>
 

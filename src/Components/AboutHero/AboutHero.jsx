@@ -5,7 +5,8 @@ import { motion } from "framer-motion";
 import { FaArrowRight, FaHeart } from "react-icons/fa"; 
 export default function AboutHero() {
   return <>
-   <section className=" h-dvh grid md:grid-cols-2  text-white relative overflow-hidden container mx-auto   "
+       {/* ================= Desktop Hero ================= */}
+   <section className=" hidden h-dvh md:grid md:grid-cols-2  text-white relative overflow-hidden container mx-auto   "
       style={{ backgroundImage: `url(${bgAbout})`,
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",    
@@ -27,5 +28,37 @@ export default function AboutHero() {
 </motion.div>
 
        </section>
+
+        {/* ================= Mobile Hero ================= */}
+  <section
+  className="relative h-[500px] pr-12 grid md:grid-cols-2 md:hidden text-white overflow-hidden container mx-auto"
+>
+    <Navbar />
+  {/* التدرج اللوني في الخلفية (أسفل الصورة) */}
+  <div className="absolute inset-0 bg-gradient-to-bl from-[#012d2f] via-[#000203] to-[#03090b]" />
+
+  {/* الصورة فوق التدرج */}
+  <div
+    className="absolute inset-0 bg-center bg-contain bg-no-repeat"
+    style={{ backgroundImage: `url(${bgAbout})` }}
+  ></div>
+
+  {/* المحتوى فوق الصورة */}
+  <div className="relative z-10 flex flex-col justify-center text-left space-y-6 px-4">
+
+
+    <motion.div
+      initial={{ x: -200, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ duration: 1, delay: 0.5 }}
+    >
+      <h1 className="text-[40px] font-bold leading-tight max-w-lg">
+        We Don’t Just Market We Move Markets
+      </h1>
+    </motion.div>
+  </div>
+</section>
+
+
   </>
 }

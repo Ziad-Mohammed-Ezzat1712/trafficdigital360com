@@ -33,14 +33,14 @@ export default function PortfolioFaqSection() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <div className="max-w-[1460px] px-6 md:px-16 py-12 mx-auto overflow-hidden">
+    <div className="max-w-[1460px] px-6 md:px-16 md:py-12 mx-auto overflow-hidden">
       <div className="grid md:grid-cols-2 gap-8 items-start">
         {/* Left - Title */}
-        <div className="flex-col justify-start items-start">
-          <h1 className="text-[48px] font-bold bg-gradient-to-r from-white to-cyan-400 bg-clip-text text-transparent">
+        <div className="flex-col justify-start items-start md:items-center">
+          <h1 className="md:text-[48px] text-[32px] text-center md:text-left font-bold bg-gradient-to-r from-white to-cyan-400 bg-clip-text text-transparent">
             Frequently
           </h1>
-          <h1 className="text-[48px] font-bold bg-gradient-to-r from-white to-cyan-400 bg-clip-text text-transparent">
+          <h1 className="md:text-[48px] text-[32px] text-center md:text-left font-bold bg-gradient-to-r from-white to-cyan-400 bg-clip-text text-transparent">
             Asked Question
           </h1>
         </div>
@@ -58,7 +58,7 @@ export default function PortfolioFaqSection() {
                   onClick={() =>
                     setOpenIndex(isOpen ? null : index)
                   }
-                  className={`w-full flex text-[20px] cursor-pointer justify-between items-center p-4 text-left font-semibold transition-colors ${
+                  className={`w-full flex md:text-[20px] text-[16px] cursor-pointer justify-between items-center p-4 text-left font-semibold transition-colors ${
                     isOpen ? "text-white" : "text-[#7C7C7C]"
                   }`}
                 >
@@ -75,7 +75,7 @@ export default function PortfolioFaqSection() {
                     isOpen ? "max-h-96 opacity-100 p-4" : "max-h-0 opacity-0 px-4"
                   }`}
                 >
-                  <p className="text-[20px] text-white">{faq.answer}</p>
+                  <p className="md:text-[20px] text-[16px] text-white">{faq.answer}</p>
                 </div>
               </div>
             );

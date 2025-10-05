@@ -8,9 +8,8 @@ export default function AboutSlider() {
   return (
     <section className="container mx-auto my-12 py-4 bg-white ">
     
-
-{/* الصف الأول */}
-<div className="overflow-hidden ">
+  {/* ================= Desktop AboutSlider ================= */}
+<div className="overflow-hidden  hidden md:block">
   <div className="flex w-[200%] animate-marquee-right">
     {[...firstRow, ...firstRow , ...firstRow].map((src, index) => (
       <div
@@ -23,6 +22,19 @@ export default function AboutSlider() {
   </div>
 </div>
 
+      {/* ================= Mobile AboutSlider ================= */}
+<div className="overflow-hidden  md:hidden block  ">
+  <div className="flex w-[200%] animate-marquee-right">
+    {[...firstRow ].map((src, index) => (
+      <div
+        key={`row1-${index}`}
+        className="w-[70px] h-[70px]  mx-4 rounded-full flex items-center justify-center "
+      >
+        <img src={src} alt={`tool-${index}`} className="w-28 h-28 object-contain" />
+      </div>
+    ))}
+  </div>
+</div>
 
 
     </section>

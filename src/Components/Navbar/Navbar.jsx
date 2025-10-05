@@ -50,9 +50,11 @@ export default function Navbar() {
 
         {/* Right Buttons (Desktop) */}
         <div className="hidden md:flex items-center space-x-4">
-          <button className="bg-[#0f9ba3] flex items-center gap-x-2 cursor-pointer px-6 py-2 rounded-xl hover:bg-cyan-600">
+         <Link to={"/request"}>
+            <button className="bg-[#0f9ba3] flex items-center gap-x-2 cursor-pointer px-6 py-2 rounded-xl hover:bg-cyan-600">
             let’s connect <FiChevronRight className="mt-[1px]" />
           </button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -86,9 +88,11 @@ export default function Navbar() {
             </Link>
           ))}
 
-          <button className="bg-[#0f9ba3] flex items-center gap-x-2 cursor-pointer px-6 py-2 rounded-xl hover:bg-cyan-600">
+          <Link to={"/request"}>
+            <button className="bg-[#0f9ba3] flex items-center gap-x-2 cursor-pointer px-6 py-2 rounded-xl hover:bg-cyan-600">
             let’s connect <FiChevronRight className="mt-[1px]" />
           </button>
+          </Link>
         </motion.div>
       )}
     </>

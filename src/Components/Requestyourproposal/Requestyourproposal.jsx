@@ -17,10 +17,10 @@ export default function Requestyourproposal() {
         backgroundPosition: "center",
       }}
     >
-      <div className="mb-48">
+      <div className="md:mb-48 mb-24">
         <Navbar />
       </div>
-      <h1 className="text-[40px] mb-22 md:text-[60px] xl:text-[70px] font-bold leading-tight  text-center">
+      <h1 className="bg-gradient-to-r from-white to-cyan-400 bg-clip-text text-transparent text-[32px] mb-22 md:text-[60px] xl:text-[70px] font-bold leading-tight  text-center">
         Request your proposal
       </h1>
 

@@ -10,13 +10,13 @@ import AboutSec3 from '../AboutSec3/AboutSec3';
 export default function About() {
   return <>
   <AboutHero/>
- <div className='my-[44px]'>
+ <div className='md:my-[44px]'>
    <HomeSec2/>
  </div>
  <AboutSlider/>
  <AboutSec2/>
  <AboutSec3/>
- <div className=' my-12'>
+ <div className=' my-12  hidden md:block'>
   <AboutSlider/>
  </div>
  <Footer/>

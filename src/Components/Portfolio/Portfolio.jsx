@@ -7,14 +7,18 @@ import PortfolioSec3 from './../PortfolioSec3/PortfolioSec3';
 import PortfolioFaqSection from '../PortfolioFAQSection/PortfolioFAQSection'
 import Footer from './../Footer/Footer';
 import PortfolioSec4 from '../PortfolioSec4/PortfolioSec4'
+import PortfolioSec1Mobile from './../portfolioSec1Mobile/portfolioSec1Mobile';
+import PortfolioSec3Mobile from './../portfolioSec3Mobile/portfolioSec3Mobile';
 
 
 export default function Portfolio() {
   return (
     <>
-    <PortfolioSec1/>
+    <div className=' hidden md:block'><PortfolioSec1/></div>
+    <div className=' md:hidden block'><PortfolioSec1Mobile/></div>
     <PortfolioSec2/>
-    <PortfolioSec3/>
+     <div className=' hidden md:block'><PortfolioSec3/></div>
+    <div className=' md:hidden block'> <PortfolioSec3Mobile/></div>
     <PortfolioFaqSection/>   
     <PortfolioSec4/>   
     <Footer/>

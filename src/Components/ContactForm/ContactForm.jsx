@@ -156,7 +156,7 @@ export default function ContactForm() {
 
   return (
     <div
-      className="rounded-2xl flex items-center justify-center bg-gradient-to-r from-gray-900 to-gray-800 px-4 py-12"
+      className="rounded-2xl overflow-y-scroll md:overflow-y-hidden flex items-center justify-center bg-gradient-to-r from-gray-900 to-gray-800 px-4 py-12"
       style={{
         backgroundImage: `url(${bgForm})`,
         backgroundRepeat: "no-repeat",
@@ -184,8 +184,8 @@ export default function ContactForm() {
         <form className="w-full bg-transparent p-6" onSubmit={handleSubmit}>
           {/* Four Inputs */}
           <div className="flex flex-col gap-6 mb-6">
-            <div className="flex justify-between gap-6 mb-8">
-              <div className="w-1/3">
+            <div className="md:flex justify-between space-y-8 md:space-y-0  gap-6 mb-8">
+              <div className="md:w-1/3">
                 <input
                   type="email"
                   placeholder="Email"
@@ -197,7 +197,7 @@ export default function ContactForm() {
                   <p className="text-[#A3A3A3] text-sm mt-1">{errors.email}</p>
                 )}
               </div>
-              <div className="w-1/3">
+              <div className="md:w-1/3">
                 <input
                   type="text"
                   placeholder="Name"
@@ -211,8 +211,8 @@ export default function ContactForm() {
               </div>
             </div>
 
-            <div className="flex justify-between gap-6 mb-10">
-              <div className="w-1/3">
+            <div className="md:flex justify-between space-y-8 md:space-y-0 gap-6 mb-10">
+              <div className="md:w-1/3">
                 <input
                   type="tel"
                   placeholder="Telephone"
@@ -231,7 +231,7 @@ export default function ContactForm() {
                 placeholder="Company Name"
                 value={company}
                 onChange={(e) => setCompany(e.target.value)}
-                className="w-1/3 px-4 py-3 rounded-lg border border-gray-300 bg-white text-black focus:outline-none"
+                className="md:w-1/3 w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-black focus:outline-none"
               />
             </div>
           </div>
@@ -296,7 +296,7 @@ export default function ContactForm() {
                               animate={{ opacity: 1, x: 0 }}
                               exit={{ opacity: 0, x: 30 }}
                               transition={{ duration: 0.3 }}
-                              className="absolute z-50 top-0 left-full ml-1 bg-white border rounded-lg shadow-lg w-64 p-3 "
+                              className="relative md:absolute  top-0 md:left-full ml-1 bg-white border rounded-lg shadow-lg w-64 p-3 z-50 "
                             >
                               {/* Select All */}
                               <motion.label

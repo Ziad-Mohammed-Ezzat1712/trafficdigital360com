@@ -4,6 +4,7 @@ import ServicesSlider from '../ServicesSlider/ServicesSlider'
 import ServicesGrid from '../ServicesGrid/ServicesGrid'
 
 import Navbar from '../Navbar/Navbar'
+import ServicesGridMobile from './../ServicesGridMobile/ServicesGridMobile';
 
 export default function ServicesSec1() {
   return (
@@ -16,10 +17,10 @@ export default function ServicesSec1() {
         backgroundPosition: "center",
       }}
     >
-   <div className='mb-72'>
+   <div className='md:mb-72 mb-48'>
      <Navbar/>
    </div>
-      <h1 className="text-[50px] md:text-[70px] xl:text-[80px] font-bold leading-tight mb-34">
+      <h1 className="text-[50px] md:text-[70px] xl:text-[80px] font-bold leading-tight md:mb-34 mb-24">
         Our <span className='text-[#13ECF8]'> services</span>
       </h1>
 
@@ -27,9 +28,16 @@ export default function ServicesSec1() {
         <ServicesSlider />
       </div>
       
-      <div className="w-full ">
+      {/* لسطح المكتب */}
+      <div className="hidden md:block w-full">
         <ServicesGrid />
       </div>
+
+      {/* للموبايل */}
+      <div className="block md:hidden w-full">
+        <ServicesGridMobile />
+      </div>
+   
    
     </section>
   )

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaStar } from "react-icons/fa";
-
+import { motion } from "framer-motion";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 export default function ServicesClientReview() {
   // بيانات العملاء
   const testimonials = [
@@ -31,8 +32,47 @@ export default function ServicesClientReview() {
     return () => clearInterval(interval);
   }, [testimonials.length]);
 
-  return (
+  return (<>
+     {/* ---------- العنوان والنصوص ---------- */}
+  <section className="container mx-auto px-6 md:px-36 py-16 overflow-hidden">
+      {/* النص */}
+      <motion.div
+        className="text-left space-y-3"
+        initial={{ opacity: 0, x: -100 }} // من الشمال
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <h2 className="text-[36px] md:text-[48px] text-gray-200">
+          See what our clients say
+        </h2>
+      </motion.div>
+
+      {/* الفقرة والزرار */}
+      <div className="flex flex-col md:flex-row justify-between gap-y-6 md:gap-x-6 mt-6 items-start md:items-center">
+        <motion.p
+          className="text-gray-400 md:w-2/3 text-[20px] md:text-[24px] leading-relaxed"
+          initial={{ opacity: 0, x: -100 }} // من الشمال
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
+        >
+          Discover who we are and how our expertise helps brands grow <br />
+          Learn more about our journey and what makes us different.
+        </motion.p>
+
+        <motion.button
+          className="bg-[#0F9BA3] flex gap-x-3 items-center hover:bg-teal-500 text-white text-[20px] px-12 py-2 rounded-4xl"
+          initial={{ opacity: 0, x: 100 }} // من اليمين
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+        >
+          about us <ArrowForwardIosIcon />
+        </motion.button>
+      </div>
+    </section>
+ 
     <section className="container mx-auto flex flex-col md:flex-row gap-6 py-28 px-28">
+
+       
       {/* Left Card */}
       <div className="relative bg-black rounded-2xl overflow-hidden border border-gray-700 w-full md:w-1/3">
         <img
@@ -114,5 +154,6 @@ export default function ServicesClientReview() {
         </div>
       </div>
     </section>
+     </>
   );
 }

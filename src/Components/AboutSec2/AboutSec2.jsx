@@ -8,7 +8,9 @@ export default function AboutSec2({
   rightText = `From the heart of Cairo, we've delivered impactful campaigns for clients across Egypt, Saudi Arabia, Dubai, and the UAE, building a reputation for excellence, speed, and creativity. Whether you're a startup looking to break into the market or an established brand aiming for the next level — Traffic 360 is your full-circle marketing partner.`,
 }) {
   return (
-    <section className="bg-black container mx-auto text-white py-20">
+    <>
+     {/* ================= Desktop AboutSec2 ================= */}
+    <section className=" hidden md:block bg-black container mx-auto text-white py-20">
       <div className="max-w-8xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           
@@ -38,5 +40,28 @@ export default function AboutSec2({
         </div>
       </div>
     </section>
+     {/* ================= Mobile AboutSec2 ================= */}
+       <section className="md:hidden block bg-black container mx-auto text-white py-20">
+      <div className="max-w-8xl mx-auto px-2">
+        <div className="grid grid-cols-1  gap-12 items-center">
+          
+          
+          <div className="space-y-8">
+            <p className="text-[#1BD1DB] text-center font-bold text-[16px]">{subtitle}</p>
+
+            <h1 className="text-white text-center font-extrabold text-[14px]  leading-tight tracking-tight">
+             We don’t just follow trends we create momentum
+            </h1>
+
+            <p className="text-[#AAAAAA] text-center max-w-2xl  text-[14px]">
+              From the heart of Cairo, we've delivered impactful campaigns for clients across Egypt, Saudi Arabia, Dubai, and the UAE, building a reputation for excellence, speed, and creativity.Whether you're a startup looking to break into the market or an established brand aiming for the next level — Traffic 360 is your full-circle marketing partner.
+            </p>
+          </div>
+
+       
+        </div>
+      </div>
+    </section>
+    </>
   );
 }
