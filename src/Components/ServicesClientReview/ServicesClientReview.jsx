@@ -3,6 +3,11 @@ import { FaStar } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import img from "../../assets/Images/img.webp"
+import img1 from "../../assets/Images/img1.png"
+import img2 from "../../assets/Images/img2.png"
+import img3 from "../../assets/Images/img3.png"
+import img4 from "../../assets/Images/img4.png"
 export default function ServicesClientReview() {
   // بيانات العملاء
   const testimonials = [
@@ -77,7 +82,7 @@ export default function ServicesClientReview() {
       {/* Left Card */}
       <div className="relative bg-black rounded-2xl overflow-hidden border border-gray-700 w-full md:w-1/3">
         <img
-          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c"
+          src={img}
           alt="Team working"
           className="w-full h-80 object-cover"
         />
@@ -85,22 +90,22 @@ export default function ServicesClientReview() {
           {/* Avatars */}
           <div className="flex -space-x-3 mb-3 justify-center">
             <img
-              src="https://randomuser.me/api/portraits/women/68.jpg"
+              src={img1}
               className="w-10 h-10 mb- rounded-full border-2 border-white"
               alt="Client"
             />
             <img
-              src="https://randomuser.me/api/portraits/men/45.jpg"
+               src={img2}
               className="w-10 h-10 rounded-full border-2 border-white"
               alt="Client"
             />
             <img
-              src="https://randomuser.me/api/portraits/men/32.jpg"
+              src={img3}
               className="w-10 h-10 rounded-full border-2 border-white"
               alt="Client"
             />
             <img
-              src="https://randomuser.me/api/portraits/women/19.jpg"
+              src={img4}
               className="w-10 h-10 rounded-full border-2 border-white"
               alt="Client"
             />

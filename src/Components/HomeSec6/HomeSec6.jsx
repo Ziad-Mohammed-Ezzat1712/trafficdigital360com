@@ -1,21 +1,21 @@
 import React from "react";
 import { motion } from "framer-motion";
-import gamal from "../../assets/Images/gamal.jpg";
-import gemy from "../../assets/Images/gemy.jpg";
-import engy from "../../assets/Images/engy.jpg";
-import zezo from "../../assets/Images/zezo.jpg";
-import amr from "../../assets/Images/amr.jpg";
-import adham from "../../assets/Images/adham.jpg";
+import gamal from "../../assets/Images/gamal.webp";
+import gemy from "../../assets/Images/gemy.webp";
+import engy from "../../assets/Images/engy.webp";
+import zezo from "../../assets/Images/zezo.webp";
+import amr from "../../assets/Images/amr.webp";
+import adham from "../../assets/Images/adham.webp";
 import linkedin from "../../assets/Images/linkedin.png";
 
 export default function HomeSec6() {
   const team = [
-    { name: "Gamal Abdelnasser", role: "Graphic Designer",  image: gamal, linkedin: "#" },
-    { name: "Engy Yasser", role: "Content Creator", image: engy, linkedin: "#" },
-    { name: "Ahmed Khaled", role: "Manager", image: adham, linkedin: "#" },
-    { name: "Mohammed Ragab", role: "Account Manager", image: gemy, linkedin: "#" },
-    { name: "Amr ", role: "Video Editor", image: amr, linkedin: "#" },
-    { name: "Ziad Mohammed", role: "Front-End Developer", image: zezo, linkedin: "#" },
+    { name: "Gamal Abdelnasser", role: "Graphic Designer",  image: gamal },
+    { name: "Engy Yasser", role: "Content Creator", image: engy },
+    { name: "Ahmed Khaled", role: "Manager", image: adham },
+    { name: "Mohammed Ragab", role: "Account Manager", image: gemy },
+    { name: "Amr ", role: "Video Editor", image: amr },
+    { name: "Ziad Mohammed", role: "Front-End Developer", image: zezo },
   ];
 
   return (
@@ -51,17 +51,7 @@ export default function HomeSec6() {
               className="w-[360px] h-[445px] object-cover "
             />
 
-            {/* أيقونة لينكدإن */}
-            {member.linkedin && (
-              <a
-                href={member.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute top-3 right-3 bg-opacity-60 rounded-full p-1"
-              >
-                <img src={linkedin} alt="LinkedIn" className="w-12 h-12" />
-              </a>
-            )}
+         
 
             {/* الشريط السفلي فيه الاسم والوظيفة */}
             <div className="absolute bottom-0 left-0 w-full bg-FFFFFF/30 text-white backdrop-blur-sm flex justify-between items-center px-4 py-5 text-sm">

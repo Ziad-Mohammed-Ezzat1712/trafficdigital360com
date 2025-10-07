@@ -2,7 +2,7 @@
 import React from 'react'
 import Navbar from '../Navbar/Navbar'
 import { FaArrowRight, FaFilePdf } from 'react-icons/fa'
-
+import { Link } from 'react-router-dom';
 import pdf from "../../../public/Profile - 360.pdf"
 
 

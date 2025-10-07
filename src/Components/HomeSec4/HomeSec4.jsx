@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion"; // 👈 نضيف framer-motion
-import portfolio1 from "../../assets/Images/portfolio1.jpg";
-import portfolio2 from "../../assets/Images/portfolio2.jpg";
-import portfolio3 from "../../assets/Images/portfolio3.jpg";
-import portfolio4 from "../../assets/Images/portfolio4.jpg";
-import portfolio5 from "../../assets/Images/portfolio5.jpg";
-import portfolio6 from "../../assets/Images/portfolio6.jpg";
-import bg from "../../assets/Images/bg.png"
+import portfolio1 from "../../assets/Images/portfolio1.webp";
+import portfolio2 from "../../assets/Images/portfolio2.webp";
+import portfolio3 from "../../assets/Images/portfolio3.webp";
+import portfolio4 from "../../assets/Images/portfolio4.webp";
+import portfolio5 from "../../assets/Images/portfolio5.webp";
+import portfolio6 from "../../assets/Images/portfolio6.webp";
+
 const projects = [
   { id: 1, title: "LIQUID SPLASH", pragraph: "TTL Designe", img: portfolio1 },
   { id: 2, title: "LIQUID ROZETTA", pragraph: "TTL Designe", img: portfolio2 },

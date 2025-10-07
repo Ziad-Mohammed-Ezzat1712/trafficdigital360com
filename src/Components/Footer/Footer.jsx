@@ -1,7 +1,7 @@
 import React from "react";
-import bgFooter from "../../assets/Images/bgFooter.png";
+import bgFooter from "../../assets/Images/bgFooter.webp";
 import { FaFacebookF, FaTwitter, FaInstagram, FaGithub } from "react-icons/fa";
-import logo from "/public/logo.png"
+import logo from "/public/logo.webp"
 
 export default function Footer() {
   return (

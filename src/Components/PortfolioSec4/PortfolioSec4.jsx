@@ -2,6 +2,24 @@ import React from 'react';
 import { FaStar } from 'react-icons/fa';
 
 export default function PortfolioSec4() {
+  const testimonials = [
+    {
+      text: "Working with Traffic 360 completely transformed our business. The team handled everything from social media to ad campaigns with creativity and precision. Since partnering with them, we’ve seen a remarkable increase in engagement and sales.",
+      name: "Mohamed Hassan",
+      company: "Puff staff",
+    },
+    {
+      text: "Their design team is top-notch! They created a brand identity that perfectly reflects who we are. Everything was smooth from start to finish, and they delivered beyond our expectations.",
+      name: "Sara El-Masry",
+      company: "Elite Cotton",
+    },
+    {
+      text: "We are very happy with the marketing services provided. The team managed our social media pages professionally, designed creative content, and ran campaigns that helped us reach new clients. Highly recommended!",
+      name: "Dr. Ahmed",
+      company: "Le Rave Clinic",
+    },
+  ];
+
   return (
     <section className="bg-black text-white py-16 px-4 text-center">
       <h1 className="md:text-[60px] text-[32px] font-bold mb-12 flex justify-center items-center gap-4 bg-gradient-to-r from-white to-cyan-400 bg-clip-text text-transparent">
@@ -9,21 +27,19 @@ export default function PortfolioSec4() {
       </h1>
 
       <div className="flex flex-col md:flex-row justify-center items-stretch gap-6 max-w-7xl mx-auto">
-        {/* Reusable Card */}
-        {[1, 2, 3].map((_, index) => (
+        {testimonials.map((item, index) => (
           <div
             key={index}
-            className="bg-[#1D1D1D] border border-cyan-400 text-white text-left rounded-2xl p-6 flex-1 shadow-md transition-all duration-300 transform h-[400px] overflow-hidden flex flex-col justify-between"
+            className="bg-[#1D1D1D] border border-cyan-400 text-white text-left rounded-2xl p-6 flex-1 shadow-md transition-all duration-300 transform hover:scale-105 h-[400px] overflow-hidden flex flex-col justify-between"
           >
             <p className="md:text-[20px] text-[16px] leading-relaxed mb-6">
-              We are very happy with the marketing services provided. The team managed our social media pages professionally, designed creative content, and ran campaigns that helped us reach new patients. Everything was delivered on time and with great attention to detail. We highly recommend their work.
+              {item.text}
             </p>
 
-            {/* Footer section: name + stars */}
             <div className="flex justify-between items-center mt-auto">
               <div>
-                <p className="font-bold text-[20px]">Clinic</p>
-                <p className="text-gray-400 text-[16px]">Le rave</p>
+                <p className="font-bold text-[20px]">{item.name}</p>
+                <p className="text-gray-400 text-[16px]">{item.company}</p>
               </div>
               <div className="flex gap-x-2 text-[#F4B400]">
                 {[...Array(5)].map((_, i) => (

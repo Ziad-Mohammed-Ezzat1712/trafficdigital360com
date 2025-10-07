@@ -1,5 +1,5 @@
 import React from 'react'
-import bgAbout from "../../assets/Images/bgAbout.png";
+import bgAbout from "../../assets/Images/bgAbout.webp";
 import Navbar from './../Navbar/Navbar';
 import { motion } from "framer-motion";
 import { FaArrowRight, FaHeart } from "react-icons/fa"; 

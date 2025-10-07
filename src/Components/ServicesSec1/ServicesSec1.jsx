@@ -1,10 +1,11 @@
 import React from 'react'
-import bgService from "../../assets/Images/bgService.PNG"
+import bgService from "../../assets/Images/bgService.webp"
 import ServicesSlider from '../ServicesSlider/ServicesSlider'
 import ServicesGrid from '../ServicesGrid/ServicesGrid'
 import { Link } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar'
 import ServicesGridMobile from './../ServicesGridMobile/ServicesGridMobile';
+import AnimatedText from "../AnimatedText/AnimatedText";
 
 export default function ServicesSec1() {
   return (
@@ -21,13 +22,13 @@ export default function ServicesSec1() {
      <Navbar/>
    </div>
       <h1 className="text-[50px] md:text-[70px] xl:text-[80px] font-bold leading-tight md:mb-34 mb-24">
-        Our <span className='text-[#13ECF8]'> services</span>
+      
+        <AnimatedText
+        text=" Our services"
+        className="bg-gradient-to-r from-white to-cyan-400 bg-clip-text text-transparent font-bold"
+      />
       </h1>
 
-      <div className="w-full ">
-        <ServicesSlider />
-      </div>
-      
       {/* لسطح المكتب */}
       <div className="hidden md:block w-full">
         <ServicesGrid />

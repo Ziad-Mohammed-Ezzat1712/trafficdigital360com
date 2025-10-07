@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://traffic360eg.com/sitemap.xml
+
+# يمنع فهرسة     الملفات أو المسارات الخاصة
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /private/

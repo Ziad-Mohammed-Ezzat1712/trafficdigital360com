@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
-import teamImage from "../../assets/Images/herosec.png";
-import Group from "../../assets/Images/Group.png";
+import teamImage from "../../assets/Images/herosec.webp";
+import Group from "../../assets/Images/Group.webp";
 import Navbar from "../Navbar/Navbar";
-import heroBG from "../../assets/Images/HeroBG.png";
-import heroRightBG from "../../assets/Images/HeroRightBG.png";
+import heroBG from "../../assets/Images/HeroBG.webp";
+import heroRightBG from "../../assets/Images/HeroRightBG.webp";
 import HomeSec2 from './../HomeSec2/HomeSec2';
 
 export default function Hero() {

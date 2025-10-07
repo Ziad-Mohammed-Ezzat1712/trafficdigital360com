@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from "framer-motion";
-import logo from "/public/logo.png";
+import logo from "/public/logo.webp";
 import { FiChevronRight, FiMenu, FiX } from "react-icons/fi";
 import { Link, useLocation } from 'react-router-dom';
 

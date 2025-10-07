@@ -1,7 +1,7 @@
 import React from "react";
 import { FaArrowRight, FaHeart } from "react-icons/fa";
 import { motion } from "framer-motion";
-import bgVector from "../../assets/Images/bgVector.png";
+import bgVector from "../../assets/Images/bgVector.webp";
 import { Link } from 'react-router-dom';
 
 export default function HomeSec7() {

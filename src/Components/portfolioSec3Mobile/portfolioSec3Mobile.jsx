@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 // كل عمود ليه الصور الخاصة بيه
