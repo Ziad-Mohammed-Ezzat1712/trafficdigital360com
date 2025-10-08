@@ -16,6 +16,7 @@ export default function ServicesClientReviewMobile() {
       text: "Professional, reliable, and results-driven. Traffic 360 boosted our online presence more than we expected.",
       name: "Omar Khaled",
     },
+    
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

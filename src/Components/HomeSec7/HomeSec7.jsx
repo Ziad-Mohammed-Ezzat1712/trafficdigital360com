@@ -1,5 +1,6 @@
 import React from "react";
-import { FaArrowRight, FaHeart } from "react-icons/fa";
+import {  FaHeart } from "react-icons/fa";
+import { FiChevronRight } from "react-icons/fi";
 import { motion } from "framer-motion";
 import bgVector from "../../assets/Images/bgVector.webp";
 import { Link } from 'react-router-dom';
@@ -54,7 +55,7 @@ export default function HomeSec7() {
             </h3>
              <Link to={"/request"}>
             <button className="flex items-center cursor-pointer text-[14px] gap-2 bg-[#0F9BA3] hover:bg-[#0c898f] text-white px-4 py-2 rounded-xl transition">
-              let’s connect <FaArrowRight />
+              let’s connect <FiChevronRight />
             </button>
          </Link>
           </div>
@@ -111,7 +112,7 @@ export default function HomeSec7() {
             </h3>
              <Link to={"/request"}>
             <button className="flex items-center cursor-pointer text-[16px] gap-2 bg-[#0F9BA3] hover:bg-[#0c898f] text-white px-6 py-3 rounded-xl transition">
-              let’s connect <FaArrowRight />
+              let’s connect <FiChevronRight />
             </button>
           </Link>
           </motion.div>
@@ -162,7 +163,7 @@ export default function HomeSec7() {
             </h3>
              <Link to={"/request"}>
             <button className="flex items-center cursor-pointer text-[14px] gap-2 bg-[#0F9BA3] hover:bg-[#0c898f] text-white px-6 py-1 rounded-xl transition">
-              let’s connect <FaArrowRight />
+              let’s connect <FiChevronRight />
             </button>
              </Link>
           </div>
@@ -219,7 +220,7 @@ export default function HomeSec7() {
             </h3>
              <Link to={"/request"}>
             <button className="flex items-center cursor-pointer text-[16px] gap-2 bg-[#0F9BA3] hover:bg-[#0c898f] text-white px-6 py-3 rounded-xl transition">
-              let’s connect <FaArrowRight />
+              let’s connect <FiChevronRight />
             </button>
              </Link>
           </motion.div>

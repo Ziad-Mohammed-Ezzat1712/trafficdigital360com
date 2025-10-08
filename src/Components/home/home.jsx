@@ -65,7 +65,8 @@ export default function Home() {
 <HomeSec5/>
 <HomeSec6/>
 <HomeSec7/>
-<Footer/>
+
 </div>
+<Footer/>
   </>
 }

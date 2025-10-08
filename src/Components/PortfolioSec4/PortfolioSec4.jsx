@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import { FaStar } from 'react-icons/fa';
 
 export default function PortfolioSec4() {
+
   const testimonials = [
     {
       text: "Working with Traffic 360 completely transformed our business. The team handled everything from social media to ad campaigns with creativity and precision. Since partnering with them, we’ve seen a remarkable increase in engagement and sales.",
@@ -18,8 +19,18 @@ export default function PortfolioSec4() {
       name: "Dr. Ahmed",
       company: "Le Rave Clinic",
     },
+ 
   ];
-
+  const [currentIndex, setCurrentIndex] = useState(0);
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setCurrentIndex((prevIndex) =>
+          prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+        );
+      }, 3000);
+      return () => clearInterval(interval);
+    }, [testimonials.length]);
+  
   return (
     <section className="bg-black text-white py-16 px-4 text-center">
       <h1 className="md:text-[60px] text-[32px] font-bold mb-12 flex justify-center items-center gap-4 bg-gradient-to-r from-white to-cyan-400 bg-clip-text text-transparent">

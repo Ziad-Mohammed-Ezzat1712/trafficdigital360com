@@ -28,15 +28,13 @@ export default function Footer() {
             <a href="#" className="hover:text-[#1DA1F2]">
               <FaTwitter />
             </a>
-            <a href="#" className="hover:text-[#1877F2]">
+            <a href="https://www.facebook.com/profile.php?id=61578198429753" className="hover:text-[#1877F2]">
               <FaFacebookF />
             </a>
-            <a href="#" className="hover:text-pink-500">
+            <a href="https://www.instagram.com/traffic360_digitalhub/" className="hover:text-pink-500">
               <FaInstagram />
             </a>
-            <a href="#" className="hover:text-gray-400">
-              <FaGithub />
-            </a>
+          
           </div>
         </div>
 
@@ -44,10 +42,11 @@ export default function Footer() {
         <div>
           <h3 className="text-[13px]  uppercase text-[#A1A1AA] font-semibold mb-6">Company</h3>
           <ul className="space-y-4 text-white text-[16px]">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Works</a></li>
-            <li><a href="#">Career</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/request">Request Your Proposal</a></li>
           </ul>
         </div>
 
@@ -55,9 +54,15 @@ export default function Footer() {
         <div>
           <h3 className="text-[13px]  uppercase text-[#A1A1AA] font-semibold mb-6">Help</h3>
           <ul className="space-y-4 text-white text-[16px]">
-            <li><a href="#">Customer Support</a></li>
-            <li><a href="#">Delivery Details</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
+         <li>   <a href="https://www.facebook.com/profile.php?id=61578198429753" className="hover:text-[#1877F2] flex gap-1 items-center">
+              <FaFacebookF />Facebook
+            </a></li>
+            <li> <a href="https://www.instagram.com/traffic360_digitalhub/" className="hover:text-pink-500 flex gap-1 items-center ">
+              <FaInstagram /> Instagram
+            </a></li>
+            <li>  <a href="#" className="hover:text-[#1DA1F2] flex gap-1 items-center">
+              <FaTwitter />Twitter
+            </a></li>
             <li><a href="#">Privacy Policy</a></li>
           </ul>
         </div>
@@ -96,17 +101,14 @@ export default function Footer() {
             sint. Velit officia consequat duis enim velit mollit.
           </p>
           <div className="flex items-center gap-4 text-xl">
-            <a href="#" className="hover:text-[#1DA1F2]">
+            <a href="#" className="hover:text-[#1DA1F2] ">
               <FaTwitter />
             </a>
-            <a href="#" className="hover:text-[#1877F2]">
+            <a href="https://www.facebook.com/profile.php?id=61578198429753" className="hover:text-[#1877F2] ">
               <FaFacebookF />
             </a>
-            <a href="#" className="hover:text-pink-500">
+            <a href="https://www.instagram.com/traffic360_digitalhub/" className="hover:text-pink-500">
               <FaInstagram />
-            </a>
-            <a href="#" className="hover:text-gray-400">
-              <FaGithub />
             </a>
           </div>
         </div>
@@ -115,20 +117,27 @@ export default function Footer() {
         <div>
           <h3 className="text-[13px]  uppercase text-[#A1A1AA] font-semibold mb-6">Company</h3>
           <ul className="space-y-4 text-white text-[16px]">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Works</a></li>
-            <li><a href="#">Career</a></li>
+               <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/request">Request Your Proposal</a></li>
           </ul>
         </div>
 
         {/* Help */}
         <div>
-          <h3 className="text-[13px]  uppercase text-[#A1A1AA] font-semibold mb-6">Help</h3>
+          <h3 className="text-[13px]  uppercase text-[#A1A1AA] font-semibold mb-6">Social</h3>
           <ul className="space-y-4 text-white text-[16px]">
-            <li><a href="#">Customer Support</a></li>
-            <li><a href="#">Delivery Details</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
+            <li>   <a href="https://www.facebook.com/profile.php?id=61578198429753" className="hover:text-[#1877F2] flex gap-1 items-center">
+              <FaFacebookF />Facebook
+            </a></li>
+             <li> <a href="https://www.instagram.com/traffic360_digitalhub/" className="hover:text-pink-500 flex gap-1 items-center ">
+              <FaInstagram /> Instagram
+            </a></li>
+            <li> <a href="#" className="hover:text-[#1DA1F2] flex gap-1 items-center ">
+              <FaTwitter />Twitter
+            </a></li>
             <li><a href="#">Privacy Policy</a></li>
           </ul>
         </div>

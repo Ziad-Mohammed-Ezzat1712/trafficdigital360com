@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar'
 import { FaArrowRight, FaFilePdf } from 'react-icons/fa'
+import { FiChevronRight } from 'react-icons/fi'
 import pdf from "../../../public/Profile - 360.pdf"
 
 export default function PortfolioSec1() {
@@ -14,7 +15,7 @@ export default function PortfolioSec1() {
         {/* زر Let’s connect */}
      <Link to={"/request"} className='z-20'>
         <button className="bg-[#27BBC3] cursor-pointer hover:bg-[#1e949a] transition px-4 py-2 rounded-md z-20 text-white   font-semibold flex items-center gap-2">
-          let’s connect <FaArrowRight />
+          let’s connect <FiChevronRight />
         </button>
  </Link>
         {/* العنوان الرئيسي */}

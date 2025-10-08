@@ -3,7 +3,7 @@ import bgRequest from "../../assets/Images/bgRequest.webp";
 import Navbar from "../Navbar/Navbar";
 import ContactForm from "../ContactForm/ContactForm";
  import {  Title, Meta, Link } from "react-head";
-
+import AnimatedText from "../AnimatedText/AnimatedText";
 export default function Requestyourproposal() {
 
 
@@ -68,9 +68,14 @@ export default function Requestyourproposal() {
       <div className="md:mb-48 mb-24">
         <Navbar />
       </div>
-      <h1 className="bg-gradient-to-r from-white to-cyan-400 bg-clip-text text-transparent text-[32px] mb-22 md:text-[60px] xl:text-[70px] font-bold leading-tight  text-center">
-        Request your proposal
+        <h1 className="text-[36px] md:text-[70px] xl:text-[80px] font-bold leading-tight md:mb-34 mb-24">
+      
+        <AnimatedText
+        text=" Request your proposal"
+        className="bg-gradient-to-r from-white to-cyan-400 bg-clip-text text-transparent font-bold"
+      />
       </h1>
+  
 
      <div className=" w-full max-w-7xl mb-36  ">
       <ContactForm/>
