@@ -12,7 +12,7 @@ export default function HomeSec2() {
   <h2 className='text-2xl font-semibold '>Fill Out The Form Below And One of Our Team Will</h2>
   <h2 className='text-2xl font-semibold '>Contact You Personally</h2>
    <Link to={"/request"}>
-   <button className="bg-[#0f9ba3] mx-auto text-xl text-white flex items-center gap-x-2 cursor-pointer  px-6 py-2 rounded-xl hover:bg-cyan-600">
+   <button className="bg-[#086368] mx-auto text-xl text-white flex items-center gap-x-2 cursor-pointer  px-6 py-2 rounded-xl hover:bg-[#005F6B]">
                 let’s connect <FiChevronRight className='mt-[1px]'/>
               </button>
               </Link>
@@ -27,7 +27,7 @@ export default function HomeSec2() {
   <h2 className='md:text-2xl text-[16px] font-semibold '>Fill Out The Form Below And One of Our Team </h2>
   <h2 className='md:text-2xl text-[16px] font-semibold '>Will of Our Team Will Contact You Personally Contact You Personally</h2>
   <Link to={"/request"}>
-   <button className="bg-[#0f9ba3] mx-auto text-xl text-white flex items-center gap-x-2 cursor-pointer  px-6 py-2 rounded-xl hover:bg-cyan-600">
+   <button className="bg-[#086368] mx-auto text-xl text-white flex items-center gap-x-2 cursor-pointer  px-6 py-2 rounded-xl hover:bg-[#005F6B]">
                 let’s connect <FiChevronRight className='mt-[1px]'/>
               </button>
               </Link>

@@ -131,7 +131,7 @@ export default function ServicesGrid() {
       <div className="flex justify-center my-12">
         <div className="md:flex items-center space-x-4">
            <Link to={"/request"}>
-          <button className="bg-[#0f9ba3] flex items-center gap-x-2 cursor-pointer px-6 py-2 rounded-xl hover:bg-cyan-600">
+          <button className="bg-[#086368] flex items-center gap-x-2 cursor-pointer px-6 py-2 rounded-xl hover:bg-[#005F6B]">
             let’s connect <FiChevronRight className="mt-[1px]" />
           </button>
           </Link>

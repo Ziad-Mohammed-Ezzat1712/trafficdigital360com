@@ -6,13 +6,13 @@ import engy from "../../assets/Images/engy.webp";
 import zezo from "../../assets/Images/zezo.webp";
 import amr from "../../assets/Images/amr.webp";
 import adham from "../../assets/Images/adham.webp";
-import linkedin from "../../assets/Images/linkedin.png";
+
 
 export default function HomeSec6() {
   const team = [
     { name: "Gamal Abdelnasser", role: "Graphic Designer",  image: gamal },
     { name: "Engy Yasser", role: "Content Creator", image: engy },
-    { name: "Ahmed Khaled", role: "Manager", image: adham },
+    { name: "Adham Karam", role: "Studio Manager", image: adham },
     { name: "Mohammed Ragab", role: "Account Manager", image: gemy },
     { name: "Amr ", role: "Video Editor", image: amr },
     { name: "Ziad Mohammed", role: "Front-End Developer", image: zezo },

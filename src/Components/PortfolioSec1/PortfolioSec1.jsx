@@ -14,7 +14,7 @@ export default function PortfolioSec1() {
        
         {/* زر Let’s connect */}
      <Link to={"/request"} className='z-20'>
-        <button className="bg-[#27BBC3] cursor-pointer hover:bg-[#1e949a] transition px-4 py-2 rounded-md z-20 text-white   font-semibold flex items-center gap-2">
+        <button className="bg-[#086368]  cursor-pointer hover:bg-[#005F6B] transition px-4 py-2 rounded-md z-20 text-white   font-semibold flex items-center gap-2">
           let’s connect <FiChevronRight />
         </button>
  </Link>
@@ -30,7 +30,7 @@ export default function PortfolioSec1() {
         <a
           href={pdf} // غيّر المسار حسب ملفك
           download
-          className="mt-4 border mb-20 z-20 border-[#27BBC3] px-6 py-2 rounded-md text-white flex items-center gap-2 hover:bg-[#27BBC3] hover:text-black transition"
+          className="mt-4 border mb-20 z-20 border-[#27BBC3] px-6 py-2 rounded-md text-white flex items-center gap-2 hover:bg-[#005F6B]  transition"
         >
           Download <FaFilePdf className="text-xl" />
         </a>

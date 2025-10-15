@@ -52,7 +52,7 @@ export default function HomeSec3() {
         >
           <div className="flex items-center space-x-6 bg-black text-white p-6 rounded-lg">
             {/* الدائرة */}
-            <div className="w-48 h-48 bg-[#0F9BA3] rounded-full flex items-center justify-center">
+            <div className="w-48 h-48 bg-[#086368] rounded-full flex items-center justify-center">
               <span className="text-7xl font-bold">3+</span>
             </div>
 
@@ -115,7 +115,7 @@ export default function HomeSec3() {
           viewport={{ once: true, amount: 0.3 }}
           className="flex  items-center justify-between gap-x-16 text-center space-y-4"
         >
-          <div className="w-24 h-24 px-6 bg-[#0F9BA3] rounded-full flex items-center ">
+          <div className="w-24 h-24 px-6 bg-[#086368] rounded-full flex items-center ">
             <span className="text-4xl font-bold">3+</span>
           </div>
         

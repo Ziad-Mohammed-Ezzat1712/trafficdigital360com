@@ -54,7 +54,7 @@ export default function HomeSec7() {
               Ready to work with us?
             </h3>
              <Link to={"/request"}>
-            <button className="flex items-center cursor-pointer text-[14px] gap-2 bg-[#0F9BA3] hover:bg-[#0c898f] text-white px-4 py-2 rounded-xl transition">
+            <button className="flex items-center cursor-pointer text-[14px] gap-2 bg-[#086368] hover:bg-[#005F6B] text-white px-4 py-2 rounded-xl transition">
               let’s connect <FiChevronRight />
             </button>
          </Link>
@@ -111,7 +111,7 @@ export default function HomeSec7() {
               Ready to work with us?
             </h3>
              <Link to={"/request"}>
-            <button className="flex items-center cursor-pointer text-[16px] gap-2 bg-[#0F9BA3] hover:bg-[#0c898f] text-white px-6 py-3 rounded-xl transition">
+            <button className="flex items-center cursor-pointer text-[16px] gap-2 bg-[#086368] hover:bg-[#005F6B] text-white px-6 py-3 rounded-xl transition">
               let’s connect <FiChevronRight />
             </button>
           </Link>
@@ -162,7 +162,7 @@ export default function HomeSec7() {
               Ready to work with us?
             </h3>
              <Link to={"/request"}>
-            <button className="flex items-center cursor-pointer text-[14px] gap-2 bg-[#0F9BA3] hover:bg-[#0c898f] text-white px-6 py-1 rounded-xl transition">
+            <button className="flex items-center cursor-pointer text-[14px] gap-2 bg-[#086368] hover:bg-[#005F6B] text-white px-6 py-1 rounded-xl transition">
               let’s connect <FiChevronRight />
             </button>
              </Link>
@@ -219,7 +219,7 @@ export default function HomeSec7() {
               Ready to work with us?
             </h3>
              <Link to={"/request"}>
-            <button className="flex items-center cursor-pointer text-[16px] gap-2 bg-[#0F9BA3] hover:bg-[#0c898f] text-white px-6 py-3 rounded-xl transition">
+            <button className="flex items-center cursor-pointer text-[16px] gap-2 bg-[#086368] hover:bg-[#005F6B] text-white px-6 py-3 rounded-xl transition">
               let’s connect <FiChevronRight />
             </button>
              </Link>

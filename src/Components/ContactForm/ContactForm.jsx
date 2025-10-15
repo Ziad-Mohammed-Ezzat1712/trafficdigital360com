@@ -363,7 +363,7 @@ export default function ContactForm() {
           <div className="flex justify-center gap-3">
             <button
               type="submit"
-              className="bg-[#0F9BA3] flex gap-2 text-white px-8 cursor-pointer py-2 rounded-lg hover:bg-[#0b777d] transition"
+              className="bg-[#086368] flex gap-2 text-white px-8 cursor-pointer py-2 rounded-lg hover:bg-[#005F6B]  transition"
             >
               <span className="text-[16px]">Send</span>
               <div className="text-md mt-">

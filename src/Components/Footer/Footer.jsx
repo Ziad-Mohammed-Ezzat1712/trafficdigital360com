@@ -1,6 +1,7 @@
 import React from "react";
 import bgFooter from "../../assets/Images/bgFooter.webp";
-import { FaFacebookF, FaTwitter, FaInstagram, FaGithub } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaInstagram, FaGithub, FaSnapchat, FaLinkedinIn } from "react-icons/fa";  
+
 import logo from "/public/logo.webp"
 
 export default function Footer() {
@@ -25,15 +26,22 @@ export default function Footer() {
             sint. Velit officia consequat duis enim velit mollit.
           </p>
           <div className="flex items-center gap-4 text-xl">
-            <a href="#" className="hover:text-[#1DA1F2]">
+            <a href="https://x.com/Traffic360eg" className="hover:text-[#1DA1F2]" target="_blank">
               <FaTwitter />
             </a>
-            <a href="https://www.facebook.com/profile.php?id=61578198429753" className="hover:text-[#1877F2]">
+            <a href="https://www.facebook.com/profile.php?id=61578198429753" className="hover:text-[#1877F2]" target="_blank">
               <FaFacebookF />
             </a>
-            <a href="https://www.instagram.com/traffic360_digitalhub/" className="hover:text-pink-500">
+            <a href="https://www.instagram.com/traffic360_digitalhub/" className="hover:text-pink-500" target="_blank">
               <FaInstagram />
             </a>
+              <a href="https://www.snapchat.com/add/traffic_digital?share_id=FaDHGIo1iKQ&locale=ar-EG" className="hover:text-[#efeb0f] flex gap-1 items-center " target="_blank">
+              <FaSnapchat />
+            </a>
+                <a href="https://www.linkedin.com/in/traffic-the-digital-hub-8560b636b/" className="hover:text-[#1693d6] flex gap-1 items-center " target="_blank">
+              <FaLinkedinIn />
+            </a>
+            
           
           </div>
         </div>
@@ -54,15 +62,22 @@ export default function Footer() {
         <div>
           <h3 className="text-[13px]  uppercase text-[#A1A1AA] font-semibold mb-6">Help</h3>
           <ul className="space-y-4 text-white text-[16px]">
-         <li>   <a href="https://www.facebook.com/profile.php?id=61578198429753" className="hover:text-[#1877F2] flex gap-1 items-center">
+         <li>   <a href="https://www.facebook.com/profile.php?id=61578198429753" className="hover:text-[#1877F2] flex gap-1 items-center" target="_blank">
               <FaFacebookF />Facebook
             </a></li>
-            <li> <a href="https://www.instagram.com/traffic360_digitalhub/" className="hover:text-pink-500 flex gap-1 items-center ">
+            <li> <a href="https://www.instagram.com/traffic360_digitalhub/" className="hover:text-pink-500 flex gap-1 items-center " target="_blank">
               <FaInstagram /> Instagram
             </a></li>
-            <li>  <a href="#" className="hover:text-[#1DA1F2] flex gap-1 items-center">
+            <li>  <a href="https://x.com/Traffic360eg" className="hover:text-[#1DA1F2] flex gap-1 items-center" target="_blank">
               <FaTwitter />Twitter
             </a></li>
+               <li> <a href="https://www.snapchat.com/add/traffic_digital?share_id=FaDHGIo1iKQ&locale=ar-EG" className="hover:text-[#efeb0f] flex gap-1 items-center " target="_blank">
+              <FaSnapchat />Snapchat
+            </a></li>
+               <li> <a href="https://www.linkedin.com/in/traffic-the-digital-hub-8560b636b/" className="hover:text-[#1693d6] flex gap-1 items-center " target="_blank">
+              <FaLinkedinIn />Linkedin
+            </a></li>
+            
             <li><a href="#">Privacy Policy</a></li>
           </ul>
         </div>
@@ -78,7 +93,7 @@ export default function Footer() {
             />
             <button
               type="submit"
-              className="w-32 cursor-pointer bg-[#0F9BA3] hover:bg-[#0b878e] text-white px-4 py-3 rounded-lg transition"
+              className="w-32 cursor-pointer bg-[#086368] hover:bg-[#005F6B] text-white px-4 py-3 rounded-lg transition"
             >
               Subscribe
             </button>
@@ -101,15 +116,22 @@ export default function Footer() {
             sint. Velit officia consequat duis enim velit mollit.
           </p>
           <div className="flex items-center gap-4 text-xl">
-            <a href="#" className="hover:text-[#1DA1F2] ">
+            <a href="https://x.com/Traffic360eg" className="hover:text-[#1DA1F2] " target="_blank">
               <FaTwitter />
             </a>
-            <a href="https://www.facebook.com/profile.php?id=61578198429753" className="hover:text-[#1877F2] ">
+            <a href="https://www.facebook.com/profile.php?id=61578198429753" className="hover:text-[#1877F2]" target="_blank">
               <FaFacebookF />
             </a>
-            <a href="https://www.instagram.com/traffic360_digitalhub/" className="hover:text-pink-500">
+            <a href="https://www.instagram.com/traffic360_digitalhub/" className="hover:text-pink-500" target="_blank">
               <FaInstagram />
             </a>
+               <a href="https://www.snapchat.com/add/traffic_digital?share_id=FaDHGIo1iKQ&locale=ar-EG" className="hover:text-[#efeb0f] flex gap-1 items-center " target="_blank">
+              <FaSnapchat />
+            </a>
+               <a href="https://www.linkedin.com/in/traffic-the-digital-hub-8560b636b/" className="hover:text-[#1693d6] flex gap-1 items-center " target="_blank">
+              <FaLinkedinIn />
+            </a>
+            
           </div>
         </div>
 
@@ -129,15 +151,19 @@ export default function Footer() {
         <div>
           <h3 className="text-[13px]  uppercase text-[#A1A1AA] font-semibold mb-6">Social</h3>
           <ul className="space-y-4 text-white text-[16px]">
-            <li>   <a href="https://www.facebook.com/profile.php?id=61578198429753" className="hover:text-[#1877F2] flex gap-1 items-center">
+            <li>   <a href="https://www.facebook.com/profile.php?id=61578198429753" className="hover:text-[#1877F2] flex gap-1 items-center" target="_blank"> 
               <FaFacebookF />Facebook
             </a></li>
-             <li> <a href="https://www.instagram.com/traffic360_digitalhub/" className="hover:text-pink-500 flex gap-1 items-center ">
+             <li> <a href="https://www.instagram.com/traffic360_digitalhub/" className="hover:text-pink-500 flex gap-1 items-center " target="_blank">
               <FaInstagram /> Instagram
             </a></li>
-            <li> <a href="#" className="hover:text-[#1DA1F2] flex gap-1 items-center ">
+            <li> <a href="https://x.com/Traffic360eg" className="hover:text-[#1DA1F2] flex gap-1 items-center " target="_blank">
               <FaTwitter />Twitter
             </a></li>
+             <li> <a href="https://www.snapchat.com/add/traffic_digital?share_id=FaDHGIo1iKQ&locale=ar-EG" className="hover:text-[#efeb0f] flex gap-1 items-center " target="_blank">
+              <FaSnapchat />Snapchat
+            </a></li>
+        
             <li><a href="#">Privacy Policy</a></li>
           </ul>
         </div>
@@ -153,7 +179,7 @@ export default function Footer() {
             />
             <button
               type="submit"
-              className="w-32 cursor-pointer bg-[#0F9BA3] hover:bg-[#0b878e] text-white px-4 py-3 rounded-lg transition"
+              className="w-32 cursor-pointer bg-[#086368] hover:bg-[#005F6B] text-white px-4 py-3 rounded-lg transition"
             >
               Subscribe
             </button>
