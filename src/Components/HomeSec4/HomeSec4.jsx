@@ -8,10 +8,7 @@ import portfolio5 from "../../assets/Images/portfolio5.webp";
 import portfolio6 from "../../assets/Images/portfolio6.webp";
 import portfolio7 from "../../assets/Images/shif1.jpg";
 import portfolio8 from "../../assets/Images/shif2.jpg";
-import portfolio9 from "../../assets/Images/shif3.jpg";
 import portfolio10 from "../../assets/Images/shif4.jpg";
-import portfolio11 from "../../assets/Images/shif5.jpg";
-import portfolio12 from "../../assets/Images/shif6.jpg";
 import portfolio13 from "../../assets/Images/elitecotton1.jpg";
 import portfolio14 from "../../assets/Images/elitecotton2.jpg";
 import portfolio15 from "../../assets/Images/elitecotton3.jpg";
@@ -20,6 +17,11 @@ import portfolio17 from "../../assets/Images/col23.png";
 import portfolio18 from "../../assets/Images/elitecotton6.jpg";
 import portfolio19 from "../../assets/Images/splash.jpg";
 import portfolio20 from "../../assets/Images/col27.png";
+import web1 from "../../assets/Images/web1.png";
+import web2 from "../../assets/Images/web2.png";
+import web3 from "../../assets/Images/web3.png";
+import web4 from "../../assets/Images/web4.jpg";
+import web5 from "../../assets/Images/web5.png";
 
 const projects = [
   { id: 1, title: "LIQUID SPLASH", pragraph: "TTL Design", category: "TTL", img: portfolio1 },
@@ -38,8 +40,12 @@ const projects = [
   { id: 14, title: "Rozetta", pragraph: "TTL Design", category: "TTL", img: portfolio6 },
   { id: 15, title: "Splash", pragraph: "TTL Design", category: "TTL", img: portfolio5 },
   { id: 16, title: "Web Elite", pragraph: "Web Design", category: "TTL", img: portfolio15 },
-  { id: 17, title: "Web Clinic", pragraph: "Web Design", category: "Web", img: portfolio9 },
-  { id: 18, title: "TTL Monkey", pragraph: "TTL Design", category: "TTL", img: portfolio10 },
+  { id: 17, title: "Burgu", pragraph: "Web Design", category: "Web", img: web1 },
+  { id: 18, title: "Web Clinic", pragraph: "Web Design", category: "Web", img: web2 },
+  { id: 19, title: "Web Clinic", pragraph: "Web Design", category: "Web", img: web3 },
+  { id: 20, title: "Web Clinic", pragraph: "Web Design", category: "Web", img: web4 },
+  { id: 21, title: "Web Clinic", pragraph: "Web Design", category: "Web", img: web5 },
+  { id: 22, title: "TTL Monkey", pragraph: "TTL Design", category: "TTL", img: portfolio10 },
 ];
 
 export default function HomeSec4() {
@@ -118,6 +124,14 @@ export default function HomeSec4() {
             onClick={() => handleFilterChange("TTL")}
           >
             TTL Design
+          </button>
+           <button
+            className={`cursor-pointer text-[16px] md:text-[20px] transition ${
+              selectedCategory === "TTL" ? "text-cyan-400 font-semibold" : "hover:text-cyan-400"
+            }`}
+            onClick={() => handleFilterChange("Ads")}
+          >
+             Ads
           </button>
         </motion.div>
       </motion.div>

@@ -40,10 +40,10 @@ export default function HomeSec7() {
               thing”
             </p>
             <a
-              href="https://twitter.com/gamalGamal8038"
-              className="text-[#55D3FD] underline"
+              href="https://www.facebook.com/profile.php?id=61578198429753"
+              className="text-[#55D3FD] underline" target="_blank"
             >
-              @gamalGamal8038
+           Traffic 360 The digital hub @facebook.com
             </a>
           </div>
 
@@ -91,10 +91,10 @@ export default function HomeSec7() {
                 thing”
               </p>
               <a
-                href="https://twitter.com/gamalGamal8038"
-                className="text-[#55D3FD] underline"
+                href="https://www.facebook.com/profile.php?id=61578198429753"
+                className="text-[#55D3FD] underline" target="_blank"
               >
-                @gamalGamal8038
+              Traffic 360 The digital hub @facebook.com
               </a>
             </motion.div>
           </div>
@@ -148,10 +148,10 @@ export default function HomeSec7() {
               thing”
             </p>
             <a
-              href="https://twitter.com/gamalGamal8038"
+              href="https://www.facebook.com/profile.php?id=61578198429753"
               className="text-[#55D3FD] underline"
             >
-              @gamalGamal8038
+             https://www.facebook.com/profile.php?id=61578198429753
             </a>
           </div>
 
@@ -199,10 +199,10 @@ export default function HomeSec7() {
                 thing”
               </p>
               <a
-                href="https://twitter.com/gamalGamal8038"
+                href="https://www.facebook.com/profile.php?id=61578198429753"
                 className="text-[#55D3FD] underline"
               >
-                @gamalGamal8038
+               https://www.facebook.com/profile.php?id=61578198429753
               </a>
             </motion.div>
           </div>
