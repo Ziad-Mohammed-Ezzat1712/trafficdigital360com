@@ -17,11 +17,17 @@ import portfolio17 from "../../assets/Images/col23.png";
 import portfolio18 from "../../assets/Images/elitecotton6.jpg";
 import portfolio19 from "../../assets/Images/splash.jpg";
 import portfolio20 from "../../assets/Images/col27.png";
-import web1 from "../../assets/Images/web1.png";
-import web2 from "../../assets/Images/web2.png";
-import web3 from "../../assets/Images/web3.png";
+import web1 from "../../assets/Images/web1.jpg";
+import web2 from "../../assets/Images/web2.jpg";
+import web3 from "../../assets/Images/web3.jpg";
 import web4 from "../../assets/Images/web4.jpg";
-import web5 from "../../assets/Images/web5.png";
+import web5 from "../../assets/Images/web5.jpg";
+import ads1 from "../../assets/Images/ads1.jpg";
+import ads2 from "../../assets/Images/ads2.jpg";
+import ads3 from "../../assets/Images/ads3.jpg";
+import ads4 from "../../assets/Images/ads4.jpg";
+import ads5 from "../../assets/Images/ads5.jpg";
+import ads6 from "../../assets/Images/ads6.jpg";
 
 const projects = [
   { id: 1, title: "LIQUID SPLASH", pragraph: "TTL Design", category: "TTL", img: portfolio1 },
@@ -40,12 +46,18 @@ const projects = [
   { id: 14, title: "Rozetta", pragraph: "TTL Design", category: "TTL", img: portfolio6 },
   { id: 15, title: "Splash", pragraph: "TTL Design", category: "TTL", img: portfolio5 },
   { id: 16, title: "Web Elite", pragraph: "Web Design", category: "TTL", img: portfolio15 },
-  { id: 17, title: "Burgu", pragraph: "Web Design", category: "Web", img: web1 },
-  { id: 18, title: "Web Clinic", pragraph: "Web Design", category: "Web", img: web2 },
-  { id: 19, title: "Web Clinic", pragraph: "Web Design", category: "Web", img: web3 },
-  { id: 20, title: "Web Clinic", pragraph: "Web Design", category: "Web", img: web4 },
-  { id: 21, title: "Web Clinic", pragraph: "Web Design", category: "Web", img: web5 },
-  { id: 22, title: "TTL Monkey", pragraph: "TTL Design", category: "TTL", img: portfolio10 },
+  { id: 17, title: "King Resturant ", pragraph: "App Design", category: "Web", img: web1 },
+  { id: 18, title: "Traffic Studio", pragraph: "Web Design", category: "Web", img: web2 },
+  { id: 19, title: "Al Jocker", pragraph: "Web Design", category: "Web", img: web3 },
+  { id: 20, title: "رحلة السلام", pragraph: "App Design", category: "Web", img: web4 },
+  { id: 21, title: "داركـ", pragraph: "App Design", category: "Web", img: web5 },
+  { id: 22, title: "Ads ", pragraph: "Ads", category: "Ads", img: ads1 },
+  { id: 23, title: "Ads ", pragraph: "Ads", category: "Ads", img: ads2 },
+  { id: 24, title: "Ads ", pragraph: "Ads", category: "Ads", img: ads2 },
+  { id: 25, title: "Ads ", pragraph: "Ads", category: "Ads", img: ads3 },
+  { id: 26, title: "Ads ", pragraph: "Ads", category: "Ads", img: ads4 },
+  { id: 27, title: "Ads ", pragraph: "Ads", category: "Ads", img: ads5 },
+  { id: 28, title: "Ads ", pragraph: "Ads", category: "Ads", img: ads6 },
 ];
 
 export default function HomeSec4() {
@@ -127,7 +139,7 @@ export default function HomeSec4() {
           </button>
            <button
             className={`cursor-pointer text-[16px] md:text-[20px] transition ${
-              selectedCategory === "TTL" ? "text-cyan-400 font-semibold" : "hover:text-cyan-400"
+              selectedCategory === "Ads" ? "text-cyan-400 font-semibold" : "hover:text-cyan-400"
             }`}
             onClick={() => handleFilterChange("Ads")}
           >
