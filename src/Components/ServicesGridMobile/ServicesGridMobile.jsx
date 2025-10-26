@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   FaBullseye,
   FaChartBar,
@@ -6,13 +6,15 @@ import {
   FaChartLine,
   FaThumbsUp,
   FaClone,
-    FaLaptop,
+  FaLaptop,
   FaMobileAlt,
-  FaHandshake 
+  FaHandshake,
 } from "react-icons/fa";
 import { FiChevronRight } from "react-icons/fi";
 import { motion } from "framer-motion";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import { LanguageContext } from "../../context/LanguageContext"; // ✅ استدعاء الكونتكست
+
 // كارت الخدمة
 const ServiceCard = ({ title, subtitle, description, Icon, full }) => {
   return (
@@ -43,6 +45,8 @@ const ServiceCard = ({ title, subtitle, description, Icon, full }) => {
 };
 
 export default function ServicesGridMobile() {
+  const { language } = useContext(LanguageContext); // ✅ استخدام اللغة
+
   return (
     <div className="md:hidden block px-4 my-10">
       <motion.div
@@ -54,71 +58,156 @@ export default function ServicesGridMobile() {
       >
         {/* الكارت الأول بعرض كامل */}
         <ServiceCard
-          title="Social Media Ad Campaigns"
-          subtitle="(Facebook, Instagram, TikTok, X, Snapchat)"
-          description="We launch and optimize ad campaigns on top social platforms, targeting the right audience with the right message to drive traffic, engagement, and conversions."
+          title={
+            language === "en"
+              ? "Social Media Ad Campaigns"
+              : "حملات إعلانات السوشيال ميديا"
+          }
+          subtitle={
+            language === "en"
+              ? "(Facebook, Instagram, TikTok, X, Snapchat)"
+              : "(فيسبوك، إنستجرام، تيك توك، إكس، سناب شات)"
+          }
+          description={
+            language === "en"
+              ? "We launch and optimize ad campaigns on top social platforms, targeting the right audience with the right message to drive traffic, engagement, and conversions."
+              : "نُطلق ونُحسن حملات الإعلانات على أفضل منصات التواصل، مستهدفين الجمهور المناسب بالرسالة الصحيحة لزيادة التفاعل والتحويلات."
+          }
           Icon={FaBullseye}
           full
         />
 
-        {/* باقي الكروت 8 */}
-          <ServiceCard
-             title="Strategic Marketing Plan"
-             subtitle="(Competitor Analysis + Marketing Roadmap)"
-             description="We analyze competitors and market position to find opportunities, then craft tailored digital and offline strategies to achieve your business goals."
-             Icon={FaChartBar}
-           />
-           <ServiceCard
-             title="Studio & Media Production"
-             subtitle=""
-             description="We produce professional photos, videos, edits, and branded visual content tailored for digital platforms—helping your business stand out with strong visual storytelling and maximizing engagement across all channels."
-             Icon={FaFilm}
-           />
-         <ServiceCard
-               title="Media Buying"
-               subtitle="Smart Ad Budget Management"
-               description="We manage your ad budget efficiently, choosing the best platforms and placements to maximize ROI through smart buying and ongoing optimization."
-               Icon={FaChartLine}
-             />
-             <ServiceCard
-               title="Marketing Campaign"
-               subtitle="(Reels – Social Posts – Calls – Engagement Pages)"
-               description="We turn your marketing plan into high-performing content: engaging Reels, professional posts, conversion-focused calls, and interactive engagement pages that drive real results."
-               Icon={FaThumbsUp}
-             />
-             <ServiceCard
-               title="Offline Marketing"
-               subtitle="(Sponsorships – Exhibitions – Outdoor Banners)"
-               description="We connect your brand with real audiences through offline marketing—events, trade shows, and outdoor banners that boost visibility and trust."
-               Icon={FaClone}
-             />
-     <ServiceCard
-              title="CRM Solutions"
-              subtitle="Customer Relationship Management"
-              description="We build and manage CRM systems that streamline communication, enhance customer experience, and boost repeat business through automation and data-driven strategies."
-              Icon={FaHandshake}
-            />
-            <ServiceCard
-              title="Web Development "
-              subtitle="(Facebook, Instagram, TikTok, X, Snapchat)"
-              description="We build responsive, user-friendly websites that reflect your brand identity and goals—optimized for UX/UI, mobile, speed, and SEO with the latest technologies."
-              Icon={FaLaptop}
-            />
-            <ServiceCard
-              title="E-Commerce Development"
-              subtitle=""
-              description="We build high-performing online stores with seamless payments, shipping integration, and full SEO to maximize conversions and boost sales—delivering a smooth shopping experience that grows your brand online."
-              Icon={FaMobileAlt}
-            />
+        <ServiceCard
+          title={
+            language === "en"
+              ? "Strategic Marketing Plan"
+              : "خطة تسويق إستراتيجية"
+          }
+          subtitle={
+            language === "en"
+              ? "(Competitor Analysis + Marketing Roadmap)"
+              : "(تحليل المنافسين + خارطة طريق تسويقية)"
+          }
+          description={
+            language === "en"
+              ? "We analyze competitors and market position to find opportunities, then craft tailored digital and offline strategies to achieve your business goals."
+              : "نحلل المنافسين ووضع السوق لتحديد الفرص، ثم نضع استراتيجيات رقمية وغير رقمية مخصصة لتحقيق أهداف عملك."
+          }
+          Icon={FaChartBar}
+        />
+
+        <ServiceCard
+          title={
+            language === "en"
+              ? "Studio & Media Production"
+              : "الاستوديو والإنتاج الإعلامي"
+          }
+          description={
+            language === "en"
+              ? "We produce professional photos, videos, edits, and branded visual content tailored for digital platforms—helping your business stand out with strong visual storytelling and maximizing engagement across all channels."
+              : "ننتج صورًا وفيديوهات احترافية ومحتوى بصري مميز للمنصات الرقمية، يساعد على تميز علامتك التجارية وزيادة التفاعل عبر جميع القنوات."
+          }
+          Icon={FaFilm}
+        />
+
+        <ServiceCard
+          title={language === "en" ? "Media Buying" : "شراء الإعلانات"}
+          subtitle={
+            language === "en"
+              ? "Smart Ad Budget Management"
+              : "إدارة ذكية لميزانية الإعلانات"
+          }
+          description={
+            language === "en"
+              ? "We manage your ad budget efficiently, choosing the best platforms and placements to maximize ROI through smart buying and ongoing optimization."
+              : "ندير ميزانية إعلاناتك بكفاءة، نختار المنصات والمواقع الأفضل لتحقيق أعلى عائد استثمار من خلال شراء ذكي وتحسين مستمر."
+          }
+          Icon={FaChartLine}
+        />
+
+        <ServiceCard
+          title={language === "en" ? "Marketing Campaign" : "حملات تسويقية"}
+          subtitle={
+            language === "en"
+              ? "(Reels – Social Posts – Calls – Engagement Pages)"
+              : "(ريلز – منشورات – مكالمات – صفحات تفاعل)"
+          }
+          description={
+            language === "en"
+              ? "We turn your marketing plan into high-performing content: engaging Reels, professional posts, conversion-focused calls, and interactive engagement pages that drive real results."
+              : "نحول خطتك التسويقية إلى محتوى فعّال: ريلز جذابة، منشورات احترافية، مكالمات موجهة للتحويل، وصفحات تفاعلية تحقق نتائج حقيقية."
+          }
+          Icon={FaThumbsUp}
+        />
+
+        <ServiceCard
+          title={language === "en" ? "Offline Marketing" : "التسويق التقليدي"}
+          subtitle={
+            language === "en"
+              ? "(Sponsorships – Exhibitions – Outdoor Banners)"
+              : "(رعايات – معارض – لافتات خارجية)"
+          }
+          description={
+            language === "en"
+              ? "We connect your brand with real audiences through offline marketing—events, trade shows, and outdoor banners that boost visibility and trust."
+              : "نربط علامتك التجارية بالجمهور الواقعي من خلال التسويق التقليدي — الفعاليات والمعارض والإعلانات الخارجية التي تعزز الظهور والثقة."
+          }
+          Icon={FaClone}
+        />
+
+        <ServiceCard
+          title={language === "en" ? "CRM Solutions" : "حلول إدارة العملاء"}
+          subtitle={
+            language === "en"
+              ? "Customer Relationship Management"
+              : "إدارة علاقات العملاء"
+          }
+          description={
+            language === "en"
+              ? "We build and manage CRM systems that streamline communication, enhance customer experience, and boost repeat business through automation and data-driven strategies."
+              : "نُنشئ وندير أنظمة CRM لتبسيط التواصل، وتحسين تجربة العملاء، وزيادة ولائهم من خلال الأتمتة والاستراتيجيات المعتمدة على البيانات."
+          }
+          Icon={FaHandshake}
+        />
+
+        <ServiceCard
+          title={language === "en" ? "Web Development" : "تطوير المواقع"}
+          subtitle={
+            language === "en"
+              ? "(UX/UI – SEO – Responsive)"
+              : "(تجربة المستخدم – تحسين محركات البحث – تصميم متجاوب)"
+          }
+          description={
+            language === "en"
+              ? "We build responsive, user-friendly websites that reflect your brand identity and goals—optimized for UX/UI, mobile, speed, and SEO with the latest technologies."
+              : "نصمم مواقع إلكترونية متجاوبة وسهلة الاستخدام تعكس هوية علامتك التجارية، محسّنة لتجربة المستخدم والسرعة وتحسين محركات البحث بأحدث التقنيات."
+          }
+          Icon={FaLaptop}
+        />
+
+        <ServiceCard
+          title={
+            language === "en"
+              ? "E-Commerce Development"
+              : "تطوير المتاجر الإلكترونية"
+          }
+          description={
+            language === "en"
+              ? "We build high-performing online stores with seamless payments, shipping integration, and full SEO to maximize conversions and boost sales—delivering a smooth shopping experience that grows your brand online."
+              : "نُنشئ متاجر إلكترونية عالية الأداء مع تكامل للدفع والشحن وتحسين شامل لمحركات البحث، لتقديم تجربة شراء سلسة تُنمّي علامتك التجارية."
+          }
+          Icon={FaMobileAlt}
+        />
       </motion.div>
 
       {/* الزرار */}
       <div className="flex justify-center my-8">
-         <Link to={"/request"}>
-        <button className="bg-[#086368] flex items-center gap-x-2 cursor-pointer px-6 py-2 rounded-xl hover:bg-[#005F6B]">
-          let’s connect <FiChevronRight className="mt-[1px]" />
-        </button>
-         </Link>
+        <Link to={"/request"}>
+          <button className="bg-[#086368] flex items-center gap-x-2 cursor-pointer px-6 py-2 rounded-xl hover:bg-[#005F6B]">
+            {language === "en" ? "let’s connect" : "تواصل معنا"}{" "}
+            <FiChevronRight className="mt-[1px]" />
+          </button>
+        </Link>
       </div>
     </div>
   );

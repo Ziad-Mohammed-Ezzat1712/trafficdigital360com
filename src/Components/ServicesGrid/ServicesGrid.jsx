@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   FaBullseye,
   FaChartBar,
@@ -8,11 +8,12 @@ import {
   FaClone,
   FaLaptop,
   FaMobileAlt,
-  FaHandshake 
+  FaHandshake,
 } from "react-icons/fa";
 import { FiChevronRight } from "react-icons/fi";
 import { motion } from "framer-motion";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import { LanguageContext } from "../../context/LanguageContext";
 
 // الكارت
 const ServiceCard = ({ title, subtitle, description, Icon }) => {
@@ -26,8 +27,10 @@ const ServiceCard = ({ title, subtitle, description, Icon }) => {
       <div>
         <h3 className="text-[24px] font-bold mb-1">{title}</h3>
         <p className="text-[14px] font-medium mb-4">{subtitle}</p>
-        <p className="text-[14px] font-medium leading-relaxed border-b pb-10 text-[#878787] 
-                      group-hover:text-white group-hover:border-[#878787]">
+        <p
+          className="text-[14px] font-medium leading-relaxed border-b pb-10 text-[#878787] 
+                      group-hover:text-white group-hover:border-[#878787]"
+        >
           {description}
         </p>
       </div>
@@ -41,88 +44,151 @@ const ServiceCard = ({ title, subtitle, description, Icon }) => {
 };
 
 export default function ServicesGrid() {
+  const { language } = useContext(LanguageContext);
+  const isArabic = language === "ar";
+
   return (
     <>
       {/* الصف الأول */}
       <motion.div
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration:1.2 }}
+        transition={{ duration: 1.2 }}
         viewport={{ once: true, amount: 0.2 }}
         className="grid md:grid-cols-3 gap-6 text-left my-8"
       >
         <ServiceCard
-          title="Social Media Ad Campaigns"
-          subtitle="(Facebook, Instagram, TikTok, X, Snapchat)"
-          description="We launch and optimize ad campaigns on top social platforms, targeting the right audience with the right message to drive traffic, engagement, and conversions."
+          title={
+            isArabic
+              ? "حملات الإعلانات على وسائل التواصل الاجتماعي"
+              : "Social Media Ad Campaigns"
+          }
+          subtitle={
+            isArabic
+              ? "(فيسبوك، إنستجرام، تيك توك، إكس، سناب شات)"
+              : "(Facebook, Instagram, TikTok, X, Snapchat)"
+          }
+          description={
+            isArabic
+              ? "نطلق ونحسّن حملات الإعلانات على أهم المنصات الاجتماعية، مستهدفين الجمهور المناسب بالرسالة الصحيحة لزيادة الزيارات والمشاركة والتحويلات."
+              : "We launch and optimize ad campaigns on top social platforms, targeting the right audience with the right message to drive traffic, engagement, and conversions."
+          }
           Icon={FaBullseye}
         />
         <ServiceCard
-          title="Strategic Marketing Plan"
-          subtitle="(Competitor Analysis + Marketing Roadmap)"
-          description="We analyze competitors and market position to find opportunities, then craft tailored digital and offline strategies to achieve your business goals."
+          title={
+            isArabic
+              ? "خطة التسويق الاستراتيجية"
+              : "Strategic Marketing Plan"
+          }
+          subtitle={
+            isArabic
+              ? "(تحليل المنافسين + خريطة طريق تسويقية)"
+              : "(Competitor Analysis + Marketing Roadmap)"
+          }
+          description={
+            isArabic
+              ? "نحلل المنافسين وموقعك في السوق لتحديد الفرص، ثم نصمم استراتيجيات رقمية وتقليدية مخصصة لتحقيق أهداف عملك."
+              : "We analyze competitors and market position to find opportunities, then craft tailored digital and offline strategies to achieve your business goals."
+          }
           Icon={FaChartBar}
         />
         <ServiceCard
-          title="Studio & Media Production"
+          title={isArabic ? "الإنتاج الإعلامي والاستوديو" : "Studio & Media Production"}
           subtitle=""
-          description="We produce professional photos, videos, edits, and branded visual content tailored for digital platforms—helping your business stand out with strong visual storytelling and maximizing engagement across all channels."
+          description={
+            isArabic
+              ? "نُنتج صورًا وفيديوهات احترافية ومحتوى بصري مخصص للمنصات الرقمية، مما يساعد علامتك التجارية على التميز من خلال سرد بصري قوي وزيادة التفاعل عبر جميع القنوات."
+              : "We produce professional photos, videos, edits, and branded visual content tailored for digital platforms—helping your business stand out with strong visual storytelling and maximizing engagement across all channels."
+          }
           Icon={FaFilm}
         />
       </motion.div>
 
-      {/* الصف التاني */}
+      {/* الصف الثاني */}
       <motion.div
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration:1.2, delay: 0.2 }}
+        transition={{ duration: 1.2, delay: 0.2 }}
         viewport={{ once: true, amount: 0.2 }}
         className="grid md:grid-cols-3 gap-6 text-left my-8"
       >
         <ServiceCard
-          title="Media Buying"
-          subtitle="Smart Ad Budget Management"
-          description="We manage your ad budget efficiently, choosing the best platforms and placements to maximize ROI through smart buying and ongoing optimization."
+          title={isArabic ? "الشراء الإعلامي" : "Media Buying"}
+          subtitle={isArabic ? "إدارة ذكية لميزانية الإعلانات" : "Smart Ad Budget Management"}
+          description={
+            isArabic
+              ? "ندير ميزانيتك الإعلانية بكفاءة، ونختار أفضل المنصات والمواقع لتحقيق أقصى عائد من خلال الشراء الذكي والتحسين المستمر."
+              : "We manage your ad budget efficiently, choosing the best platforms and placements to maximize ROI through smart buying and ongoing optimization."
+          }
           Icon={FaChartLine}
         />
         <ServiceCard
-          title="Marketing Campaign"
-          subtitle="(Reels – Social Posts – Calls – Engagement Pages)"
-          description="We turn your marketing plan into high-performing content: engaging Reels, professional posts, conversion-focused calls, and interactive engagement pages that drive real results."
+          title={isArabic ? "الحملات التسويقية" : "Marketing Campaign"}
+          subtitle={
+            isArabic
+              ? "(ريلز – منشورات – مكالمات – صفحات تفاعلية)"
+              : "(Reels – Social Posts – Calls – Engagement Pages)"
+          }
+          description={
+            isArabic
+              ? "نحول خطتك التسويقية إلى محتوى عالي الأداء: ريلز جذابة، منشورات احترافية، مكالمات موجهة للتحويل، وصفحات تفاعلية تحقق نتائج حقيقية."
+              : "We turn your marketing plan into high-performing content: engaging Reels, professional posts, conversion-focused calls, and interactive engagement pages that drive real results."
+          }
           Icon={FaThumbsUp}
         />
         <ServiceCard
-          title="Offline Marketing"
-          subtitle="(Sponsorships – Exhibitions – Outdoor Banners)"
-          description="We connect your brand with real audiences through offline marketing—events, trade shows, and outdoor banners that boost visibility and trust."
+          title={isArabic ? "التسويق غير الإلكتروني" : "Offline Marketing"}
+          subtitle={
+            isArabic ? "(رعايات – معارض – لافتات خارجية)" : "(Sponsorships – Exhibitions – Outdoor Banners)"
+          }
+          description={
+            isArabic
+              ? "نربط علامتك التجارية بجمهورك الواقعي من خلال التسويق الميداني — مثل الفعاليات والمعارض واللافتات الخارجية لتعزيز الوعي والثقة."
+              : "We connect your brand with real audiences through offline marketing—events, trade shows, and outdoor banners that boost visibility and trust."
+          }
           Icon={FaClone}
         />
       </motion.div>
 
-      {/* الصف التالت */}
+      {/* الصف الثالث */}
       <motion.div
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration:1.2, delay: 0.4 }}
+        transition={{ duration: 1.2, delay: 0.4 }}
         viewport={{ once: true, amount: 0.2 }}
         className="grid md:grid-cols-3 gap-6 text-left my-8"
       >
         <ServiceCard
-          title="CRM Solutions"
-          subtitle="Customer Relationship Management"
-          description="We build and manage CRM systems that streamline communication, enhance customer experience, and boost repeat business through automation and data-driven strategies."
+          title={isArabic ? "حلول إدارة علاقات العملاء (CRM)" : "CRM Solutions"}
+          subtitle={isArabic ? "إدارة تواصل العملاء" : "Customer Relationship Management"}
+          description={
+            isArabic
+              ? "نصمم وندير أنظمة CRM تساعدك على تحسين التواصل، وتعزيز تجربة العملاء، وزيادة المبيعات المتكررة عبر الأتمتة والتحليل الذكي."
+              : "We build and manage CRM systems that streamline communication, enhance customer experience, and boost repeat business through automation and data-driven strategies."
+          }
           Icon={FaHandshake}
         />
         <ServiceCard
-          title="Web Development "
-          subtitle="(Facebook, Instagram, TikTok, X, Snapchat)"
-          description="We build responsive, user-friendly websites that reflect your brand identity and goals—optimized for UX/UI, mobile, speed, and SEO with the latest technologies."
+          title={isArabic ? "تطوير المواقع الإلكترونية" : "Web Development"}
+          subtitle={
+            isArabic ? "(مواقع متجاوبة وسريعة التحميل)" : "(Responsive, Fast & SEO-Optimized Websites)"
+          }
+          description={
+            isArabic
+              ? "نُنشئ مواقع متجاوبة وسهلة الاستخدام تعكس هوية علامتك التجارية وأهدافك — مُحسّنة لتجربة المستخدم، السرعة، والأداء باستخدام أحدث التقنيات."
+              : "We build responsive, user-friendly websites that reflect your brand identity and goals—optimized for UX/UI, mobile, speed, and SEO with the latest technologies."
+          }
           Icon={FaLaptop}
         />
         <ServiceCard
-          title="E-Commerce Development"
+          title={isArabic ? "تطوير المتاجر الإلكترونية" : "E-Commerce Development"}
           subtitle=""
-          description="We build high-performing online stores with seamless payments, shipping integration, and full SEO to maximize conversions and boost sales—delivering a smooth shopping experience that grows your brand online."
+          description={
+            isArabic
+              ? "نُنشئ متاجر إلكترونية عالية الأداء بدمج الدفع والشحن والتحسين لمحركات البحث — لتجربة تسوق سلسة تزيد المبيعات وتنمي علامتك التجارية عبر الإنترنت."
+              : "We build high-performing online stores with seamless payments, shipping integration, and full SEO to maximize conversions and boost sales—delivering a smooth shopping experience that grows your brand online."
+          }
           Icon={FaMobileAlt}
         />
       </motion.div>
@@ -130,10 +196,11 @@ export default function ServicesGrid() {
       {/* الزرار */}
       <div className="flex justify-center my-12">
         <div className="md:flex items-center space-x-4">
-           <Link to={"/request"}>
-          <button className="bg-[#086368] flex items-center gap-x-2 cursor-pointer px-6 py-2 rounded-xl hover:bg-[#005F6B]">
-            let’s connect <FiChevronRight className="mt-[1px]" />
-          </button>
+          <Link to="/request">
+            <button className="bg-[#086368] flex items-center gap-x-2 cursor-pointer px-6 py-2 rounded-xl hover:bg-[#005F6B]">
+              {isArabic ? "تواصل معنا" : "Let’s connect"}{" "}
+              <FiChevronRight  className={`mt-[1px] ${language === "ar" ? "rotate-180" : ""}`} />
+            </button>
           </Link>
         </div>
       </div>

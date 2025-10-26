@@ -6,6 +6,8 @@ import Portfolio from './Components/Portfolio/Portfolio';
 import WhatsAppButton from './Components/WhatsAppButton/WhatsAppButton';
 import Services from './Components/Services/Services';
 import HomeRequest from './Components/HomeRequest/HomeRequest';
+import { LanguageProvider } from './context/LanguageContext';
+import LanguageSwitcherButton from './Components/LanguageSwitcherButton/LanguageSwitcherButton';
 
 let x = createBrowserRouter([
 {index : true,element:<Home/> },
@@ -21,10 +23,13 @@ function App() {
 
   return (
     <>
-    
+     <LanguageProvider>
+     <LanguageSwitcherButton />
     <WhatsAppButton/>
    <RouterProvider router={x}></RouterProvider>
+   </LanguageProvider>
     </>
+    
   )
 }
 

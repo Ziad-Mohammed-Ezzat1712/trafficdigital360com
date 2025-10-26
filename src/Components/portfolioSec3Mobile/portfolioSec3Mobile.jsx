@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -28,10 +28,11 @@ import col33 from "../../assets/Images/col33.png";
 import col34 from "../../assets/Images/col34.png";
 import col35 from "../../assets/Images/col35.png";
 import col36 from "../../assets/Images/col36.png";
+import { LanguageContext } from "../../context/LanguageContext";
 
-const column1Images = [col11, col12, col13,col14, col15, col16,col17, col18, col19,col10,col11, col12, col13,col14, col15, col16,col17, col18, col19,col10,col11, col12, col13,col14, col15, col16,col17, col18, col19,col10,col11, col12, col13,col14, col15, col16,col17, col18, col19,col10,col11, col12, col13,col14, col15, col16,col17, col18, col19,col10,col11, col12, col13,col14, col15, col16,col17, col18, col19,col10];
-const column2Images = [col21,col22,col23,col24,col25,col26,col27,col28,col29,col21,col22,col23,col24,col25,col26,col27,col28,col29,col21,col22,col23,col24,col25,col26,col27,col28,col29,col21,col22,col23,col24,col25,col26,col27,col28,col29,col21,col22,col23,col24,col25,col26,col27,col28,col29,col21,col22,col23,col24,col25,col26,col27,col28,col29];
-const column3Images = [col31,col32,col33,col34,col35,col36,col31,col32,col33,col34,col35,col36,col31,col32,col33,col34,col35,col36,col31,col32,col33,col34,col35,col36,col31,col32,col33,col34,col35,col36,col31,col32,col33,col34,col35,col36,col31,col32,col33,col34,col35,col36,col31,col32,col33,col34,col35,col36];
+const column1Images = [col11, col12, col13,col14, col15, col16,col17, col18, col19,col10,col11, col12, col13,col14, col15, col16,col17, col18, col19,col10,col11, col12, col13,col14, col15, col16,col17, col18, col19,col10,col11, col12, col13,col14, col15, col16,col17, col18, col19,col10,col11, col12, col13,col14, col15, col16,col17, col18, col19,col10,col11, col12, col13,col14, col15, col16,col17, col18, col19,col10,col11, col12, col13,col14, col15, col16,col17, col18, col19,col10,col11, col12, col13,col14, col15, col16,col17, col18, col19,col10,col11, col12, col13,col14, col15, col16,col17, col18, col19,col10,col11, col12, col13,col14, col15, col16,col17, col18, col19,col10,col11, col12, col13,col14, col15, col16,col17, col18, col19,col10,col11, col12, col13,col14, col15, col16,col17, col18, col19,col10];
+const column2Images = [col21,col22,col23,col24,col25,col26,col27,col28,col29,col21,col22,col23,col24,col25,col26,col27,col28,col29,col21,col22,col23,col24,col25,col26,col27,col28,col29,col21,col22,col23,col24,col25,col26,col27,col28,col29,col21,col22,col23,col24,col25,col26,col27,col28,col29,col21,col22,col23,col24,col25,col26,col27,col28,col29,col21,col22,col23,col24,col25,col26,col27,col28,col29,col21,col22,col23,col24,col25,col26,col27,col28,col29,col21,col22,col23,col24,col25,col26,col27,col28,col29,col21,col22,col23,col24,col25,col26,col27,col28,col29,col21,col22,col23,col24,col25,col26,col27,col28,col29,col21,col22,col23,col24,col25,col26,col27,col28,col29];
+const column3Images = [col31,col32,col33,col34,col35,col36,col31,col32,col33,col34,col35,col36,col31,col32,col33,col34,col35,col36,col31,col32,col33,col34,col35,col36,col31,col32,col33,col34,col35,col36,col31,col32,col33,col34,col35,col36,col31,col32,col33,col34,col35,col36,col31,col32,col33,col34,col35,col36,col31,col32,col33,col34,col35,col36,col31,col32,col33,col34,col35,col36,col31,col32,col33,col34,col35,col36,col31,col32,col33,col34,col35,col36,col31,col32,col33,col34,col35,col36,col31,col32,col33,col34,col35,col36,col31,col32,col33,col34,col35,col36,col31,col32,col33,col34,col35,col36];
 
 function Column({ images, reverse = false, }) {
   return (
@@ -59,15 +60,17 @@ function Column({ images, reverse = false, }) {
   );
 }
 export default function PortfolioSec3Mobile() {
+    const { language } = useContext(LanguageContext);
+    const isArabic = language === "ar";
   const { ref, inView } = useInView({
-    triggerOnce: true, // يظهر مرة واحدة بس
+    triggerOnce: false, // يظهر مرة واحدة بس
     threshold: 0.2,    // يبدأ لما 20% من العنصر يدخل في الشاشة
   });
 
   return (
     <>
       <h2 className="text-[40px] text-center font-bold z-20  text-white">
-  Our work
+{isArabic ? "أعمالنا " : "Our work"}
 </h2>
     
     <section
@@ -86,7 +89,7 @@ export default function PortfolioSec3Mobile() {
         <div className="relative border border-[#086368] rounded-3xl p-3 text-center bg-black z-10 px-6">
         <section className="grid grid-cols-3 gap-x-6 max-w-7xl mx-auto ">
         <Column images={column1Images}  /> {/* أسرع */}
-        <Column images={column2Images}  speed={2} /> {/* أبطأ */}
+        <Column images={column2Images}  speed={1} /> {/* أبطأ */}
         <Column images={column3Images}  /> {/* أسرع واحد */}
       </section>
         </div>

@@ -1,22 +1,29 @@
-import React from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { motion } from "framer-motion";
-import gamal from "../../assets/Images/gamal.webp";
-import gemy from "../../assets/Images/gemy.webp";
-import engy from "../../assets/Images/engy.webp";
-import zezo from "../../assets/Images/zezo.webp";
-import amr from "../../assets/Images/amr.webp";
-import adham from "../../assets/Images/adham.webp";
-
+import axios from "axios";
+import { LanguageContext } from "../../context/LanguageContext";
 
 export default function HomeSec6() {
-  const team = [
-    { name: "Gamal Abdelnasser", role: "Graphic Designer",  image: gamal },
-    { name: "Engy Yasser", role: "Content Creator", image: engy },
-    { name: "Adham Karam", role: "Studio Manager", image: adham },
-    { name: "Mohammed Ragab", role: "Account Manager", image: gemy },
-    { name: "Amr ", role: "Video Editor", image: amr },
-    { name: "Ziad Mohammed", role: "Front-End Developer", image: zezo },
-  ];
+  const [team, setTeam] = useState([]);
+  const { language } = useContext(LanguageContext);
+
+  useEffect(() => {
+    const fetchStaff = async () => {
+      try {
+        const res = await axios.get(
+          `/handle/viewAllStaff.php?nocache=${Date.now()}`
+        );
+        if (Array.isArray(res.data.data)) {
+          setTeam(res.data.data);
+        } else {
+          console.error("Unexpected API response:", res.data.data);
+        }
+      } catch (error) {
+        console.error("Error fetching staff:", error);
+      }
+    };
+    fetchStaff();
+  }, []);
 
   return (
     <div className="bg-black pb-12 max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center">
@@ -25,19 +32,16 @@ export default function HomeSec6() {
         let initial = {};
 
         if (column === 0) {
-          // شمال
           initial = { opacity: 0, x: -100, rotateZ: -10, scale: 0.9 };
         } else if (column === 2) {
-          // يمين
           initial = { opacity: 0, x: 100, rotateZ: 10, scale: 0.9 };
         } else {
-          // نص
           initial = { opacity: 0, y: 100, rotateZ: -8, scale: 0.9 };
         }
 
         return (
           <motion.div
-            key={idx}
+            key={member.id || idx}
             className="relative rounded-2xl overflow-hidden shadow-md group w-[360px] h-[445px] bg-black"
             initial={initial}
             whileInView={{ opacity: 1, x: 0, y: 0, rotateZ: 0, scale: 1 }}
@@ -47,16 +51,20 @@ export default function HomeSec6() {
             {/* صورة البروفايل */}
             <img
               src={member.image}
-              alt={member.name}
-              className="w-[360px] h-[445px] object-cover "
+              alt={language === "ar" ? member.name_ar : member.name}
+              className="w-[360px] h-[445px] object-cover"
             />
-
-         
 
             {/* الشريط السفلي فيه الاسم والوظيفة */}
             <div className="absolute bottom-0 left-0 w-full bg-FFFFFF/30 text-white backdrop-blur-sm flex justify-between items-center px-4 py-5 text-sm">
-              <span className="font-bold text-[20px]">{member.name}</span>
-              <span className="font-medium">{member.role}</span>
+              <span className="font-bold text-[20px]">
+                {language === "ar" ? member.name_ar : member.name}
+              </span>
+              <span className="font-medium">
+                {language === "ar"
+                  ? member.specialization_ar
+                  : member.specialization}
+              </span>
             </div>
           </motion.div>
         );
