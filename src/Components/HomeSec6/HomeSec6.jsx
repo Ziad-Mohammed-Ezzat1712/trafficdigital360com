@@ -11,7 +11,7 @@ export default function HomeSec6() {
     const fetchStaff = async () => {
       try {
         const res = await axios.get(
-          `/handle/viewAllStaff.php?nocache=${Date.now()}`
+          `https://dashboard.traffic360eg.com/handle/viewAllStaff.php?nocache=${Date.now()}`
         );
         if (Array.isArray(res.data.data)) {
           setTeam(res.data.data);
