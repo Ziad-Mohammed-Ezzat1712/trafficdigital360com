@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { LanguageContext } from "../../context/LanguageContext"; // ✅ استدعاء الكونتكست
+import { LanguageContext } from "../../Context/LanguageContext"; // ✅ استدعاء الكونتكست
 
 export default function AboutSec2() {
   const { language } = useContext(LanguageContext); // ✅ استخدام اللغة

@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import bgForm from "../../assets/Images/bgForm.PNG";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import { LanguageContext } from "../../context/LanguageContext";
+import { LanguageContext } from "../../Context/LanguageContext";
 
 export default function ContactForm() {
   const { language } = useContext(LanguageContext);

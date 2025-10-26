@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Plus, Minus } from "lucide-react";
 import { Link } from 'react-router-dom';
-import { LanguageContext } from "../../context/LanguageContext"; // استدعاء الكونتكست
+import { LanguageContext } from "../../Context/LanguageContext"; // استدعاء الكونتكست
 
 export default function PortfolioFaqSection() {
   const { language } = useContext(LanguageContext);

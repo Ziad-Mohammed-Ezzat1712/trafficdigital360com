@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { LanguageContext } from "../../context/LanguageContext";
+import { LanguageContext } from "../../Context/LanguageContext";
 
 import Frame from "../../assets/Images/Frame.png";
 import Figma from "../../assets/Images/Figma.png";

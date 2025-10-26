@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
-import { LanguageContext } from "../../context/LanguageContext";
+import { LanguageContext } from "../../Context/LanguageContext";
 
 export default function HomeSec6() {
   const [team, setTeam] = useState([]);

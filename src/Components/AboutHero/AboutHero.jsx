@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import bgAbout from "../../assets/Images/bgAbout.webp";
 import Navbar from './../Navbar/Navbar';
 import { motion } from "framer-motion";
-import { LanguageContext } from "../../context/LanguageContext"; // ✅ استدعاء الكونتكست
+import { LanguageContext } from "../../Context/LanguageContext"; // ✅ استدعاء الكونتكست
 
 export default function AboutHero() {
   const { language } = useContext(LanguageContext); // ✅ استخدام اللغة

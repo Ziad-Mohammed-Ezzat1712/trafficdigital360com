@@ -15,7 +15,7 @@ import col11 from "../../assets/Images/col11.png";
   import col22 from "../../assets/Images/col22.png";
  import col23 from "../../assets/Images/col23.png"; import col24 from "../../assets/Images/col24.png";
  import col25 from "../../assets/Images/col25.png"; import col26 from "../../assets/Images/col26.png"; import col27 from "../../assets/Images/col27.png"; import col28 from "../../assets/Images/col28.png"; import col29 from "../../assets/Images/col29.png"; import col31 from "../../assets/Images/col31.png"; import col32 from "../../assets/Images/col32.png"; import col33 from "../../assets/Images/col33.png"; import col34 from "../../assets/Images/col34.png"; import col35 from "../../assets/Images/col35.png"; import col36 from "../../assets/Images/col36.png";
-import { LanguageContext } from "../../context/LanguageContext";
+import { LanguageContext } from "../../Context/LanguageContext";
 const column1Images = [col11, col12, col13, col14, col15, col16, col17, col18, col19, col10, col11, col12, col13, col14, col15, col16, col17, col18, col19, col10, col11, col12, col13, col14, col15, col16, col17, col18, col19, col10];
 const column2Images = [col21, col22, col23, col24, col25, col26, col27, col28, col29, col21, col22, col23, col24, col25, col26, col27, col28, col29, col21, col22, col23, col24, col25, col26, col27, col28, col29];
 const column3Images = [col31, col32, col33, col34, col35, col36, col31, col32, col33, col34, col35, col36, col31, col32, col33, col34, col35, col36, col31, col32, col33, col34, col35, col36];

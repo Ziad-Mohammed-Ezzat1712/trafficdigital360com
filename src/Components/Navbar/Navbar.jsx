@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import logo from "/public/logo.webp";
 import { FiChevronRight, FiMenu, FiX } from "react-icons/fi";
 import { Link, useLocation } from 'react-router-dom';
-import { LanguageContext } from '../../context/LanguageContext'; // ✅ استدعاء الكونتكست
+import { LanguageContext } from '../../Context/LanguageContext'; // ✅ استدعاء الكونتكست
 
 export default function Navbar() {
   const location = useLocation(); 

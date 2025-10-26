@@ -3,7 +3,7 @@ import Navbar from "../Navbar/Navbar";
 import { FaArrowRight, FaFilePdf } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import pdf from "../../../public/Profile - 360.pdf";
-import { LanguageContext } from "../../context/LanguageContext";
+import { LanguageContext } from "../../Context/LanguageContext";
 
 export default function PortfolioSec1Mobile() {
   const { language } = useContext(LanguageContext);

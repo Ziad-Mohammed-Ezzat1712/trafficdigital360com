@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import { FiSmile, FiAward, FiMonitor } from "react-icons/fi";
-import { LanguageContext } from "../../context/LanguageContext";
+import { LanguageContext } from "../../Context/LanguageContext";
 
 export default function HomeSec3() {
   const { language } = useContext(LanguageContext);

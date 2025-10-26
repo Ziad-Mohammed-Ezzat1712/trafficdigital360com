@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import ServicesGridMobile from './../ServicesGridMobile/ServicesGridMobile';
 import AnimatedText from "../AnimatedText/AnimatedText";
-import { LanguageContext } from "../../context/LanguageContext";
+import { LanguageContext } from "../../Context/LanguageContext";
 
 export default function ServicesSec1() {
   const { language } = useContext(LanguageContext);

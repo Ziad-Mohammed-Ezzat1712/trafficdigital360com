@@ -4,7 +4,7 @@ import Navbar from "../Navbar/Navbar";
 import { FaArrowRight, FaFilePdf } from "react-icons/fa";
 import { FiChevronRight } from "react-icons/fi";
 import pdf from "../../../public/Profile - 360.pdf";
-import { LanguageContext } from "../../context/LanguageContext";
+import { LanguageContext } from "../../Context/LanguageContext";
 
 export default function PortfolioSec1() {
   const { language } = useContext(LanguageContext);

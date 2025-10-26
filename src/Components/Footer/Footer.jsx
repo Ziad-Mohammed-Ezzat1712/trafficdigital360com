@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { LanguageContext } from "../../context/LanguageContext";
+import { LanguageContext } from "../../Context/LanguageContext";
 import bgFooter from "../../assets/Images/bgFooter.webp";
 import {
   FaFacebookF,

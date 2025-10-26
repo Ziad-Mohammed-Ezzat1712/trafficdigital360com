@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { FaStar } from "react-icons/fa";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Link } from "react-router-dom";
-import { LanguageContext } from "../../context/LanguageContext";
+import { LanguageContext } from "../../Context/LanguageContext";
 
 export default function ServicesClientReviewMobile() {
   const { language } = useContext(LanguageContext);

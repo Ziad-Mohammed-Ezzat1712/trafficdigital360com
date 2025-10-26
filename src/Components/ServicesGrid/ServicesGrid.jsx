@@ -13,7 +13,7 @@ import {
 import { FiChevronRight } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { LanguageContext } from "../../context/LanguageContext";
+import { LanguageContext } from "../../Context/LanguageContext";
 
 // الكارت
 const ServiceCard = ({ title, subtitle, description, Icon }) => {

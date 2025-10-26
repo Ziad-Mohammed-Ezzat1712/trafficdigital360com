@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { FaStar } from 'react-icons/fa';
-import { LanguageContext } from "../../context/LanguageContext"; // استدعاء الكونتكست
+import { LanguageContext } from "../../Context/LanguageContext"; // استدعاء الكونتكست
 
 export default function PortfolioSec4() {
   const { language } = useContext(LanguageContext);

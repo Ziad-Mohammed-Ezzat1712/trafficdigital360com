@@ -7,7 +7,7 @@ import Navbar from "../Navbar/Navbar";
 import heroBG from "../../assets/Images/HeroBG.webp";
 import heroRightBG from "../../assets/Images/HeroRightBG.webp";
 import HomeSec2 from "./../HomeSec2/HomeSec2";
-import { LanguageContext } from "../../context/LanguageContext"; // ✅ استدعاء الكونتكست
+import { LanguageContext } from "../../Context/LanguageContext"; // ✅ استدعاء الكونتكست
 
 export default function Hero() {
   const { language } = useContext(LanguageContext); // ✅ استخدام اللغة الحالية

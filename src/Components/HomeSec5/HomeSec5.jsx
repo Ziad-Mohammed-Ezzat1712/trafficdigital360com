@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FiChevronRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import { LanguageContext } from "../../context/LanguageContext";
+import { LanguageContext } from "../../Context/LanguageContext";
 
 export default function HomeSec5() {
   const { language } = useContext(LanguageContext);

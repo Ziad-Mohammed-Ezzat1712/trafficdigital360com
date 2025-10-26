@@ -4,7 +4,7 @@ import Navbar from "../Navbar/Navbar";
 import ContactForm from "../ContactForm/ContactForm";
 import { Title, Meta, Link } from "react-head";
 import AnimatedText from "../AnimatedText/AnimatedText";
-import { LanguageContext } from "../../context/LanguageContext"; // استدعاء الكونتكست
+import { LanguageContext } from "../../Context/LanguageContext"; // استدعاء الكونتكست
 
 export default function Requestyourproposal() {
   const { language } = useContext(LanguageContext);

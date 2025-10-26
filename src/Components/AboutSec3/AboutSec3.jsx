@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { FaEye, FaTrophy, FaBullseye } from "react-icons/fa";
-import { LanguageContext } from "../../context/LanguageContext";
+import { LanguageContext } from "../../Context/LanguageContext";
 
 export default function AboutSec3() {
   const { language } = useContext(LanguageContext);

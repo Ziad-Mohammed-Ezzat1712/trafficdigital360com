@@ -8,7 +8,7 @@ import img1 from "../../assets/Images/img1.png";
 import img2 from "../../assets/Images/img2.png";
 import img3 from "../../assets/Images/img3.png";
 import img4 from "../../assets/Images/img4.png";
-import { LanguageContext } from "../../context/LanguageContext";
+import { LanguageContext } from "../../Context/LanguageContext";
 
 export default function ServicesClientReview() {
   const { language } = useContext(LanguageContext);

@@ -4,7 +4,7 @@ import { FiChevronRight } from "react-icons/fi";
 import { motion } from "framer-motion";
 import bgVector from "../../assets/Images/bgVector.webp";
 import { Link } from "react-router-dom";
-import { LanguageContext } from "../../context/LanguageContext";
+import { LanguageContext } from "../../Context/LanguageContext";
 
 export default function HomeSec7() {
   const { language } = useContext(LanguageContext);
