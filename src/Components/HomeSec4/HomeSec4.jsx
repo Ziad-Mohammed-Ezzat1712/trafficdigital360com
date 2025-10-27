@@ -153,34 +153,37 @@ export default function HomeSec4() {
           >
             <AnimatePresence>
               {filteredProjects.slice(0, visibleCount).map((project) => (
-                <motion.div
-                  key={project.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.4 }}
-                  className="relative group overflow-hidden rounded-lg shadow-lg cursor-pointer"
-                  onClick={() =>
-                    project.video_url && setVideoModal(project.video_url)
-                  }
-                >
-                  <img
-                    src={project.cover}
-                    alt={project.name}
-                    className="w-full md:h-[450px] h-[163px] object-fill transition-transform duration-500 group-hover:blur-[2px]"
-                  />
+              <motion.div
+  key={project.id}
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  exit={{ opacity: 0 }}
+  transition={{ duration: 0.4 }}
+  className="relative group overflow-hidden rounded-lg shadow-lg cursor-pointer"
+  onClick={() => {
+    if (project.category === "Web Design" && project.link) {
+      window.open(project.link, "_blank");
+    } else if (project.video_url) {
+      setVideoModal(project.video_url);
+    }
+  }}
+>
+  <img
+    src={project.cover}
+    alt={project.name}
+    className="w-full md:h-[450px] h-[163px] object-fill transition-transform duration-500 group-hover:blur-[2px]"
+  />
 
-                  <div className="absolute inset-0 bg-[#2D2D2D]/[75%] flex flex-col space-y-4 items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <h3 className="text-[30px] font-semibold">
-                      {language === "ar" ? project.name_ar : project.name}
-                    </h3>
-                    <p>
-                      {language === "ar"
-                        ? project.category_ar
-                        : project.category}
-                    </p>
-                  </div>
-                </motion.div>
+  <div className="absolute inset-0 bg-[#2D2D2D]/[75%] flex flex-col space-y-4 items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+    <h3 className="text-[30px] font-semibold">
+      {language === "ar" ? project.name_ar : project.name}
+    </h3>
+    <p>
+      {language === "ar" ? project.category_ar : project.category}
+    </p>
+  </div>
+</motion.div>
+
               ))}
             </AnimatePresence>
           </motion.div>
@@ -206,7 +209,7 @@ export default function HomeSec4() {
           )}
 
           {/* ====== مودال الفيديو ====== */}
-          <AnimatePresence>
+          {/* <AnimatePresence>
             {videoModal && (
               <motion.div
                 initial={{ opacity: 0 }}
@@ -231,7 +234,7 @@ export default function HomeSec4() {
                 </motion.div>
               </motion.div>
             )}
-          </AnimatePresence>
+          </AnimatePresence> */}
         </>
       )}
     </section>

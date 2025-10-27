@@ -27,7 +27,7 @@ export default function AboutHero() {
           transition={{ duration: 1, delay: 0.5 }}
           className="flex flex-col justify-center px-32 space-y-6 bg-cover bg-center"
         >
-          <h1 className="text-[80px] xl:text-[91px] font-bold leading-tight">
+          <h1 className=" md:text-[52px] xl:text-[78px] font-bold leading-tight">
             {language === "en"
               ? "We Don’t Just Market We Move Markets"
               : "نحن لا نسوّق فقط، بل نحرك الأسواق"}
