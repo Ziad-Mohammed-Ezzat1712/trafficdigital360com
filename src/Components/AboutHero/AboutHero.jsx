@@ -29,8 +29,8 @@ export default function AboutHero() {
         >
           <h1 className=" md:text-[52px] xl:text-[78px] font-bold leading-tight">
             {language === "en"
-              ? "We Don’t Just Market We Move Markets"
-              : "نحن لا نسوّق فقط، بل نحرك الأسواق"}
+              ? "We are here to move markets"
+              : "نحن هنا لنحرّك الأسواق"}
           </h1>
         </motion.div>
       </section>
