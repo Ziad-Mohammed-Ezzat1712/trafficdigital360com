@@ -36,12 +36,19 @@ export default function HomeSec6() {
   };
 
   return (
-    <div className="bg-black pb-12">
+    <div className="bg-transparent py-12">
       {/* العنوان */}
-      <h2 className="text-center bg-gradient-to-r from-white to-cyan-400 bg-clip-text text-transparent text-4xl font-bold pt-12 pb-8">
-        {language === "ar" ? "فريقنا" : "Our Team"}
-      </h2>
+   
+    <h1 className="text-white text-center text-[60px] mb-14  anton-regular permanent-marker-regular bungee-regular">
+  <span className="font-extrabold">        {language === "ar" ? "فريقنا" : "Our "} </span>
 
+  <span className="relative inline-block font-normal ">
+    Team
+
+    {/* Orange underline */}
+    <span className="absolute left-0 bottom-2 w-full h-4 bg-[#00AEEF] -z-10"></span>
+  </span>
+</h1>
       {/* شبكة صور الفريق */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center">
         {team.slice(0, visibleCount).map((member, idx) => {

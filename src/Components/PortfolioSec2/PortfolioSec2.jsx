@@ -26,7 +26,7 @@ export default function PortfolioSec2() {
   return (
     <>
       {/* ================= Desktop PortfolioSec2 ================= */}
-      <section className="max-w-7xl mx-auto hidden md:block">
+      <section className="max-w-8xl mx-auto hidden md:block">
         {/* العنوان */}
         <h2 className="text-[40px] text-center font-bold mb-12 z-20 bg-gradient-to-r from-white to-cyan-400 bg-clip-text text-transparent">
           {isArabic ? (
@@ -48,7 +48,7 @@ export default function PortfolioSec2() {
             }`}
              
           >
-            {[...firstRow, ...firstRow, ...firstRow].map((src, index) => (
+            {[...firstRow, ...firstRow, ...firstRow, ...firstRow].map((src, index) => (
               <div
                 key={`row1-${index}`}
                 className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] mx-4 rounded-full bg-gray-200 flex items-center justify-center transition-transform duration-300"
@@ -70,7 +70,7 @@ export default function PortfolioSec2() {
               isArabic ? "animate-marquee-right" : "animate-marquee-left"
             }`}
           >
-            {[...secondRow, ...secondRow, ...secondRow].map((src, index) => (
+            {[...secondRow, ...secondRow, ...secondRow, ...secondRow].map((src, index) => (
               <div
                 key={`row2-${index}`}
                 className="w-[70px] h-[70px] md:w-[90px] md:h-[90px] mx-4 rounded-full bg-gray-200 flex items-center justify-center transition-transform duration-300"

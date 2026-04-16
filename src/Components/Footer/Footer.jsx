@@ -64,7 +64,7 @@ export default function Footer() {
     <>
       {/* ================= Desktop Footer ================= */}
       <section
-        className="relative md:block hidden max-w-[1500px] mx-auto bg-black text-white py-48 px-6"
+        className="relative md:block hidden  mx-auto bg-black text-white py-48 px-6"
         style={{
           backgroundImage: `url(${bgFooter})`,
           backgroundSize: "cover",

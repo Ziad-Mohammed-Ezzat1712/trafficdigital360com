@@ -1,5 +1,6 @@
 import React from 'react'
 import Hero from '../Hero/Hero'
+import Hero2 from '../hero2/hero2'
 import HomeSec2 from '../HomeSec2/HomeSec2'
 import HomeSec3 from '../HomeSec3/HomeSec3'
 import HomeSec4 from '../HomeSec4/HomeSec4'
@@ -9,6 +10,8 @@ import HomeSec7 from '../HomeSec7/HomeSec7'
 import Footer from '../Footer/Footer'
 import HomeSlider from '../HomeSlider/HomeSlider'
 import {  Title, Meta, Link } from "react-head";
+import AboutSlider from '../AboutSlider/AboutSlider'
+import ServicesSec1 from '../ServicesSec1/ServicesSec1'
 export default function Home() {
   return <>
 
@@ -56,15 +59,19 @@ export default function Home() {
           }
         })}
       </script>
-  <div className=' overflow-hidden'>
-<Hero/>
-<div className=' hidden md:block'><HomeSec2/></div>
+  <div className=' overflow-hidden mb-24'>
+<Hero2/>
+{/* <Hero/> */}
+
+{/* <div className=' hidden md:block'><HomeSec2/></div> */}
 
 <HomeSec3/>
+<AboutSlider/>
+<ServicesSec1/>
 <HomeSec4/>
-<HomeSec5/>
+{/* <HomeSec5/> */}
 <HomeSec6/>
-<HomeSec7/>
+{/* <HomeSec7/> */}
 
 </div>
 <Footer/>

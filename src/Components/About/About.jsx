@@ -58,7 +58,7 @@ export default function About() {
         {/* SPACE */}
   <AboutHero/>
  <div className='md:my-[44px]'>
-   <HomeSec2/>
+   <AboutSlider/>
  </div>
 
  <AboutSec2/>

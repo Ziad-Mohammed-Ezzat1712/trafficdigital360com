@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { LanguageContext } from "../../Context/LanguageContext";
+import { MdGTranslate } from "react-icons/md";
 
 
 const LanguageSwitcherButton = () => {
@@ -16,19 +17,17 @@ const LanguageSwitcherButton = () => {
     <div
       onClick={handleClick}
       className={`
-        fixed bottom-20 md:right-[-10px] right-[-16px] z-50 cursor-pointer 
-        text-white px-0 py-0  rounded-full flex items-center 
-        transition-all duration-300 group
-        hover:bg-[#086368] hover:pr-6
-        ${isTouched ? "bg-[#086368] pr-1" : ""}
+        fixed bottom-20 md:right-[40px] right-[-16px] z-50 cursor-pointer 
+        text-white px-4 py-3 rounded-xl font-medium text-lg bg-black    flex items-center   
+        transition-all duration-300 group hover:bg-blue-400 p-2
+      
+      
       `}
     >
-      <img
-        src="/Translate.png"
-        alt="Language"
-        className="w-48 h-22 transition-all duration-300"
-      />
-      <span
+              {language === "ar" ? "AR" : "EN"}
+
+
+      {/* <span
         className={`
           ml-2 font-bold overflow-hidden whitespace-nowrap
           transition-all duration-300
@@ -38,7 +37,7 @@ const LanguageSwitcherButton = () => {
         `}
       >
         {language === "ar" ? "English" : "العربية"}
-      </span>
+      </span> */}
     </div>
   );
 };

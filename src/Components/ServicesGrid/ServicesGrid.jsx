@@ -56,7 +56,7 @@ export default function ServicesGrid() {
         transition={{ duration: 1.2 }}
         viewport={{ once: true, amount: 0.2 }}
         className="grid md:grid-cols-3 gap-6 text-left my-8"
-      >
+      >   
         <ServiceCard
           title={
             isArabic

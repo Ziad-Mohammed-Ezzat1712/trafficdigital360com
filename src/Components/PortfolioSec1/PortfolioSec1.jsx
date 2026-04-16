@@ -12,7 +12,7 @@ export default function PortfolioSec1() {
 
   return (
     <>
-      <section className="h-dvh text-white relative container pt-52 mx-auto flex flex-col justify-center items-center text-center gap-6">
+      <section className="h-dvh text-white relative  pt-52 mx-auto flex flex-col justify-center items-center text-center gap-6">
         <Navbar />
 
         {/* زر Let's connect */}

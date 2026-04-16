@@ -66,7 +66,7 @@ export default function PortfolioFaqSection() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <div className="max-w-[1460px] px-6 md:px-16 md:py-12 mx-auto overflow-hidden"
+    <div className="max-w-8xl px-6 md:px-16 md:py-12 mx-auto overflow-hidden"
     dir="ltr">
       <div className="grid md:grid-cols-2 gap-8 items-start">
         {/* Left - Title */}

@@ -34,7 +34,7 @@ export default function HomeSec7() {
     <>
       {/* ================= Desktop HomeSec7 ================= */}
       <motion.section
-        className="relative md:block hidden max-w-7xl mx-auto my-22 bg-black text-white py-20 px-6"
+        className="relative md:block hidden  mx-auto my-22 bg-black text-white py-20 px-6"
         style={{
           backgroundImage:
             window.innerWidth >= 768 ? `url(${bgVector})` : "none",

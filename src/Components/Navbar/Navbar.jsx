@@ -27,13 +27,13 @@ export default function Navbar() {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1 }}
-        className={`absolute overflow-hidden container mx-auto top-0 left-[2%] w-full flex items-center 
+        className={`absolute overflow-hidden container mx-auto top-0 left-[10%] w-full flex items-center 
           xl:justify-around justify-between px-6 md:px-10 py-6 z-50
           ${language === "ar" ? "flex-row-reverse" : ""}`}
       >
         {/* Logo */}
         <div className="font-bold text-xl tracking-wide">
-          <img src={logo} alt="logo" className="w-10 h-14" />
+          <img src={logo} alt="logo" className="w-12 h-16" />
         </div>
 
         {/* Desktop Links */}
@@ -41,7 +41,7 @@ export default function Navbar() {
           {navLinks.map((link) => (
             <Link key={link.to} to={link.to}>
               <li
-                className={`cursor-pointer text-white ${
+                className={`cursor-pointer text-white font-medium ${
                   pathname === link.to
                     ? "overline decoration-cyan-400"
                     : "hover:text-cyan-400"
@@ -54,7 +54,7 @@ export default function Navbar() {
         </ul>
 
         {/* Right Buttons (Desktop) */}
-        <div className="hidden md:flex items-center space-x-4">
+        <div className="hidden md:flex items-center font-medium text-white space-x-4">
           <Link to={"/request"}>
             <button className="bg-[#086368] flex items-center gap-x-2 cursor-pointer px-6 py-2 rounded-xl hover:bg-[#005F6B]">
               {language === "ar" ? "تواصل معنا" : "let’s connect"}

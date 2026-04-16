@@ -118,7 +118,7 @@ export default function PortfolioSec3() {
           isArabic ? "flex-row-reverse" : ""
         }`}
       >
-        <div className="relative max-w-7xl w-full">
+        <div className="relative max-w-8xl w-full">
           {/* الشادو */}
           <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-40 h-4 shadow-[0_0px_140px_30px_#2CDBCF] z-0"></div>
 
@@ -126,12 +126,14 @@ export default function PortfolioSec3() {
           <div className="relative border border-[#086368] rounded-3xl p-3 text-center bg-black z-10 px-6">
             {/* ✅ الصور ثابتة الاتجاه */}
             <section
-              className="grid grid-cols-1 md:grid-cols-3 gap-x-6 max-w-7xl mx-auto"
+              className="grid grid-cols-1 md:grid-cols-4 gap-x-6 max-w-8xl mx-auto"
               dir="ltr"
             >
               <Column images={column1Images} />
               <Column images={column2Images} />
               <Column images={column3Images} />
+              <Column images={column3Images} />
+              
             </section>
           </div>
         </div>

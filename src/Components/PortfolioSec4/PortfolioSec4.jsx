@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { FaStar } from 'react-icons/fa';
 import { LanguageContext } from "../../Context/LanguageContext"; // استدعاء الكونتكست
 
-export default function PortfolioSec4() {
+export default function   PortfolioSec4() {
   const { language } = useContext(LanguageContext);
   const isArabic = language === "ar";
 
@@ -58,7 +58,7 @@ export default function PortfolioSec4() {
         {isArabic ? "ماذا يقول العملاء" : "What Clients Say"}
       </h1>
 
-      <div className="flex flex-col md:flex-row justify-center items-stretch gap-6 max-w-7xl mx-auto">
+      <div className="flex flex-col md:flex-row justify-center items-stretch gap-6 max-w-8xl mx-auto">
         {testimonials.map((item, index) => (
           <div
             key={index}
