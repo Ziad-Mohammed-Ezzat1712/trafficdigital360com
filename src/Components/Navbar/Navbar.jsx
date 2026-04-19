@@ -27,13 +27,13 @@ export default function Navbar() {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1 }}
-        className={`absolute overflow-hidden container mx-auto top-0 left-[10%] w-full flex items-center 
+        className={`absolute overflow-hidden container mx-auto top-0 md:left-[10%] w-full flex items-center 
           xl:justify-around justify-between px-6 md:px-10 py-6 z-50
           ${language === "ar" ? "flex-row-reverse" : ""}`}
       >
         {/* Logo */}
         <div className="font-bold text-xl tracking-wide">
-          <img src={logo} alt="logo" className="w-12 h-16" />
+          <img src={logo} alt="logo" className="md:w-12 md:h-16 h-12" />
         </div>
 
         {/* Desktop Links */}

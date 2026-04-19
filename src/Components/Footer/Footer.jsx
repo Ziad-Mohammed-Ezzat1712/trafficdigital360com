@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "../../Context/LanguageContext";
 import bgFooter from "../../assets/Images/bgFooter.webp";
+import bgAbout from "../../../public/aboutbg.jpg";
 import {
   FaFacebookF,
   FaTwitter,
@@ -64,9 +65,9 @@ export default function Footer() {
     <>
       {/* ================= Desktop Footer ================= */}
       <section
-        className="relative md:block hidden  mx-auto bg-black text-white py-48 px-6"
+        className="relative md:block hidden  mx-auto bg-black text-white py-36 px-6 "
         style={{
-          backgroundImage: `url(${bgFooter})`,
+          backgroundImage: `url(${bgAbout})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -219,6 +220,7 @@ export default function Footer() {
             </form>
           </div>
         </div>
+       
       </section>
 
       {/* ================= Mobile Footer ================= */}

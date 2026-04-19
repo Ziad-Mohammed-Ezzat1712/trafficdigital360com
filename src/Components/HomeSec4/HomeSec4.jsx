@@ -171,10 +171,10 @@ export default function HomeSec4() {
                 transition={{ type: "spring", stiffness: 50 }}
                 className="absolute"
               >
-                <div className="md:w-[320px] md:h-[390px] w-[180px] h-[200px] rounded-xl overflow-hidden shadow-xl group cursor-pointer">
+                <div className="md:w-[320px] md:h-[390px] w-[180px] h-[200px]  overflow-hidden shadow-xl group cursor-pointer">
                   <img
                     src={project.cover}
-                    className="w-full h-full object-cover group-hover:scale-110 transition duration-300"
+                    className="w-full h-full object-contain  group-hover:scale-110 transition duration-300"
                   />
 
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center text-center transition duration-300">
