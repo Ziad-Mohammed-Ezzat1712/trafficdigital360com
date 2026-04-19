@@ -15,7 +15,7 @@ const WhatsAppButton = () => {
       onClick={handleClick}
     
       className={`
-        fixed bottom-5 md:right-10 right-[-16px] z-50 cursor-pointer 
+        fixed bottom-5 md:right-10 right-[5px] z-50 cursor-pointer 
         text-white  px-3 py-3 rounded-xl font-medium text-lg bg-black  flex items-center 
         transition-all duration-300 group
         hover:bg-[#5FD669] hover:

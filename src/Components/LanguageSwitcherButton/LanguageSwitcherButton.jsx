@@ -17,7 +17,7 @@ const LanguageSwitcherButton = () => {
     <div
       onClick={handleClick}
       className={`
-        fixed bottom-20 md:right-[40px] right-[-16px] z-50 cursor-pointer 
+        fixed bottom-20 md:right-[40px] right-[5px] z-50 cursor-pointer 
         text-white px-4 py-3 rounded-xl font-medium text-lg bg-black    flex items-center   
         transition-all duration-300 group hover:bg-blue-400 p-2
       
