@@ -143,13 +143,8 @@ export default function ContactForm() {
 
   return (
     <div
-      className="rounded-2xl overflow-y-scroll md:overflow-y-hidden flex items-center justify-center bg-gradient-to-r from-gray-900 to-gray-800 px-4 py-12"
-      style={{
-        backgroundImage: `url(${bgForm})`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      className="rounded-2xl overflow-y-scroll md:overflow-y-hidden flex items-center justify-center  px-4 "
+    
     >
       <div className="w-full">
         <AnimatePresence>
@@ -166,7 +161,7 @@ export default function ContactForm() {
           )}
         </AnimatePresence>
 
-        <form className="w-full bg-transparent p-6" onSubmit={handleSubmit}>
+        <form className="w-full bg-transparent pb-72" onSubmit={handleSubmit}>
           <div className="flex flex-col gap-6 mb-6">
             <div className="md:flex justify-between space-y-8 md:space-y-0 gap-6 mb-8">
               <div className="md:w-1/3">
@@ -308,7 +303,7 @@ export default function ContactForm() {
 
           {/* Send Button */}
           <div className="flex justify-center gap-3">
-            <button type="submit" className="bg-[#086368] flex gap-2 text-white px-8 cursor-pointer py-2 rounded-lg hover:bg-[#005F6B] transition">
+            <button type="submit" className="bg-[#008c96] flex gap-2 text-white px-8 cursor-pointer py-2 rounded-lg hover:bg-[#005F6B] transition">
               <span className="text-[16px]">{isArabic ? "إرسال" : "Send"}</span>
               <div className="text-md mt-">
                 <ArrowForwardIosIcon fontSize="small" className={`mt-[1px] ${language === "ar" ? "rotate-180" : ""}`} />

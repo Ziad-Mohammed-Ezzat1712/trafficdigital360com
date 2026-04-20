@@ -26,7 +26,7 @@ export default function AboutHero() {
     <>
       {/* ================= Desktop Hero ================= */}
       <section
-        className="hidden h-dvh md:grid  text-white relative overflow-hidden  mx-auto"
+        className=" md:h-dvh h-[600px] grid  text-white relative overflow-hidden  mx-auto"
         style={{
           backgroundImage: `url(${bgAbout})`,
           backgroundRepeat: "no-repeat",
@@ -37,7 +37,7 @@ export default function AboutHero() {
         <Navbar />
 <div className=" z-10 flex  items-end justify-center h-full text-center">
        
-    <h1 className="text-4xl md:text-[100px] anton-regular permanent-marker-regular bungee-regular text-fill font-extrabold text-[#00AEEF] ">
+    <h1 className="text-6xl md:text-[100px] anton-regular permanent-marker-regular bungee-regular dm-serif-display-regular  dm-serif-display-regular-italic  text-[#008c96] ">
          Traffic Digital
           
         </h1>
@@ -45,24 +45,21 @@ export default function AboutHero() {
         
      
         </div>
-     <h1 className=" md:text-[52px] xl:text-[60px] px-42  italic leading-tight">
+     <h1 className="text-[24px] md:text-[52px] xl:text-[60px] md:px-42 py-12 md:py-0  px-5 italic leading-tight">
               {displayedText}
           </h1>
       </section>
 
       {/* ================= Mobile Hero ================= */}
-      <section className="relative h-[500px] pr-12 grid md:grid-cols-2 md:hidden text-white overflow-hidden container mx-auto">
+      {/* <section className="relative h-[500px] pr-12 grid md:grid-cols-2 md:hidden text-white overflow-hidden container mx-auto">
         <Navbar />
-        {/* التدرج اللوني في الخلفية */}
-        <div className="absolute inset-0 bg-gradient-to-bl from-[#012d2f] via-[#000203] to-[#03090b]" />
+         <div className="absolute inset-0 bg-gradient-to-bl from-[#012d2f] via-[#000203] to-[#03090b]" />
 
-        {/* الصورة */}
         <div
           className="absolute inset-0 bg-center bg-contain bg-no-repeat"
           style={{ backgroundImage: `url(${bgAbout})` }}
         ></div>
 
-        {/* المحتوى */}
         <div className="relative z-10 flex flex-col justify-center text-left space-y-6 px-4">
           <motion.div
             initial={{ x: -200, opacity: 0 }}
@@ -76,7 +73,7 @@ export default function AboutHero() {
             </h1>
           </motion.div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

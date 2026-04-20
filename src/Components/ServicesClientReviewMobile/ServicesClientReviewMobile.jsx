@@ -77,7 +77,7 @@ export default function ServicesClientReviewMobile() {
 
         <div className="flex w-1/2 justify-center items-center">
           <Link to={"/about"}>
-            <button className="bg-[#086368] relative text-center flex gap-x-6 items-center cursor-pointer hover:bg-[#097f85] text-white text-[13px] px-4 py-2 rounded-2xl">
+            <button className="bg-[#008c96] relative text-center flex gap-x-6 items-center cursor-pointer hover:bg-[#097f85] text-white text-[13px] px-4 py-2 rounded-2xl">
               {language === "ar" ? texts.btn_ar : texts.btn_en}
               <ArrowForwardIosIcon  className={`mt-[1px] ${language === "ar" ? "rotate-180" : ""}`} />
             </button>

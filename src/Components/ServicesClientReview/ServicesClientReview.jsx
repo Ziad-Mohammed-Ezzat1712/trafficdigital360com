@@ -86,7 +86,7 @@ export default function ServicesClientReview() {
 
           <Link to={"/about"}>
             <motion.button
-              className="bg-[#086368] flex gap-x-3 items-center cursor-pointer hover:bg-[#097f85] text-white text-[20px] px-12 py-2 rounded-4xl"
+              className="bg-[#008c96] flex gap-x-3 items-center cursor-pointer hover:bg-[#097f85] text-white text-[20px] px-12 py-2 rounded-4xl"
               initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}

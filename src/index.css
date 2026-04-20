@@ -87,7 +87,7 @@ body{
 /* النص الأساسي */
 .text-fill {
   color: #ffffff;
-  -webkit-text-stroke: 3px #00AEEF;
+  -webkit-text-stroke: 3px #008c96;
   /* text-shadow: #ffffff 4px 5px;  */
 }
 
@@ -138,4 +138,15 @@ body{
   font-family: "Bungee", sans-serif;
   font-weight: 1000;
   font-style: normal;
+}
+.dm-serif-display-regular {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style:normal;
+}
+
+.dm-serif-display-regular-italic {
+  font-family: "DM Serif Display", serif;
+  font-weight: 600;
+  font-style: italic;
 }

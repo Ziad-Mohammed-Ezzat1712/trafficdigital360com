@@ -17,7 +17,6 @@ export default function Navbar() {
     { to: "/about", label: language === "ar" ? "من نحن" : "About us" },
     { to: "/services", label: language === "ar" ? "الخدمات" : "Services" },
     { to: "/portfolio", label: language === "ar" ? "أعمالنا" : "Portfolio" },
-    { to: "/request", label: language === "ar" ? "طلب عرض سعر" : "Request your proposal" },
      { to: "/request", label: language === "ar" ? "" : "" },
   ];
 
@@ -37,11 +36,11 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Links */}
-        <ul className={`hidden md:flex ${language === "ar" ? "space-x-reverse space-x-8" : "space-x-8"}`}>
+        <ul className={`hidden md:flex md:gap-4 md:px-4 ${language === "ar" ? "space-x-reverse space-x-8" : "space-x-8"}`}>
           {navLinks.map((link) => (
             <Link key={link.to} to={link.to}>
               <li
-                className={`cursor-pointer text-white font-medium ${
+                className={`cursor-pointer text-white  font-medium ${
                   pathname === link.to
                     ? "overline decoration-cyan-400"
                     : "hover:text-cyan-400"
@@ -56,7 +55,7 @@ export default function Navbar() {
         {/* Right Buttons (Desktop) */}
         <div className="hidden md:flex items-center font-medium text-white space-x-4">
           <Link to={"/request"}>
-            <button className="bg-[#086368] flex items-center gap-x-2 cursor-pointer px-6 py-2 rounded-xl hover:bg-[#005F6B]">
+            <button className="bg-[#008c96] flex items-center gap-x-2 cursor-pointer px-6 py-2 rounded-xl hover:bg-[#005F6B]">
               {language === "ar" ? "تواصل معنا" : "let’s connect"}
               <FiChevronRight className={`mt-[1px] ${language === "ar" ? "rotate-180" : ""}`} />
             </button>
@@ -97,7 +96,7 @@ export default function Navbar() {
           ))}
 
           <Link to={"/request"}>
-            <button className="bg-[#086368] flex items-center gap-x-2 cursor-pointer px-6 py-2 rounded-xl hover:bg-[#005F6B]">
+            <button className="bg-[#008c96] flex items-center gap-x-2 cursor-pointer px-6 py-2 rounded-xl hover:bg-[#005F6B]">
               {language === "ar" ? "تواصل معنا" : "let’s connect"}
               <FiChevronRight className={`mt-[1px] ${language === "ar" ? "rotate-180" : ""}`} />
             </button>

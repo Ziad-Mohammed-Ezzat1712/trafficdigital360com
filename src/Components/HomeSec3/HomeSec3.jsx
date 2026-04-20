@@ -96,7 +96,7 @@
 //           className="relative"
 //         >
 //           <div className="flex items-center space-x-6 bg-black text-white p-6 rounded-lg">
-//             <div className="w-48 h-48 bg-[#086368] rounded-full flex items-center justify-center">
+//             <div className="w-48 h-48 bg-[#008c96] rounded-full flex items-center justify-center">
 //               <span className="text-7xl font-bold">3+</span>
 //             </div>
 
@@ -172,7 +172,7 @@
 //           viewport={{ once: true, amount: 0.3 }}
 //           className="flex items-center justify-between gap-x-16 text-center space-y-4"
 //         >
-//           <div className="w-24 h-24 px-6 bg-[#086368] rounded-full flex items-center ">
+//           <div className="w-24 h-24 px-6 bg-[#008c96] rounded-full flex items-center ">
 //             <span className="text-4xl font-bold">3+</span>
 //           </div>
 
@@ -219,24 +219,24 @@ export default function HomeSec3() {
   }, []);
   return (
     <section className="">
-      <div className="max-w-8xl mx-auto px-6 lg:px-12 py-16 grid grid-cols-1 lg:grid-cols-2 items-center gap-40">
+      <div className="max-w-8xl mx-auto px-6 lg:px-12 py-16 grid grid-cols-1 lg:grid-cols-2 items-center md:gap-40 gap-12">
         {/* Left Side */}
         <div className="flex justify-between relative">
           {/* Background shape ثابت */}
           <div className=" rounded-t-full w-[300px] xl:h-[600px] h-[500px] relative shadow-lg overflow-visible">
             {/* الصورة فوق الخلفية */}
           </div>
-          <img src={home2} alt="Vape Bottle" className=" z-10 rounded-xl animate-float" />
+          <img src={home2} alt="Vape Bottle" className=" z-10 rounded-xl animate-float " />
         </div>
 
         {/* Right Side */}
-        <div className=" w-max-1 xl:text-left text-center">
+        <div className=" w-max-1 xl:text-left md:px-0 px-5">
           <div className="relative inline-block">
             {/* Outline */}
          
 
             {/* Fill */}
-            <span className="text-[#0F9BA3] text-fill anton-regular permanent-marker-regular bungee-regular text-[62px] font-bold ">
+            <span className="anton-regular permanent-marker-regular bungee-regular dm-serif-display-regular  dm-serif-display-regular-italic   text-[#008c96] md:text-[62px] text-[42px] font-bold  ">
               Traffic Digital
             </span>
           </div>

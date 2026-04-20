@@ -16,7 +16,7 @@ export default function PortfolioSec1Mobile() {
 
         {/* زر Let’s connect */}
         <Link to={"/request"}>
-          <button className="bg-[#086368] cursor-pointer hover:bg-[#005F6B] mt-46 md:mt-0  transition px-4 py-2 rounded-md z-20 text-white md:font-semibold flex items-center gap-2">
+          <button className="bg-[#008c96] cursor-pointer hover:bg-[#005F6B] mt-46 md:mt-0  transition px-4 py-2 rounded-md z-20 text-white md:font-semibold flex items-center gap-2">
             {isArabic ? "لنتواصل" : "let’s connect"} <FaArrowRight className={`mt-[1px] ${language === "ar" ? "rotate-180" : ""}`} />
           </button>
         </Link>

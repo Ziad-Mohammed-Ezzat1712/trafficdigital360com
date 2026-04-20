@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
 import bgRequest from "../../assets/Images/bgRequest.webp";
+import bgAbout from "../../../public/aboutbg.jpg";
+
 import Navbar from "../Navbar/Navbar";
 import ContactForm from "../ContactForm/ContactForm";
 import { Title, Meta, Link } from "react-head";
@@ -81,25 +83,25 @@ export default function Requestyourproposal() {
       </script>
 
       <section
-        className="flex flex-col justify-center items-center text-white relative overflow-hidden max-w-[1500px] mx-auto py-20"
+        className="flex flex-col justify-center items-center text-white relative overflow-hidden mb-24   mx-auto py-20"
         style={{
-          backgroundImage: `url(${bgRequest})`,
+          backgroundImage: `url(${bgAbout})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <div className="md:mb-48 mb-24">
+        <div className="md:mb-36 mb-24">
           <Navbar />
         </div>
-        <h1 className="text-[36px] md:text-[70px] xl:text-[80px]  leading-tight md:mb-34 mb-24 bg-gradient-to-r from-white to-cyan-400 bg-clip-text text-transparent font-bold">
+        <h1 className="text-[36px] md:text-[70px] xl:text-[80px]  leading-tight md:mb-24 mb-24 bg-gradient-to-r from-white to-cyan-400 bg-clip-text text-transparent font-bold">
           
             {isArabic ? "اطلب عرضك الآن" : "Request your proposal"}
             
       
         </h1>
 
-        <div className="w-full max-w-7xl mb-36">
+        <div className="w-full max-w-[1600px] mb-">
           <ContactForm />
         </div>
       </section>

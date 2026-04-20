@@ -45,8 +45,8 @@ export default function HomeSec5() {
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-40 h-4 shadow-[0_0px_80px_10px_#06b6d4] z-0"></div>
 
         {/* main content */}
-        <div className="relative border border-[#086368] rounded-3xl md:py-22 py-6 text-center bg-black z-10 px-6">
-          <div className="mb-6 border inline-block border-[#086368] px-4 py-1 rounded-full">
+        <div className="relative border border-[#008c96] rounded-3xl md:py-22 py-6 text-center bg-black z-10 px-6">
+          <div className="mb-6 border inline-block border-[#008c96] px-4 py-1 rounded-full">
             <span className="inline-block text-[#15D5DF] px-4 py-1 rounded-full text-[16px] font-medium">
               {text[language].badge}
             </span>
@@ -65,7 +65,7 @@ export default function HomeSec5() {
           {/* button */}
           <div className="mt-8 flex justify-center">
             <Link to={"/request"}>
-              <button className="bg-[#086368] md:text-[16px] text-[12px] text-white font-medium px-6 py-2 cursor-pointer rounded-md hover:bg-[#005F6B] transition flex items-center justify-center gap-2">
+              <button className="bg-[#008c96] md:text-[16px] text-[12px] text-white font-medium px-6 py-2 cursor-pointer rounded-md hover:bg-[#005F6B] transition flex items-center justify-center gap-2">
                 {text[language].button}
                 <span className="md:text-[16px] text-[12px]">
                   <FiChevronRight className={`mt-[1px] ${language === "ar" ? "rotate-180" : ""}`} />

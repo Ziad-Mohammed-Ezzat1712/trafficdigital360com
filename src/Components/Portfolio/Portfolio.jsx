@@ -10,6 +10,7 @@ import PortfolioSec4 from '../PortfolioSec4/PortfolioSec4'
 import PortfolioSec1Mobile from './../portfolioSec1Mobile/portfolioSec1Mobile';
 import PortfolioSec3Mobile from './../portfolioSec3Mobile/portfolioSec3Mobile';
  import {  Title, Meta, Link } from "react-head";
+import ProfileTd from '../ProfileTD/ProfileTD'
 
 export default function Portfolio() {
   return (
@@ -60,6 +61,7 @@ export default function Portfolio() {
       </script>
 
     <div className=' hidden md:block overflow-x-hidden'><PortfolioSec1/></div>
+    
     <div className=' md:hidden block overflow-x-hidden'><PortfolioSec1Mobile/></div>
     <PortfolioSec2/>
      <div className=' hidden md:block overflow-x-hidden'><PortfolioSec3/></div>

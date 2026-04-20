@@ -95,10 +95,10 @@ export default function HomeSec4() {
   const t = text[language];
 
   return (
-    <section className="bg-black text-white py-10 min-h-[600px]">
+    <section className="bg-transparent text-white py-10 min-h-[600px]">
       {/* ===== Header ===== */}
-      <div className="text-center mb-10">
-        <h1 className="md:text-[70px] text-[20px]">{t.title1}</h1>
+      <div className="text-center md:mb-10">
+        {/* <h1 className="md:text-[70px] text-[20px]">{t.title1}</h1>
         <h2 className="md:text-[70px] text-[20px]">
           {t.title2}
         
@@ -106,11 +106,11 @@ export default function HomeSec4() {
             {t.title3.split(" ").slice(1).join(" ")}
           </span>
 
-        </h2>
+        </h2> */}
 
         {/* ===== Filters ===== */}
-        <div className="flex flex-wrap justify-center gap-4 mt-6">
-          {/* All */}
+        {/* <div className="flex flex-wrap justify-center gap-4 mt-6">
+         
           <button
             onClick={() => handleFilterChange("All")}
             className={`px-4 py-1 rounded-full cursor-pointer transition-all duration-300 ${
@@ -122,7 +122,6 @@ export default function HomeSec4() {
             {language === "ar" ? "كل المشاريع" : "All Projects"}
           </button>
 
-          {/* Categories */}
           {categories.map((cat, i) => (
             <button
               key={i}
@@ -136,7 +135,17 @@ export default function HomeSec4() {
               {language === "ar" ? cat.name_ar : cat.name}
             </button>
           ))}
-        </div>
+        </div> */}
+         <h1 className="text-white text-center md:text-[60px] text-[42px] ">
+  <span className="font-extrabold anton-regular permanent-marker-regular bungee-regular">Our </span>
+
+  <span className="relative inline-block font-normal anton-regular permanent-marker-regular  ">
+    Projects
+
+    {/* Orange underline */}
+    <span className="absolute left-0 bottom-2 w-full h-4 bg-[#008c96] -z-10"></span>
+  </span>
+</h1>
       </div>
 
       {/* ===== Loading ===== */}
@@ -168,7 +177,7 @@ export default function HomeSec4() {
                   opacity: Math.abs(offset) > 2 ? 0 : 1,
                   zIndex: 100 - Math.abs(offset),
                 }}
-                transition={{ type: "spring", stiffness: 50 }}
+                transition={{ type: "spring", stiffness: 20 }}
                 className="absolute"
               >
                 <div className="md:w-[320px] md:h-[390px] w-[180px] h-[200px]  overflow-hidden shadow-xl group cursor-pointer">

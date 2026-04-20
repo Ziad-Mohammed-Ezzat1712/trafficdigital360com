@@ -39,14 +39,14 @@ export default function HomeSec6() {
     <div className="bg-transparent py-12">
       {/* العنوان */}
    
-    <h1 className="text-white text-center text-[60px] mb-14  anton-regular permanent-marker-regular bungee-regular">
+    <h1 className="text-white text-center md:text-[60px] text-[42px] mb-14  anton-regular permanent-marker-regular bungee-regular">
   <span className="font-extrabold">        {language === "ar" ? "فريقنا" : "Our "} </span>
 
   <span className="relative inline-block font-normal ">
     Team
 
     {/* Orange underline */}
-    <span className="absolute left-0 bottom-2 w-full h-4 bg-[#00AEEF] -z-10"></span>
+    <span className="absolute left-0 bottom-2 w-full h-4 bg-[#008c96] -z-10"></span>
   </span>
 </h1>
       {/* شبكة صور الفريق */}
@@ -100,7 +100,7 @@ export default function HomeSec6() {
         <div className="flex justify-center mt-10">
           <button
             onClick={handleToggle}
-            className="px-8 py-3 text-lg bg-[#086368] hover:bg-[#005F6B] cursor-pointer text-white rounded-full transition-colors"
+            className="px-8 py-3 text-lg bg-[#008c96] hover:bg-[#005F6B] cursor-pointer text-white rounded-full transition-colors"
           >
             {visibleCount < team.length
               ? language === "ar"

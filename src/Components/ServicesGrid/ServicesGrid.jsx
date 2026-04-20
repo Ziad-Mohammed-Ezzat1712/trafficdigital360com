@@ -197,7 +197,7 @@ export default function ServicesGrid() {
       <div className="flex justify-center my-12">
         <div className="md:flex items-center space-x-4">
           <Link to="/request">
-            <button className="bg-[#086368] flex items-center gap-x-2 cursor-pointer px-6 py-2 rounded-xl hover:bg-[#005F6B]">
+            <button className="bg-[#008c96] flex items-center gap-x-2 cursor-pointer px-6 py-2 rounded-xl hover:bg-[#005F6B]">
               {isArabic ? "تواصل معنا" : "Let’s connect"}{" "}
               <FiChevronRight  className={`mt-[1px] ${language === "ar" ? "rotate-180" : ""}`} />
             </button>

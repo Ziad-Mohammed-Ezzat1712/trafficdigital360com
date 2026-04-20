@@ -90,7 +90,7 @@ export default function HomeSec7() {
               {t.ctaTitle}
             </h3>
             <Link to={"/request"}>
-              <button className="flex items-center cursor-pointer text-[16px] gap-2 bg-[#086368] hover:bg-[#005F6B] text-white px-6 py-3 rounded-xl transition">
+              <button className="flex items-center cursor-pointer text-[16px] gap-2 bg-[#008c96] hover:bg-[#005F6B] text-white px-6 py-3 rounded-xl transition">
                 {t.ctaBtn} <FiChevronRight className={`mt-[1px] ${language === "ar" ? "rotate-180" : ""}`} />
               </button>
             </Link>
@@ -127,7 +127,7 @@ export default function HomeSec7() {
           <div className="bg-white rounded-2xl flex items-center justify-between px-4 py-4 gap-4">
             <h3 className="text-md font-medium text-black">{t.ctaTitle}</h3>
             <Link to={"/request"}>
-              <button className="flex items-center cursor-pointer text-[14px] gap-2 bg-[#086368] hover:bg-[#005F6B] text-white px-6 py-1 rounded-xl transition">
+              <button className="flex items-center cursor-pointer text-[14px] gap-2 bg-[#008c96] hover:bg-[#005F6B] text-white px-6 py-1 rounded-xl transition">
                 {t.ctaBtn} <FiChevronRight className={`mt-[1px] ${language === "ar" ? "rotate-180" : ""}`} />
               </button>
             </Link>

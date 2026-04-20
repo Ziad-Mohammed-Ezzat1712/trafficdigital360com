@@ -4,6 +4,7 @@ import ServicesClientReview from '../ServicesClientReview/ServicesClientReview'
 import Footer from '../Footer/Footer'
 import ServicesClientReviewMobile from './../ServicesClientReviewMobile/ServicesClientReviewMobile';
  import {  Title, Meta, Link } from "react-head";
+import Navbar from '../Navbar/Navbar';
 export default function Services() {
   return <>
 
@@ -51,7 +52,7 @@ export default function Services() {
             }
           })}
         </script>
-
+ <div className='mb-42'><Navbar /></div>
   <ServicesSec1/>
  {/* ديسكتوب */}
       <div className="hidden md:block">

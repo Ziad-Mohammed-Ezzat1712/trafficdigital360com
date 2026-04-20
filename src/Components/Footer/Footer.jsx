@@ -213,7 +213,7 @@ export default function Footer() {
               />
               <button
                 type="submit"
-                className="w-32 cursor-pointer bg-[#086368] hover:bg-[#005F6B] text-white px-4 py-3 rounded-lg transition"
+                className="w-32 cursor-pointer bg-[#008c96] hover:bg-[#005F6B] text-white px-4 py-3 rounded-lg transition"
               >
                 {text.subscribeBtn}
               </button>
@@ -365,7 +365,7 @@ export default function Footer() {
               />
               <button
                 type="submit"
-                className="w-32 cursor-pointer bg-[#086368] hover:bg-[#005F6B] text-white px-4 py-3 rounded-lg transition"
+                className="w-32 cursor-pointer bg-[#008c96] hover:bg-[#005F6B] text-white px-4 py-3 rounded-lg transition"
               >
                 {text.subscribeBtn}
               </button>

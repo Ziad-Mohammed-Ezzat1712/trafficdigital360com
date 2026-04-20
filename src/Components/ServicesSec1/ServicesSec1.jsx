@@ -15,13 +15,13 @@ export default function ServicesSec1() {
   return (
     <section
       className="flex flex-col justify-center items-center text-white relative overflow-hidden max-w-[1500px]  mx-auto text-center"
-      
+    
     >
       <div className="md:mb-12 mb-48">
        
       </div>
 
-   <h1 className="text-white text-center text-[60px] py-12 ">
+   <h1 className="text-white text-center md:text-[60px] text-[42px] py-12 ">
   <span className="font-extrabold  anton-regular permanent-marker-regular ">       {isArabic ? "خدماتنا" : "Our "}
 
  </span>
@@ -29,7 +29,7 @@ export default function ServicesSec1() {
   <span className="relative inline-block font-normal  anton-regular permanent-marker-regular bungee-regular">
        services
     {/* Orange underline */}
-    <span className="absolute left-0 bottom-2 w-full h-4 bg-[#00AEEF] -z-10"></span>
+    <span className="absolute left-0 bottom-2 w-full h-4 bg-[#008c96] -z-10"></span>
   </span>
 </h1>
 

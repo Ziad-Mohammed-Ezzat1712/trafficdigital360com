@@ -32,7 +32,7 @@ export default function HomeSec2() {
         <h2 className="text-2xl font-semibold">{t.subtitle2}</h2>
 
         <Link to="/request">
-          <button className="bg-[#086368] mx-auto text-xl text-white flex items-center justify-center gap-x-2 cursor-pointer px-6 py-2 rounded-xl hover:bg-[#005F6B]">
+          <button className="bg-[#008c96] mx-auto text-xl text-white flex items-center justify-center gap-x-2 cursor-pointer px-6 py-2 rounded-xl hover:bg-[#005F6B]">
             {t.button} <FiChevronRight className={`mt-[1px] ${language === "ar" ? "rotate-180" : ""}`} />
           </button>
         </Link>
@@ -45,7 +45,7 @@ export default function HomeSec2() {
         <h2 className="text-[16px] font-semibold">{t.subtitle2}</h2>
 
         <Link to="/request">
-          <button className="bg-[#086368] mx-auto text-xl text-white flex items-center justify-center gap-x-2 cursor-pointer px-6 py-2 rounded-xl hover:bg-[#005F6B]">
+          <button className="bg-[#008c96] mx-auto text-xl text-white flex items-center justify-center gap-x-2 cursor-pointer px-6 py-2 rounded-xl hover:bg-[#005F6B]">
             {t.button} <FiChevronRight className={`mt-[1px] ${language === "ar" ? "rotate-180" : ""}`} />
           </button>
         </Link>

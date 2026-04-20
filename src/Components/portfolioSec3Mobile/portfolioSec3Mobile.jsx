@@ -86,7 +86,7 @@ export default function PortfolioSec3Mobile() {
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-40 h-4 shadow-[0_0px_140px_30px_#2CDBCF] z-0"></div>
 
         {/* المحتوى الرئيسي */}
-        <div className="relative border border-[#086368] rounded-3xl p-3 text-center bg-black z-10 px-6">
+        <div className="relative border border-[#008c96] rounded-3xl p-3 text-center bg-black z-10 px-6">
         <section className="grid grid-cols-3 gap-x-6 max-w-7xl mx-auto ">
         <Column images={column1Images}  /> {/* أسرع */}
         <Column images={column2Images}  speed={1} /> {/* أبطأ */}

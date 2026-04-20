@@ -112,14 +112,14 @@ export default function AboutSlider() {
   return (
     <div className="text-center py-10 bg-transparent dark:bg-gray-900">
       <div className="max-w-[1600px] mx-auto px-4">
-      <h1 className="text-white text-center text-[60px] mb-28">
+      <h1 className="text-white text-center md:text-[60px] text-[42px] mb-28">
   <span className="font-extrabold anton-regular permanent-marker-regular bungee-regular">Our </span>
 
   <span className="relative inline-block font-normal anton-regular permanent-marker-regular  ">
     Clients
 
     {/* Orange underline */}
-    <span className="absolute left-0 bottom-2 w-full h-4 bg-[#00AEEF] -z-10"></span>
+    <span className="absolute left-0 bottom-2 w-full h-4 bg-[#008c96] -z-10"></span>
   </span>
 </h1>
         <Swiper
@@ -128,7 +128,7 @@ export default function AboutSlider() {
           loop={true}
           spaceBetween={100}
           breakpoints={{
-            320: { slidesPerView: 1 },
+            320: { slidesPerView: 3 },
             480: { slidesPerView: 2.8 },
             768: { slidesPerView: 3 },
             1024: { slidesPerView: 4 },
