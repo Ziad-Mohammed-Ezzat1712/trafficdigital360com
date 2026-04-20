@@ -37,7 +37,7 @@ export default function AboutHero() {
         <Navbar />
 <div className=" z-10 flex  items-end justify-center h-full text-center">
        
-    <h1 className="text-6xl md:text-[100px] anton-regular permanent-marker-regular bungee-regular dm-serif-display-regular  dm-serif-display-regular-italic  text-[#008c96] ">
+    <h1 className="text-4xl md:text-[100px] anton-regular permanent-marker-regular bungee-regular dm-serif-display-regular  dm-serif-display-regular-italic  text-[#008c96] ">
          Traffic Digital
           
         </h1>
@@ -45,7 +45,7 @@ export default function AboutHero() {
         
      
         </div>
-     <h1 className="text-[24px] md:text-[52px] xl:text-[60px] md:px-42 py-12 md:py-0  px-5 italic leading-tight">
+     <h1 className="text-[20px] md:text-[52px] xl:text-[60px] md:px-42 py-12 md:py-0  px-5 italic leading-tight">
               {displayedText}
           </h1>
       </section>

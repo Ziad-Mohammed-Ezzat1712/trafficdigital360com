@@ -38,7 +38,7 @@ export default function Hero2() {
 
       {/* Text */}
       <div className="relative z-10 flex items-center justify-center h-full text-center">
-        <h1 className="text-3xl md:text-[100px] anton-regular permanent-marker-regular bungee-regular dm-serif-display-regular  dm-serif-display-regular-italic  font-extrabold text-[#13cfdd] ">
+        <h1 className="text-2xl md:text-[100px] anton-regular permanent-marker-regular bungee-regular dm-serif-display-regular  dm-serif-display-regular-italic  font-extrabold text-[#13cfdd] ">
           {displayedText}
           
         </h1>

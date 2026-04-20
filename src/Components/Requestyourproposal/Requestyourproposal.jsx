@@ -83,7 +83,26 @@ export default function Requestyourproposal() {
       </script>
 
       <section
-        className="flex flex-col justify-center items-center text-white relative overflow-hidden mb-24   mx-auto py-20"
+        className="flex flex-col md:hidden  justify-center items-center text-white relative overflow-hidden mb-24   mx-auto py-20"
+        
+      >
+        <div className="md:mb-36 mb-24 hidden md:block ">
+          <Navbar />
+        </div>
+        <Navbar />
+        <h1 className="text-[36px] md:text-[70px] xl:text-[80px] mt-24 md:mt-0  leading-tight md:mb-24 mb-24 bg-gradient-to-r from-white to-cyan-400 bg-clip-text text-transparent font-bold">
+          
+            {isArabic ? "اطلب عرضك الآن" : "Request your proposal"}
+            
+      
+        </h1>
+
+        <div className="w-full max-w-[1600px] ">
+          <ContactForm />
+        </div>
+      </section>
+       <section
+        className=" hidden md:flex md:flex-col justify-center items-center text-white relative overflow-hidden mb-24   mx-auto py-20"
         style={{
           backgroundImage: `url(${bgAbout})`,
           backgroundRepeat: "no-repeat",
@@ -91,17 +110,18 @@ export default function Requestyourproposal() {
           backgroundPosition: "center",
         }}
       >
-        <div className="md:mb-36 mb-24">
+        <div className="md:mb-36 mb-24 hidden md:block ">
           <Navbar />
         </div>
-        <h1 className="text-[36px] md:text-[70px] xl:text-[80px]  leading-tight md:mb-24 mb-24 bg-gradient-to-r from-white to-cyan-400 bg-clip-text text-transparent font-bold">
+        <Navbar />
+        <h1 className="text-[36px] md:text-[70px] xl:text-[80px] mt-24 md:mt-0  leading-tight md:mb-24 mb-24 bg-gradient-to-r from-white to-cyan-400 bg-clip-text text-transparent font-bold">
           
             {isArabic ? "اطلب عرضك الآن" : "Request your proposal"}
             
       
         </h1>
 
-        <div className="w-full max-w-[1600px] mb-">
+        <div className="w-full max-w-[1600px] ">
           <ContactForm />
         </div>
       </section>

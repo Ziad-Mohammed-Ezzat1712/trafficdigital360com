@@ -128,7 +128,7 @@ export default function AboutSlider() {
           loop={true}
           spaceBetween={100}
           breakpoints={{
-            320: { slidesPerView: 3 },
+            320: { slidesPerView: 2 },
             480: { slidesPerView: 2.8 },
             768: { slidesPerView: 3 },
             1024: { slidesPerView: 4 },

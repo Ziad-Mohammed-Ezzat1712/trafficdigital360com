@@ -223,10 +223,10 @@ export default function HomeSec3() {
         {/* Left Side */}
         <div className="flex justify-between relative">
           {/* Background shape ثابت */}
-          <div className=" rounded-t-full w-[300px] xl:h-[600px] h-[500px] relative shadow-lg overflow-visible">
+          <div className=" rounded-t-full w-[300px] xl:h-[600px] h-[380px] relative shadow-lg overflow-visible">
             {/* الصورة فوق الخلفية */}
           </div>
-          <img src={home2} alt="Vape Bottle" className=" z-10 rounded-xl animate-float " />
+          <img src={home2} alt="Home Section" className=" z-10 rounded-xl animate-float " />
         </div>
 
         {/* Right Side */}
