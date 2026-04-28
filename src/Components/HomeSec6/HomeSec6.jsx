@@ -16,8 +16,6 @@ export default function HomeSec6() {
         );
         if (Array.isArray(res.data.data)) {
           setTeam(res.data.data);
-        } else {
-          console.error("Unexpected API response:", res.data.data);
         }
       } catch (error) {
         console.error("Error fetching staff:", error);
@@ -26,7 +24,6 @@ export default function HomeSec6() {
     fetchStaff();
   }, []);
 
-  // دالة لزيادة أو تقليل عدد العناصر
   const handleToggle = () => {
     if (visibleCount < team.length) {
       setVisibleCount((prev) => prev + 6);
@@ -36,31 +33,53 @@ export default function HomeSec6() {
   };
 
   return (
-    <div className="bg-transparent py-12">
-      {/* العنوان */}
-   
-    <h1 className="text-white text-center md:text-[60px] text-[42px] mb-14  anton-regular permanent-marker-regular bungee-regular">
-  <span className="font-extrabold">        {language === "ar" ? "فريقنا" : "Our "} </span>
+    <div
+      dir={language === "ar" ? "rtl" : "ltr"}
+      className="bg-transparent py-12"
+    >
+      {/* ===== Title ===== */}
+      <h1 className="text-white text-center md:text-[60px] text-[42px] mb-14 anton-regular permanent-marker-regular bungee-regular">
+        <span className="font-extrabold">
+          {language === "ar" ? "فريقنا" : "Our "}
+        </span>
 
-  <span className="relative inline-block font-normal ">
-    Team
+        <span className="relative inline-block font-normal">
+          {language === "ar" ? "" : "Team"}
 
-    {/* Orange underline */}
-    <span className="absolute left-0 bottom-2 w-full h-4 bg-[#008c96] -z-10"></span>
-  </span>
-</h1>
-      {/* شبكة صور الفريق */}
+          <span className="absolute left-0 bottom-2 w-full h-4 bg-[#008c96] -z-10"></span>
+        </span>
+      </h1>
+
+      {/* ===== Grid ===== */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center">
         {team.slice(0, visibleCount).map((member, idx) => {
           const column = idx % 3;
+
+          const isRTL = language === "ar";
+
           let initial = {};
 
           if (column === 0) {
-            initial = { opacity: 0, x: -100, rotateZ: -10, scale: 0.9 };
+            initial = {
+              opacity: 0,
+              x: isRTL ? 100 : -100,
+              rotateZ: isRTL ? 10 : -10,
+              scale: 0.9,
+            };
           } else if (column === 2) {
-            initial = { opacity: 0, x: 100, rotateZ: 10, scale: 0.9 };
+            initial = {
+              opacity: 0,
+              x: isRTL ? -100 : 100,
+              rotateZ: isRTL ? -10 : 10,
+              scale: 0.9,
+            };
           } else {
-            initial = { opacity: 0, y: 100, rotateZ: -8, scale: 0.9 };
+            initial = {
+              opacity: 0,
+              y: 100,
+              rotateZ: -8,
+              scale: 0.9,
+            };
           }
 
           return (
@@ -72,14 +91,12 @@ export default function HomeSec6() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 1.5, ease: "easeOut" }}
             >
-              {/* صورة البروفايل */}
               <img
                 src={member.image}
                 alt={language === "ar" ? member.name_ar : member.name}
                 className="w-[360px] h-[445px] object-cover"
               />
 
-              {/* الشريط السفلي فيه الاسم والوظيفة */}
               <div className="absolute bottom-0 left-0 w-full bg-white/30 text-white backdrop-blur-sm flex justify-between items-center px-4 py-5 text-sm">
                 <span className="font-bold text-[20px]">
                   {language === "ar" ? member.name_ar : member.name}
@@ -95,7 +112,7 @@ export default function HomeSec6() {
         })}
       </div>
 
-      {/* زر "See More / See Less" */}
+      {/* ===== Button ===== */}
       {team.length > 6 && (
         <div className="flex justify-center mt-10">
           <button

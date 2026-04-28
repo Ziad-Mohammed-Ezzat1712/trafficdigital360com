@@ -29,7 +29,7 @@ export default function Footer() {
       aboutPage: "About",
       services: "Services",
       portfolio: "Portfolio",
-      request: "Request Your Proposal",
+      request: "Contact us",
       facebook:"Facebook",
       instagram:"Instagram",
       twitter:"Twitter",

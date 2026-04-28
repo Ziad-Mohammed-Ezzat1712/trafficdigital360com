@@ -21,14 +21,14 @@ export default function ServicesSec1() {
        
       </div>
 
-   <h1 className="text-white text-center md:text-[60px] text-[42px] py-12 ">
-  <span className="font-extrabold  anton-regular permanent-marker-regular ">       {isArabic ? "خدماتنا" : "Our "}
+  <h1 className="text-white text-center md:text-[60px] text-[42px] py-12 ">
+  <span className="font-extrabold anton-regular permanent-marker-regular">
+    {isArabic ? "خدماتنا" : "Our "}
+  </span>
 
- </span>
+  <span className="relative inline-block font-normal anton-regular permanent-marker-regular bungee-regular">
+    {isArabic ? "" : "services"}
 
-  <span className="relative inline-block font-normal  anton-regular permanent-marker-regular bungee-regular">
-       services
-    {/* Orange underline */}
     <span className="absolute left-0 bottom-2 w-full h-4 bg-[#008c96] -z-10"></span>
   </span>
 </h1>

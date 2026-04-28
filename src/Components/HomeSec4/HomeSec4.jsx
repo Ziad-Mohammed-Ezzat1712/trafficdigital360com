@@ -42,17 +42,23 @@ export default function HomeSec4() {
       ? projects
       : projects.filter((p) => p.category === selectedCategory);
 
-  // 🔥 Auto Slide
+  // 🔥 Auto Slide (direction aware)
   useEffect(() => {
     startAutoSlide();
     return stopAutoSlide;
-  }, [filteredProjects]);
+  }, [filteredProjects, language]);
 
   const startAutoSlide = () => {
     stopAutoSlide();
     intervalRef.current = setInterval(() => {
       setCurrentIndex((prev) =>
-        prev === filteredProjects.length - 1 ? 0 : prev + 1
+        language === "ar"
+          ? prev === 0
+            ? filteredProjects.length - 1
+            : prev - 1
+          : prev === filteredProjects.length - 1
+          ? 0
+          : prev + 1
       );
     }, 3000);
   };
@@ -79,73 +85,21 @@ export default function HomeSec4() {
     setCurrentIndex(0);
   };
 
-  const text = {
-    en: {
-      title1: "We make cool things",
-      title2: "that do great ",
-      title3: " business",
-    },
-    ar: {
-      title1: "نحن نصنع أشياء مميزة",
-      title2: "تحقق نجاحًا مذهلًا ",
-      title3: " للأعمال ",
-    },
-  };
-
-  const t = text[language];
-
   return (
     <section className="bg-transparent text-white py-10 min-h-[600px]">
       {/* ===== Header ===== */}
       <div className="text-center md:mb-10">
-        {/* <h1 className="md:text-[70px] text-[20px]">{t.title1}</h1>
-        <h2 className="md:text-[70px] text-[20px]">
-          {t.title2}
-        
-           <span className="bg-[url('/src/assets/Images/bg.png')] bg-cover bg-center rounded-full">
-            {t.title3.split(" ").slice(1).join(" ")}
+        <h1 className="text-white text-center md:text-[60px] text-[42px] ">
+          <span className="font-extrabold anton-regular permanent-marker-regular bungee-regular">
+            {language === "ar" ? "مشاريعنا" : "Our "}
           </span>
 
-        </h2> */}
+          <span className="relative inline-block font-normal anton-regular permanent-marker-regular">
+            {language === "ar" ? "" : "Projects"}
 
-        {/* ===== Filters ===== */}
-        {/* <div className="flex flex-wrap justify-center gap-4 mt-6">
-         
-          <button
-            onClick={() => handleFilterChange("All")}
-            className={`px-4 py-1 rounded-full cursor-pointer transition-all duration-300 ${
-              selectedCategory === "All"
-                ? "bg-white text-black scale-105"
-                : "text-gray-400 hover:text-white"
-            }`}
-          >
-            {language === "ar" ? "كل المشاريع" : "All Projects"}
-          </button>
-
-          {categories.map((cat, i) => (
-            <button
-              key={i}
-              onClick={() => handleFilterChange(cat.name)}
-              className={`px-4 py-1 rounded-full cursor-pointer transition-all duration-300 ${
-                selectedCategory === cat.name
-                  ? "bg-white text-black scale-105"
-                  : "text-gray-400 hover:text-white"
-              }`}
-            >
-              {language === "ar" ? cat.name_ar : cat.name}
-            </button>
-          ))}
-        </div> */}
-         <h1 className="text-white text-center md:text-[60px] text-[42px] ">
-  <span className="font-extrabold anton-regular permanent-marker-regular bungee-regular">Our </span>
-
-  <span className="relative inline-block font-normal anton-regular permanent-marker-regular  ">
-    Projects
-
-    {/* Orange underline */}
-    <span className="absolute left-0 bottom-2 w-full h-4 bg-[#008c96] -z-10"></span>
-  </span>
-</h1>
+            <span className="absolute left-0 bottom-2 w-full h-4 bg-[#008c96] -z-10"></span>
+          </span>
+        </h1>
       </div>
 
       {/* ===== Loading ===== */}
@@ -159,7 +113,8 @@ export default function HomeSec4() {
         >
           {/* ===== Cards ===== */}
           {filteredProjects.map((project, index) => {
-            const offset = index - currentIndex;
+            const direction = language === "ar" ? -1 : 1;
+            const offset = (index - currentIndex) * direction;
 
             return (
               <motion.div
@@ -167,8 +122,12 @@ export default function HomeSec4() {
                 drag="x"
                 dragConstraints={{ left: 0, right: 0 }}
                 onDragEnd={(e, info) => {
-                  if (info.offset.x < -50) next();
-                  if (info.offset.x > 50) prev();
+                  if (info.offset.x < -50) {
+                    language === "ar" ? prev() : next();
+                  }
+                  if (info.offset.x > 50) {
+                    language === "ar" ? next() : prev();
+                  }
                 }}
                 animate={{
                   x: offset * 200,
@@ -180,10 +139,10 @@ export default function HomeSec4() {
                 transition={{ type: "spring", stiffness: 20 }}
                 className="absolute"
               >
-                <div className="md:w-[320px] md:h-[390px] w-[180px] h-[200px]  overflow-hidden shadow-xl group cursor-pointer">
+                <div className="md:w-[320px] md:h-[390px] w-[180px] h-[200px] overflow-hidden shadow-xl group cursor-pointer">
                   <img
                     src={project.cover}
-                    className="w-full h-full object-contain  group-hover:scale-110 transition duration-300"
+                    className="w-full h-full object-contain group-hover:scale-110 transition duration-300"
                   />
 
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center text-center transition duration-300">
